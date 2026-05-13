@@ -1,6 +1,7 @@
 /**
  * Transformer Chatbot – Toán Rời Rạc
  * Frontend Application Logic
+ * v2.0 – Markdown + KaTeX + Conversation Memory
  */
 
 const API_BASE = '';  // Same origin
@@ -20,7 +21,16 @@ const clearBtn = document.getElementById('clearBtn');
 
 // ─── State ───
 let isWaiting = false;
-let conversationMessages = [];
+let conversationMessages = [];    // UI display list (kept for backward compat)
+let conversationHistory = [];     // Memory: [{role:'user'|'bot', content:'...'}]
+
+// ─── Marked.js config ───
+if (typeof marked !== 'undefined') {
+    marked.setOptions({
+        breaks: true,     // GFM line breaks
+        gfm: true,        // GitHub Flavored Markdown
+    });
+}
 
 // ─── Init ───
 document.addEventListener('DOMContentLoaded', () => {
@@ -66,7 +76,7 @@ async function sendMessage() {
     // Hide welcome, show chat
     if (welcomeScreen) welcomeScreen.style.display = 'none';
 
-    // Add user message
+    // Add user message to UI & history
     addMessage('user', message);
     chatInput.value = '';
     chatInput.style.height = 'auto';
@@ -84,6 +94,7 @@ async function sendMessage() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 message: message,
+                history: conversationHistory,
                 temperature: 0.5,
                 top_k: 3,
                 max_tokens: 100,
@@ -130,7 +141,7 @@ function addMessage(role, content, meta = null, isError = false) {
             <div class="message-meta">
                 <span class="meta-badge">⚡ ${meta.time}ms</span>
                 <span class="meta-badge">📝 ${meta.tokens} tokens</span>
-                <button class="copy-btn" onclick="copyText(this, '${escapeHtml(content)}')" title="Sao chép">📋</button>
+                <button class="copy-btn" onclick="copyText(this)" title="Sao chép">📋</button>
             </div>
         `;
     }
@@ -149,20 +160,48 @@ function addMessage(role, content, meta = null, isError = false) {
         </div>
     `;
 
+    // Store raw content as data attribute for copy
+    msgEl.dataset.rawContent = content;
+
     chatMessages.appendChild(msgEl);
+
+    // Render KaTeX math in the newly added message
+    try {
+        if (typeof renderMathInElement === 'function') {
+            const contentEl = msgEl.querySelector('.message-content');
+            renderMathInElement(contentEl, {
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '\\[', right: '\\]', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                ],
+                throwOnError: false,
+            });
+        }
+    } catch (_) { /* KaTeX not loaded yet, skip silently */ }
+
+    // Push to both arrays
     conversationMessages.push({ role, content });
+    if (!isError) {
+        conversationHistory.push({ role, content });
+    }
+
     scrollToBottom();
 }
 
-// ─── Format Content ───
+// ─── Format Content (Markdown via marked.js) ───
 function formatContent(text) {
-    // Basic formatting
+    if (typeof marked !== 'undefined' && marked.parse) {
+        // Use marked.js for full Markdown rendering
+        const rawHtml = marked.parse(text);
+        // Wrap in a container to avoid paragraph margin issues
+        return rawHtml;
+    }
+    // Fallback: basic formatting if marked.js not loaded
     let html = escapeHtml(text);
-    // Bold: **text**
     html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    // Inline code: `code`
     html = html.replace(/`(.*?)`/g, '<code style="background:rgba(124,90,255,0.12);padding:1px 5px;border-radius:4px;font-family:JetBrains Mono,monospace;font-size:12px;color:var(--accent-tertiary);">$1</code>');
-    // Line breaks
     html = html.replace(/\n/g, '<br>');
     return html;
 }
@@ -175,13 +214,12 @@ function escapeHtml(text) {
 }
 
 // ─── Copy Text ───
-function copyText(btn, text) {
-    // Decode the escaped text
-    const textarea = document.createElement('textarea');
-    textarea.innerHTML = text;
-    const decoded = textarea.value;
+function copyText(btn) {
+    // Walk up to the .message element and grab the raw content
+    const msgEl = btn.closest('.message');
+    const raw = msgEl ? msgEl.dataset.rawContent : '';
 
-    navigator.clipboard.writeText(decoded).then(() => {
+    navigator.clipboard.writeText(raw).then(() => {
         const original = btn.textContent;
         btn.textContent = '✅';
         setTimeout(() => btn.textContent = original, 1500);
@@ -205,6 +243,7 @@ function askSuggestion(text) {
 function newChat() {
     chatMessages.innerHTML = '';
     conversationMessages = [];
+    conversationHistory = [];
     if (welcomeScreen) welcomeScreen.style.display = 'flex';
     chatInput.value = '';
     chatInput.style.height = 'auto';
