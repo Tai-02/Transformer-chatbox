@@ -18,7 +18,7 @@ BATCH_SIZE = 64
 D_MODEL = 256
 N_LAYER = 4
 N_HEAD = 8
-DROPOUT = 0.2
+DROPOUT = 0.3         # Tăng từ 0.2 -> 0.3 để giảm overfitting
 EPOCHS = 200
 LR = 5e-4
 
@@ -91,6 +91,7 @@ def train():
             optimizer.zero_grad()
             logits, loss = model(x, y)
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)  # Gradient Clipping
             optimizer.step()
 
             total_train_loss += loss.item()

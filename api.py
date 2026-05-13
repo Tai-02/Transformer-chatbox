@@ -123,7 +123,7 @@ class HistoryItem(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: Optional[List[HistoryItem]] = None
-    temperature: float = 0.5
+    temperature: float = 0.3    # Giảm từ 0.5 → 0.3 để bot chọn từ chắc chắn hơn, bớt nói sảng
     top_k: int = 3
     max_tokens: int = 100
 
