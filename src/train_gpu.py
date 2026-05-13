@@ -158,7 +158,7 @@ def train_one_model(config_name, config, device, train_seq, val_seq, pad_idx, vo
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
     
     scaler = torch.amp.GradScaler('cuda') if torch.cuda.is_available() else None
-    early_stopping = EarlyStopping(patience=15, delta=0.005)
+    early_stopping = EarlyStopping(patience=30, delta=0.005)
     best_val_loss = float('inf')
     best_val_acc = 0
     best_train_loss = float('inf')
@@ -274,10 +274,13 @@ def train_one_model(config_name, config, device, train_seq, val_seq, pad_idx, vo
                 'dr': DROPOUT
             }, SAVE_PATH)
 
-        early_stopping(avg_val_loss)
-        if early_stopping.early_stop:
-            print(f"⏹️  Early stopping tại epoch {epoch+1}.")
-            break
+        # Chỉ kích hoạt Early Stopping sau khi đã qua ít nhất 1/3 số Epochs
+        # Để tránh mô hình bị dừng sớm quá nhạy cảm ở giai đoạn Warmup & Curriculum lúc đầu
+        if epoch >= (EPOCHS // 3):
+            early_stopping(avg_val_loss)
+            if early_stopping.early_stop:
+                print(f"⏹️  Early stopping tại epoch {epoch+1}.")
+                break
 
     total_time = time.time() - total_start
     
