@@ -1,91 +1,68 @@
-# Transformer Chatbot - Toán Rời Rạc
+# 🤖 Transformer Chatbot - Toán Rời Rạc
+*(Tích hợp Kiến trúc Não lai Hybrid RAG 3 Lớp)*
 
-Dự án xây dựng một chatbot dựa trên kiến trúc Transformer (Decoder-only) chuyên về giải đáp các câu hỏi Toán rời rạc. Mô hình được tối ưu hóa để chạy tốt trên cả CPU và GPU cá nhân.
+Dự án xây dựng một AI Chatbot giải đáp câu hỏi môn Toán rời rạc. Bot sử dụng kiến trúc **Hybrid RAG (Retrieval-Augmented Generation)** kết hợp cùng mô hình **Transformer (Decoder-only)** tự huấn luyện từ con số 0, nhằm đảm bảo độ chính xác 100% về mặt học thuật đồng thời giữ được sự linh hoạt trong giao tiếp.
 
 ---
 
-## 📂 Cấu trúc thư mục (Directory Structure)
-Do các file dữ liệu lớn và model checkpoints được liệt kê trong `.gitignore`, bạn cần chuẩn bị cấu trúc thư mục như sau trước khi chạy:
+## 🧠 Kiến Trúc Não Lai (Hybrid 3-Layer Architecture)
+Thay vì phó mặc hoàn toàn cho Transformer (dễ sinh ra ảo giác - Hallucination), dự án áp dụng hệ thống điều phối 3 lớp thông minh:
+
+- 🛡️ **Lớp 1 (Exact Match - Khớp chính xác):** Sử dụng thuật toán TF-IDF. Chặn đứng các câu hỏi trùng khớp 100% với sách giáo khoa và trả về đáp án siêu tốc trong `0.02s`.
+- 🔮 **Lớp 2 (Semantic Search - Tìm kiếm ngữ nghĩa):** Tích hợp Vector Embedding để tính toán Jaccard + TF-IDF. Dù người dùng gõ tiếng lóng, sai chính tả hay đảo từ, hệ thống vẫn "hiểu ý" và trích xuất đúng định nghĩa toán học. (Ngưỡng an toàn tối ưu: `0.45`).
+- 🧬 **Lớp 3 (Transformer AI - Suy luận sáng tạo):** Nếu câu hỏi hoàn toàn mới (Vượt ngoài sách), mạng Nơ-ron Transformer 26 triệu tham số sẽ tự động tiếp quản và tự múa bút sáng tác câu trả lời.
+
+👉 **Tính năng bổ sung:** Tích hợp **Lớp 0 (Chit-Chat Filter)** giúp Bot có "Kỹ năng mềm" - Biết chào hỏi và cảm ơn cực kỳ dẻo miệng!
+
+---
+
+## 📂 Cấu trúc thư mục
 
 ```text
 Transformer/
 ├── data/
-│   ├── raw/           <-- Đặt file 'output.csv' vào đây
-│   ├── augmented/     <-- Tự động tạo khi chạy augment_data.py
-│   └── processed/     <-- Tự động tạo khi chạy preprocess.py
-├── models/            <-- Nơi lưu trữ 'model.pt' sau khi train
-├── logs/              <-- Nơi lưu trữ 'progress.txt'
-├── src/               <-- Mã nguồn (Preprocess, Train, Model)
-├── chat.py            <-- Script để chat với bot
+│   ├── raw/           <-- Dữ liệu gốc (output.csv)
+│   ├── augmented/     <-- Dữ liệu đã nhân bản (output_augmented.csv)
+│   └── processed/     <-- Dữ liệu đã mã hóa (vocab.pkl, data.pkl)
+├── models/            <-- Lưu trữ 'model.pt' (Pre-trained Transformer)
+├── src/               
+│   ├── brain_rag.py   <-- 🧠 Bộ não lai RAG (Core)
+│   ├── model.py       <-- Kiến trúc mạng Transformer
+│   ├── augment_data.py<-- Script nhân bản dữ liệu
+│   └── preprocess.py  <-- Tokenization
+├── web/               <-- Giao diện Frontend (HTML, CSS, JS)
+├── api.py             <-- Máy chủ FastAPI điều phối hệ thống
 └── README.md
 ```
 
-## 🛠 Cài đặt & Chuẩn bị
+---
 
-### 1. Tạo các thư mục cần thiết
-Nếu bạn vừa clone project này, hãy chạy lệnh sau để tạo các thư mục bị thiếu:
+## 🛠 Hướng dẫn chạy Hệ thống
+
+### 1. Chuẩn bị Dữ liệu & Huấn luyện (Nếu chưa có model)
+Dù bạn chọn chạy bằng CPU hay GPU, quy trình chuẩn bị dữ liệu là bắt buộc:
 ```powershell
-mkdir data/raw, data/augmented, data/processed, models, logs
+python src/augment_data.py  # Nhân bản dữ liệu
+python src/preprocess.py    # Xây dựng từ điển (Vocab)
+python src/train.py         # Huấn luyện mô hình
 ```
 
-### 2. Chuẩn bị dữ liệu thô
-Tải file dữ liệu mẫu tại đây: [Google Drive - Dữ liệu mẫu](https://drive.google.com/drive/folders/17U5mYwNusa2OKSnUFA4fyNiI6aPK1_vd?usp=sharing)
-
-Sau đó copy file vào đường dẫn: `data/raw/output.csv`.
-*Định dạng file CSV: `Chủ đề;Câu hỏi;Câu trả lời` (Phân tách bằng dấu chấm phẩy `;`)*
-
----
-
-## 📌 Quy trình thực hiện (Bắt buộc)
-
-Dù bạn chọn chạy bằng CPU hay GPU, bạn đều phải thực hiện 2 bước chuẩn bị dữ liệu sau:
-
-1. **Tăng cường dữ liệu (Data Augmentation):**
-   ```powershell
-   python src/augment_data.py
-   ```
-   *Lệnh này sẽ đọc từ `data/raw/output.csv` và tạo ra `data/augmented/output_augmented.csv`.*
-
-2. **Tiền xử lý và Tokenize:**
-   ```powershell
-   python src/preprocess.py
-   ```
-   *Lệnh này sẽ tạo ra `vocab.pkl` và `data.pkl` trong thư mục `data/processed/`.*
-
----
-
-## 🚀 Cách 1: Huấn luyện bằng GPU (Khuyên dùng)
-Dành cho máy tính có card đồ họa NVIDIA. Tốc độ xử lý nhanh gấp nhiều lần CPU.
-
-*   **Lệnh chạy:**
-    ```powershell
-    python src/train_gpu.py
-    ```
-*   **Đặc điểm:** Sử dụng thư viện `CUDA`, hỗ trợ tự động nhận diện phần cứng và tối ưu hóa bộ nhớ.
-
-## 💻 Cách 2: Huấn luyện bằng CPU
-Dành cho máy tính không có card đồ họa rời hoặc muốn chạy tiết kiệm năng lượng.
-
-*   **Lệnh chạy:**
-    ```powershell
-    python src/train.py
-    ```
-*   **Đặc điểm:** Chạy ổn định trên mọi hệ máy, các thông số đã được đồng bộ hóa hoàn toàn với bản GPU.
-
----
-
-## 💬 Cách Chat với Bot
-Sau khi huấn luyện xong, model tốt nhất sẽ được lưu tại `models/model.pt`. Để trò chuyện với Bot, hãy chạy:
+### 2. Khởi động Máy chủ API & Giao diện Web (Khuyên dùng)
+Dự án được trang bị một hệ thống Web cực kỳ hiện đại mang phong cách Cyber-Academic. Để bật Web:
 
 ```powershell
-python chat.py
+python api.py
 ```
+👉 Sau đó, mở trình duyệt và truy cập: **`http://localhost:8000`**
 
-## 🛠 Thông số kỹ thuật (Cấu hình "Tốc độ")
-- **Kiến trúc:** Transformer Decoder (4 Layers, 8 Heads)
-- **D_Model:** 256
-- **Dropout:** 0.2 (Chống học vẹt)
-- **Optimizer:** AdamW (Weight Decay: 0.05)
-- **Loss Function:** CrossEntropy (Label Smoothing: 0.1)
-- **Early Stopping:** Tự động dừng nếu sai số tập Val không cải thiện quá 0.01 trong 10 Epoch liên tiếp.
+Dưới mỗi câu trả lời của Bot, bạn sẽ thấy các **Huy hiệu (Badge)** nhiều màu sắc (Xanh/Tím/Cam) minh bạch hóa quá trình suy luận và độ tin cậy (Confidence Score) của Bot!
+
+---
+
+## 🛠 Thông số kỹ thuật Model (Cấu hình Large)
+- **Kiến trúc:** Transformer Decoder (8 Layers, 16 Heads)
+- **D_Model:** 512 | **Tham số:** ~26 Triệu
+- **Dropout:** 0.4 (Chống học vẹt tối đa)
+- **Cơ chế Attention:** Masked Multi-Head Self-Attention
+- **API Server:** FastAPI + Uvicorn
 

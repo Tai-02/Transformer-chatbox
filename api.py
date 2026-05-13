@@ -186,14 +186,56 @@ async def chat(req: ChatRequest):
     start_time = time.perf_counter()
 
     # ═══════════════════════════════════════════════════════════
+    #  LỚP 0: BỘ LỌC GIAO TIẾP XÃ GIAO (CHIT-CHAT)
+    # ═══════════════════════════════════════════════════════════
+    msg_lower = message.lower()
+    if len(msg_lower) < 25:
+        if any(w in msg_lower for w in ["chào", "hello", "hi ", "helo", "xin chào", "alo", "ê"]):
+            return ChatResponse(
+                response="Chào bạn nha! 👋 Mình là Trợ lý AI môn Toán Rời Rạc siêu cấp đáng yêu đây. Hôm nay mình giúp gì được cho bạn nè? 🥰",
+                tokens_generated=25,
+                inference_time_ms=1.2,
+                source_layer=1,
+                source_method="Giao tiếp cơ bản",
+                confidence=1.0,
+                matched_question="[Xã giao]"
+            )
+        elif any(w in msg_lower for w in ["cảm ơn", "thank", "cám ơn", "tks"]):
+            return ChatResponse(
+                response="Dạ không có chi! 💖 Chúc bạn làm môn Toán rời rạc đạt điểm 10 tuyệt đối nha! Cần hỏi bài gì cứ gõ vào đây nhé! 🚀",
+                tokens_generated=25,
+                inference_time_ms=1.2,
+                source_layer=1,
+                source_method="Giao tiếp cơ bản",
+                confidence=1.0,
+                matched_question="[Xã giao]"
+            )
+
+    # ═══════════════════════════════════════════════════════════
     #  THỬ LỚP 1 & LỚP 2: Hybrid RAG Brain
     # ═══════════════════════════════════════════════════════════
     if hybrid_brain and hybrid_brain.is_loaded:
         rag_result = hybrid_brain.search(message)
         if rag_result:
             elapsed_ms = (time.perf_counter() - start_time) * 1000
+            
+            import random
+            prefixes = [
+                "Chào bạn! Theo mình được học thì:\n",
+                "Câu này có trong sách giáo khoa nè! Đáp án là:\n",
+                "Để mình giải thích phần này cho bạn nhé:\n",
+                "Dạ, kiến thức chuẩn về phần này là:\n"
+            ]
+            suffixes = [
+                "\n\nHy vọng câu trả lời này giúp ích cho bạn nha! 🥰",
+                "\n\nBạn còn thắc mắc chỗ nào nữa không ạ? 😊",
+                "\n\nChúc bạn học tốt môn Toán Rời Rạc nha! 🚀"
+            ]
+            # Chỉ bọc văn phong thân thiện nếu đáp án là chữ bình thường
+            friendly_answer = f"{random.choice(prefixes)}{rag_result['answer']}{random.choice(suffixes)}"
+            
             return ChatResponse(
-                response=rag_result['answer'],
+                response=friendly_answer,
                 tokens_generated=len(rag_result['answer'].split()),
                 inference_time_ms=round(elapsed_ms, 2),
                 source_layer=rag_result['layer'],
@@ -244,8 +286,19 @@ async def chat(req: ChatRequest):
     response = re.sub(r'\s+([.,!?()])', r'\1', response)
     response = response.strip().rstrip('?')
 
+    if response:
+        import random
+        prefixes_ai = [
+            "Hmm, phần này trong sách không có ghi rõ, nhưng theo mình suy luận thì:\n",
+            "Câu hỏi này lạ quá! Nhưng mình thử ráp kiến thức lại xem sao nhé:\n",
+            "Để mình thử tư duy một chút xem... Có vẻ như là:\n"
+        ]
+        friendly_ai_response = f"{random.choice(prefixes_ai)}{response}\n\n(Lưu ý: Đây là câu trả lời do AI tự sáng tạo, bạn nhớ kiểm tra lại nhé! 🤖)"
+    else:
+        friendly_ai_response = "Xin lỗi, mình chưa học tới phần kiến thức này rồi. Bạn hỏi câu khác nhé! 😅"
+
     return ChatResponse(
-        response=response if response else "Xin lỗi, mình chưa hiểu câu hỏi này.",
+        response=friendly_ai_response,
         tokens_generated=len(response_tokens),
         inference_time_ms=round(elapsed_ms, 2),
         source_layer=3,
