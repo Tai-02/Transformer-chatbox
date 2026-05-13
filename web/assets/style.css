@@ -847,3 +847,39 @@ body::after {
     from { transform: translateX(100%); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
+
+/* ═══════════════════════════════════════
+   HYBRID BRAIN - LAYER BADGES
+   ═══════════════════════════════════════ */
+.layer-badge {
+    font-weight: 600 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 10px !important;
+    letter-spacing: 0.3px;
+    padding: 3px 10px !important;
+    transition: all var(--transition-fast);
+}
+
+/* Lớp 1: Exact Match - Xanh lá (Chính xác tuyệt đối) */
+.layer-badge.layer-1 {
+    background: rgba(16, 185, 129, 0.12) !important;
+    border-color: rgba(16, 185, 129, 0.25) !important;
+    color: #10B981 !important;
+    box-shadow: 0 0 8px rgba(16, 185, 129, 0.15);
+}
+
+/* Lớp 2: Semantic Search - Tím (Tìm kiếm ngữ nghĩa) */
+.layer-badge.layer-2 {
+    background: rgba(167, 139, 250, 0.12) !important;
+    border-color: rgba(167, 139, 250, 0.25) !important;
+    color: #A78BFA !important;
+    box-shadow: 0 0 8px rgba(167, 139, 250, 0.15);
+}
+
+/* Lớp 3: Transformer AI - Cam (Sáng tạo) */
+.layer-badge.layer-3 {
+    background: rgba(245, 158, 11, 0.12) !important;
+    border-color: rgba(245, 158, 11, 0.25) !important;
+    color: #F59E0B !important;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.15);
+}

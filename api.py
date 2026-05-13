@@ -1,6 +1,10 @@
 """
 FastAPI Backend cho Transformer Chatbot - Toán Rời Rạc
-Bọc model PyTorch thành REST API endpoint.
+======================================================
+Kiến trúc Hybrid 3 Lớp:
+  Lớp 1: TF-IDF Exact Match (Khớp chính xác)
+  Lớp 2: Semantic Keyword Search (Tìm kiếm ngữ nghĩa)
+  Lớp 3: Transformer Generate (AI sáng tạo câu trả lời)
 """
 
 import torch
@@ -31,6 +35,7 @@ word2idx = None
 idx2word = None
 device = None
 model_info = {}
+hybrid_brain = None  # 🧠 Bộ não lai Hybrid RAG
 
 
 def tokenize(text):
@@ -43,11 +48,12 @@ def tokenize(text):
 
 def load_model():
     """Load model và vocab vào bộ nhớ 1 lần duy nhất"""
-    global model, word2idx, idx2word, device, model_info
+    global model, word2idx, idx2word, device, model_info, hybrid_brain
 
     # Thêm src vào path để import model
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
     from model import make_model
+    from brain_rag import HybridBrain
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -85,6 +91,18 @@ def load_model():
     }
 
     print(f"[OK] Model loaded on {device} | Vocab: {len(word2idx)} | d_model: {checkpoint['d_m']}")
+
+    # ─── 🧠 Khởi động Hybrid RAG Brain ───
+    hybrid_brain = HybridBrain()
+    rag_success = hybrid_brain.load_knowledge_base()
+    if rag_success:
+        model_info["rag_status"] = "active"
+        model_info["rag_qa_pairs"] = len(hybrid_brain.qa_pairs)
+        print(f"[OK] Hybrid Brain ACTIVATED! 🧠 3-Layer Architecture Ready!")
+    else:
+        print("[WARN] RAG Brain could not load. Falling back to Transformer-only mode.")
+        model_info["rag_status"] = "inactive"
+
     return True
 
 
@@ -100,8 +118,8 @@ async def lifespan(app: FastAPI):
 # ─── FastAPI App ───
 app = FastAPI(
     title="Transformer Chatbot - Toán Rời Rạc",
-    description="API cho chatbot Toán Rời Rạc sử dụng kiến trúc Transformer Decoder-only",
-    version="1.0.0",
+    description="API cho chatbot Toán Rời Rạc sử dụng kiến trúc Hybrid 3 Lớp (TF-IDF + Semantic + Transformer)",
+    version="2.0.0",
     lifespan=lifespan,
 )
 
@@ -132,6 +150,10 @@ class ChatResponse(BaseModel):
     response: str
     tokens_generated: int
     inference_time_ms: float
+    source_layer: Optional[int] = None        # Lớp nào đã trả lời (1, 2, hoặc 3)
+    source_method: Optional[str] = None       # Phương pháp đã dùng
+    confidence: Optional[float] = None        # Độ tin cậy (0.0 - 1.0)
+    matched_question: Optional[str] = None    # Câu hỏi gốc đã khớp (nếu có)
 
 
 # ─── Endpoints ───
@@ -147,7 +169,13 @@ async def health_check():
 
 @app.post("/api/chat", response_model=ChatResponse)
 async def chat(req: ChatRequest):
-    """Gửi câu hỏi và nhận câu trả lời từ chatbot (hỗ trợ multi-turn history)"""
+    """
+    Gửi câu hỏi và nhận câu trả lời từ chatbot.
+    Hệ thống sẽ tự động chọn lớp phù hợp nhất để trả lời:
+      Lớp 1: Khớp chính xác (nhanh nhất, chính xác nhất)
+      Lớp 2: Tìm kiếm ngữ nghĩa (thông minh, linh hoạt)
+      Lớp 3: Transformer AI (sáng tạo, cho câu hỏi hoàn toàn mới)
+    """
     if model is None:
         raise HTTPException(status_code=503, detail="Model chưa được load.")
 
@@ -155,7 +183,29 @@ async def chat(req: ChatRequest):
     if not message:
         raise HTTPException(status_code=400, detail="Tin nhắn không được để trống.")
 
-    # ─── Build prompt from current question ONLY ───
+    start_time = time.perf_counter()
+
+    # ═══════════════════════════════════════════════════════════
+    #  THỬ LỚP 1 & LỚP 2: Hybrid RAG Brain
+    # ═══════════════════════════════════════════════════════════
+    if hybrid_brain and hybrid_brain.is_loaded:
+        rag_result = hybrid_brain.search(message)
+        if rag_result:
+            elapsed_ms = (time.perf_counter() - start_time) * 1000
+            return ChatResponse(
+                response=rag_result['answer'],
+                tokens_generated=len(rag_result['answer'].split()),
+                inference_time_ms=round(elapsed_ms, 2),
+                source_layer=rag_result['layer'],
+                source_method=rag_result['method'],
+                confidence=rag_result['score'],
+                matched_question=rag_result['matched_question'],
+            )
+
+    # ═══════════════════════════════════════════════════════════
+    #  LỚP 3: Transformer Generate (Fallback)
+    # ═══════════════════════════════════════════════════════════
+    # Build prompt from current question ONLY
     # Vì mô hình train trên từng câu đơn, việc nối history sẽ làm hỏng Positional Encoding
     current_tokens = tokenize(message)
     if not current_tokens:
@@ -171,7 +221,6 @@ async def chat(req: ChatRequest):
     x = torch.tensor([prompt_indices]).to(device)
 
     # ─── Generate ───
-    start_time = time.perf_counter()
     with torch.no_grad():
         out_ids = model.generate(
             x,
@@ -199,6 +248,10 @@ async def chat(req: ChatRequest):
         response=response if response else "Xin lỗi, mình chưa hiểu câu hỏi này.",
         tokens_generated=len(response_tokens),
         inference_time_ms=round(elapsed_ms, 2),
+        source_layer=3,
+        source_method='Transformer Generate',
+        confidence=None,
+        matched_question=None,
     )
 
 

@@ -112,6 +112,10 @@ async function sendMessage() {
         addMessage('bot', data.response, {
             tokens: data.tokens_generated,
             time: data.inference_time_ms,
+            source_layer: data.source_layer,
+            source_method: data.source_method,
+            confidence: data.confidence,
+            matched_question: data.matched_question,
         });
     } catch (err) {
         typingIndicator.classList.remove('active');
@@ -137,8 +141,27 @@ function addMessage(role, content, meta = null, isError = false) {
 
     let metaHTML = '';
     if (meta && role === 'bot') {
+        // Tạo badge hiển thị Layer nguồn gốc
+        let layerBadge = '';
+        if (meta.source_layer === 1) {
+            layerBadge = `<span class="meta-badge layer-badge layer-1">🛡️ Lớp 1 · Chính xác</span>`;
+        } else if (meta.source_layer === 2) {
+            layerBadge = `<span class="meta-badge layer-badge layer-2">🔮 Lớp 2 · Ngữ nghĩa</span>`;
+        } else if (meta.source_layer === 3) {
+            layerBadge = `<span class="meta-badge layer-badge layer-3">🧬 Lớp 3 · AI Sáng tạo</span>`;
+        }
+
+        // Badge độ tin cậy (chỉ hiện cho Layer 1 & 2)
+        let confidenceBadge = '';
+        if (meta.confidence != null) {
+            const pct = Math.round(meta.confidence * 100);
+            confidenceBadge = `<span class="meta-badge">🎯 ${pct}%</span>`;
+        }
+
         metaHTML = `
             <div class="message-meta">
+                ${layerBadge}
+                ${confidenceBadge}
                 <span class="meta-badge">⚡ ${meta.time}ms</span>
                 <span class="meta-badge">📝 ${meta.tokens} tokens</span>
                 <button class="copy-btn" onclick="copyText(this)" title="Sao chép">📋</button>
