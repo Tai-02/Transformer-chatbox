@@ -89,3 +89,21 @@ python chat.py
 - **Loss Function:** CrossEntropy (Label Smoothing: 0.1)
 - **Early Stopping:** Tự động dừng nếu sai số tập Val không cải thiện quá 0.01 trong 10 Epoch liên tiếp.
 
+---
+
+## 🌐 Giao diện Web
+Hệ thống đã được nâng cấp lên ứng dụng Web phong cách "Cyber-Academic" hiện đại, thay thế cho giao diện Terminal truyền thống.
+
+**Tính năng nổi bật:**
+- **Backend FastAPI:** Tải model vào RAM/VRAM một lần duy nhất (`lifespan`), cung cấp REST API tốc độ cao.
+- **Frontend Hiện đại:** Vanilla JS kết hợp giao diện Glassmorphism, Dark Mode, Typing Effect.
+- **Hiển thị Toán học:** Tích hợp `marked.js` và `KaTeX` để tự động render Markdown và các công thức Toán rời rạc (LaTeX).
+- **Báo cáo hiệu năng:** Hiển thị thời gian Inference (ms) và số lượng tokens sinh ra ở mỗi câu trả lời.
+
+**Cách khởi động Web UI:**
+1. Đảm bảo bạn đã huấn luyện model thành công (đã có file `models/model.pt` và `data/processed/vocab.pkl`).
+2. Chạy lệnh sau để bật máy chủ:
+   ```powershell
+   python api.py
+   ```
+3. Mở trình duyệt (Chrome/Edge) và truy cập vào: **[http://localhost:8000](http://localhost:8000)**
