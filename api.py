@@ -155,44 +155,18 @@ async def chat(req: ChatRequest):
     if not message:
         raise HTTPException(status_code=400, detail="Tin nhắn không được để trống.")
 
-    # ─── Build prompt from conversation history ───
-    # Format: <sos> Q1 <sep> A1 <eos> <sos> Q2 <sep> A2 <eos> ... <sos> Qn <sep>
-    prompt_indices = []
-    history = req.history or []
-
-    # Process past turns (pairs of user→bot)
-    i = 0
-    while i < len(history) - 1:  # Exclude the last item (current user msg)
-        item = history[i]
-        if item.role == 'user':
-            q_tokens = tokenize(item.content)
-            prompt_indices.append(word2idx['<sos>'])
-            prompt_indices.extend([word2idx.get(w, word2idx['<unk>']) for w in q_tokens])
-            prompt_indices.append(word2idx['<sep>'])
-            # Look for the next bot response
-            if i + 1 < len(history) and history[i + 1].role == 'bot':
-                a_tokens = tokenize(history[i + 1].content)
-                prompt_indices.extend([word2idx.get(w, word2idx['<unk>']) for w in a_tokens])
-                prompt_indices.append(word2idx['<eos>'])
-                i += 2
-            else:
-                i += 1
-        else:
-            i += 1
-
-    # Append current question
+    # ─── Build prompt from current question ONLY ───
+    # Vì mô hình train trên từng câu đơn, việc nối history sẽ làm hỏng Positional Encoding
     current_tokens = tokenize(message)
     if not current_tokens:
         raise HTTPException(status_code=400, detail="Không thể tokenize tin nhắn.")
 
-    prompt_indices.append(word2idx['<sos>'])
-    prompt_indices.extend([word2idx.get(w, word2idx['<unk>']) for w in current_tokens])
-    prompt_indices.append(word2idx['<sep>'])
-
-    # Truncate if too long (keep last max_len tokens to avoid positional overflow)
-    max_ctx = model.max_len - req.max_tokens
-    if len(prompt_indices) > max_ctx:
-        prompt_indices = prompt_indices[-max_ctx:]
+    # Encode input: <sos> + question_tokens + <sep>
+    prompt_indices = (
+        [word2idx['<sos>']]
+        + [word2idx.get(w, word2idx['<unk>']) for w in current_tokens]
+        + [word2idx['<sep>']]
+    )
 
     x = torch.tensor([prompt_indices]).to(device)
 
