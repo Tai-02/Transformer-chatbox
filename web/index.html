@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformer Chatbot – Toán Rời Rạc</title>
+    <meta name="description" content="Chatbot AI chuyên giải đáp câu hỏi Toán Rời Rạc, sử dụng kiến trúc Transformer Decoder-only.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- ═══ SIDEBAR ═══ -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">🧠</div>
+                    <div class="logo-text">
+                        <span class="logo-title">Transformer Bot</span>
+                        <span class="logo-subtitle">Toán Rời Rạc</span>
+                    </div>
+                </div>
+                <button class="new-chat-btn" id="newChatBtn">
+                    <span class="icon">✨</span>
+                    Cuộc trò chuyện mới
+                </button>
+            </div>
+
+            <div class="sidebar-body">
+                <div class="sidebar-section-title">📚 Chủ đề gợi ý</div>
+                <div class="topic-list">
+                    <div class="topic-item" data-question="Đồ thị Euler là gì?">
+                        <span class="topic-icon">📐</span>
+                        <span class="topic-label">Đồ thị Euler</span>
+                    </div>
+                    <div class="topic-item" data-question="Giải thích thuật toán Dijkstra">
+                        <span class="topic-icon">🔍</span>
+                        <span class="topic-label">Thuật toán Dijkstra</span>
+                    </div>
+                    <div class="topic-item" data-question="Cây khung nhỏ nhất là gì?">
+                        <span class="topic-icon">🌳</span>
+                        <span class="topic-label">Cây khung nhỏ nhất</span>
+                    </div>
+                    <div class="topic-item" data-question="Nguyên lý Dirichlet là gì?">
+                        <span class="topic-icon">🕳️</span>
+                        <span class="topic-label">Nguyên lý Dirichlet</span>
+                    </div>
+                    <div class="topic-item" data-question="Logic mệnh đề là gì?">
+                        <span class="topic-icon">🔢</span>
+                        <span class="topic-label">Logic mệnh đề</span>
+                    </div>
+                    <div class="topic-item" data-question="Hoán vị và tổ hợp khác nhau thế nào?">
+                        <span class="topic-icon">🎲</span>
+                        <span class="topic-label">Hoán vị & Tổ hợp</span>
+                    </div>
+                    <div class="topic-item" data-question="Quan hệ tương đương là gì?">
+                        <span class="topic-icon">🔗</span>
+                        <span class="topic-label">Quan hệ tương đương</span>
+                    </div>
+                    <div class="topic-item" data-question="Phép chứng minh quy nạp là gì?">
+                        <span class="topic-icon">📜</span>
+                        <span class="topic-label">Chứng minh quy nạp</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="model-badge" id="modelBadge">
+                    <span class="pulse"></span>
+                    Đang kết nối...
+                </div>
+            </div>
+        </aside>
+
+        <!-- Sidebar overlay for mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- ═══ MAIN CONTENT ═══ -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="chat-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Menu">☰</button>
+                    <div>
+                        <div class="chat-title">Trợ lý Toán Rời Rạc</div>
+                        <div class="chat-title-sub">Transformer Decoder · 4 Layers · 8 Heads</div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="header-btn" id="clearBtn" title="Xóa cuộc trò chuyện">🗑️</button>
+                </div>
+            </header>
+
+            <!-- Chat Area -->
+            <div class="chat-container" id="chatContainer">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-icon">🧠</div>
+                    <h1 class="welcome-title">Xin chào! Mình là Transformer Bot</h1>
+                    <p class="welcome-desc">
+                        Mình có thể giúp bạn giải đáp các câu hỏi về <strong>Toán Rời Rạc</strong> – từ Lý thuyết
+                        đồ thị, Logic mệnh đề, Tổ hợp đến Đại số Bool. Hãy hỏi bất cứ điều gì!
+                    </p>
+
+                    <div class="suggestion-grid">
+                        <div class="suggestion-card" onclick="askSuggestion('Đồ thị Euler là gì?')">
+                            <span class="sg-icon">📐</span>
+                            <span class="sg-text">Đồ thị Euler là gì? Điều kiện để đồ thị có chu trình Euler?</span>
+                        </div>
+                        <div class="suggestion-card" onclick="askSuggestion('Thuật toán Dijkstra hoạt động như thế nào?')">
+                            <span class="sg-icon">🔍</span>
+                            <span class="sg-text">Thuật toán Dijkstra hoạt động như thế nào?</span>
+                        </div>
+                        <div class="suggestion-card" onclick="askSuggestion('Nguyên lý Dirichlet là gì?')">
+                            <span class="sg-icon">🕳️</span>
+                            <span class="sg-text">Nguyên lý Dirichlet (nguyên lý chuồng bồ câu) là gì?</span>
+                        </div>
+                        <div class="suggestion-card" onclick="askSuggestion('Phân biệt hoán vị, chỉnh hợp và tổ hợp')">
+                            <span class="sg-icon">🎲</span>
+                            <span class="sg-text">Phân biệt hoán vị, chỉnh hợp và tổ hợp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages"></div>
+
+                <!-- Typing Indicator -->
+                <div class="typing-indicator" id="typingIndicator" style="max-width:780px;margin:0 auto;padding:0 24px;">
+                    <div class="message-avatar" style="background:linear-gradient(135deg,var(--accent-primary),var(--accent-secondary));box-shadow:var(--glow-primary);">🤖</div>
+                    <div class="typing-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <div class="input-container">
+                        <textarea class="chat-input" id="chatInput" placeholder="Hỏi về Toán Rời Rạc..." rows="1" autofocus></textarea>
+                        <button class="send-btn" id="sendBtn" title="Gửi tin nhắn">
+                            ➤
+                        </button>
+                    </div>
+                    <div class="input-hint">
+                        Nhấn <kbd>Enter</kbd> để gửi · <kbd>Shift+Enter</kbd> để xuống dòng
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/assets/app.js"></script>
+</body>
+
+</html>
