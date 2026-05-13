@@ -163,3 +163,8 @@ logs/
 data/raw/
 data/processed/
 data/augmented/
+
+# Cho phép push các file dữ liệu cốt lõi phục vụ API
+!data/raw/output.csv
+!data/augmented/output_augmented.csv
+!data/processed/vocab.pkl
