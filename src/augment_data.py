@@ -137,7 +137,7 @@ def main():
         print(f"Không tìm thấy file: {INPUT_CSV}")
         return
 
-    df = pd.read_csv(INPUT_CSV, sep=';')
+    df = pd.read_csv(INPUT_CSV, sep=';', encoding='utf-8-sig')
     # Xử lý header linh hoạt
     if df.columns[0].strip().lower() in ['chương', 'topic', 'chủ đề']:
         df.columns = ['topic', 'question', 'answer']
@@ -157,7 +157,7 @@ def main():
 
     os.makedirs(os.path.dirname(OUTPUT_CSV), exist_ok=True)
     result_df = pd.DataFrame(augmented_data)
-    result_df.to_csv(OUTPUT_CSV, sep=';', index=False, header=False)
+    result_df.to_csv(OUTPUT_CSV, sep=';', index=False, header=False, encoding='utf-8-sig')
 
     original_count = len(df)
     augmented_count = len(result_df)
