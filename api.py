@@ -1,10 +1,8 @@
 """
 FastAPI Backend cho Transformer Chatbot - Toán Rời Rạc
 ======================================================
-Kiến trúc Hybrid 3 Lớp:
-  Lớp 1: TF-IDF Exact Match (Khớp chính xác)
-  Lớp 2: Semantic Keyword Search (Tìm kiếm ngữ nghĩa)
-  Lớp 3: Transformer Generate (AI sáng tạo câu trả lời)
+Kiến trúc:
+  Lớp duy nhất: Transformer Generate (AI sáng tạo câu trả lời)
 """
 
 import torch
@@ -35,7 +33,6 @@ word2idx = None
 idx2word = None
 device = None
 model_info = {}
-hybrid_brain = None  # 🧠 Bộ não lai Hybrid RAG
 
 
 def tokenize(text):
@@ -48,12 +45,11 @@ def tokenize(text):
 
 def load_model():
     """Load model và vocab vào bộ nhớ 1 lần duy nhất"""
-    global model, word2idx, idx2word, device, model_info, hybrid_brain
+    global model, word2idx, idx2word, device, model_info
 
     # Thêm src vào path để import model
     sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
     from model import make_model
-    from brain_rag import HybridBrain
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -91,17 +87,6 @@ def load_model():
     }
 
     print(f"[OK] Model loaded on {device} | Vocab: {len(word2idx)} | d_model: {checkpoint['d_m']}")
-
-    # ─── 🧠 Khởi động Hybrid RAG Brain ───
-    hybrid_brain = HybridBrain()
-    rag_success = hybrid_brain.load_knowledge_base()
-    if rag_success:
-        model_info["rag_status"] = "active"
-        model_info["rag_qa_pairs"] = len(hybrid_brain.qa_pairs)
-        print(f"[OK] Hybrid Brain ACTIVATED! 🧠 3-Layer Architecture Ready!")
-    else:
-        print("[WARN] RAG Brain could not load. Falling back to Transformer-only mode.")
-        model_info["rag_status"] = "inactive"
 
     return True
 
@@ -212,40 +197,7 @@ async def chat(req: ChatRequest):
             )
 
     # ═══════════════════════════════════════════════════════════
-    #  THỬ LỚP 1 & LỚP 2: Hybrid RAG Brain
-    # ═══════════════════════════════════════════════════════════
-    if hybrid_brain and hybrid_brain.is_loaded:
-        rag_result = hybrid_brain.search(message)
-        if rag_result:
-            elapsed_ms = (time.perf_counter() - start_time) * 1000
-            
-            import random
-            prefixes = [
-                "Chào bạn! Theo mình được học thì:\n",
-                "Câu này có trong sách giáo khoa nè! Đáp án là:\n",
-                "Để mình giải thích phần này cho bạn nhé:\n",
-                "Dạ, kiến thức chuẩn về phần này là:\n"
-            ]
-            suffixes = [
-                "\n\nHy vọng câu trả lời này giúp ích cho bạn nha! 🥰",
-                "\n\nBạn còn thắc mắc chỗ nào nữa không ạ? 😊",
-                "\n\nChúc bạn học tốt môn Toán Rời Rạc nha! 🚀"
-            ]
-            # Chỉ bọc văn phong thân thiện nếu đáp án là chữ bình thường
-            friendly_answer = f"{random.choice(prefixes)}{rag_result['answer']}{random.choice(suffixes)}"
-            
-            return ChatResponse(
-                response=friendly_answer,
-                tokens_generated=len(rag_result['answer'].split()),
-                inference_time_ms=round(elapsed_ms, 2),
-                source_layer=rag_result['layer'],
-                source_method=rag_result['method'],
-                confidence=rag_result['score'],
-                matched_question=rag_result['matched_question'],
-            )
-
-    # ═══════════════════════════════════════════════════════════
-    #  LỚP 3: Transformer Generate (Fallback)
+    #  LỚP DUY NHẤT: Transformer Generate
     # ═══════════════════════════════════════════════════════════
     # Build prompt from current question ONLY
     # Vì mô hình train trên từng câu đơn, việc nối history sẽ làm hỏng Positional Encoding
@@ -301,7 +253,7 @@ async def chat(req: ChatRequest):
         response=friendly_ai_response,
         tokens_generated=len(response_tokens),
         inference_time_ms=round(elapsed_ms, 2),
-        source_layer=3,
+        source_layer=1,
         source_method='Transformer Generate',
         confidence=None,
         matched_question=None,

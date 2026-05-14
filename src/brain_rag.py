@@ -80,7 +80,7 @@ class HybridBrain:
             return False
 
         try:
-            df = pd.read_csv(data_path, sep=';', encoding='utf-8-sig')
+            df = pd.read_csv(data_path, sep=',', encoding='utf-8-sig')
             df.columns = ['topic', 'question', 'answer']
             # Loại bỏ các dòng trùng lặp (chỉ giữ câu hỏi gốc duy nhất)
             df = df.drop_duplicates(subset=['question'], keep='first')
@@ -293,13 +293,13 @@ class HybridBrain:
             return None
 
         # ── Lớp 1: Khớp chính xác ──
-        result = self.layer1_exact_match(user_question, threshold=0.85)
+        result = self.layer1_exact_match(user_question, threshold=1)
         if result:
             print(f"[RAG] 🛡️  Lớp 1 (Exact Match) | Score: {result['score']} | Q: {result['matched_question'][:50]}...")
             return result
 
         # ── Lớp 2: Tìm kiếm ngữ nghĩa ──
-        result = self.layer2_semantic_search(user_question, threshold=0.45)
+        result = self.layer2_semantic_search(user_question, threshold=1)
         if result:
             print(f"[RAG] 🔮 Lớp 2 (Semantic)    | Score: {result['score']} | Q: {result['matched_question'][:50]}...")
             return result

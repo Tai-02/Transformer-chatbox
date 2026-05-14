@@ -1,18 +1,15 @@
 # 🤖 Transformer Chatbot - Toán Rời Rạc
-*(Tích hợp Kiến trúc Não lai Hybrid RAG 3 Lớp)*
+*(Mô hình Generative AI dựa trên Transformer)*
 
-Dự án xây dựng một AI Chatbot giải đáp câu hỏi môn Toán rời rạc. Bot sử dụng kiến trúc **Hybrid RAG (Retrieval-Augmented Generation)** kết hợp cùng mô hình **Transformer (Decoder-only)** tự huấn luyện từ con số 0, nhằm đảm bảo độ chính xác 100% về mặt học thuật đồng thời giữ được sự linh hoạt trong giao tiếp.
+Dự án xây dựng một AI Chatbot giải đáp câu hỏi môn Toán rời rạc. Bot sử dụng kiến trúc **Transformer (Decoder-only)** tự huấn luyện từ con số 0 để tiếp nhận câu hỏi và tự động sinh ra (generate) câu trả lời dựa trên lượng tri thức đã học được.
 
 ---
 
-## 🧠 Kiến Trúc Não Lai (Hybrid 3-Layer Architecture)
-Thay vì phó mặc hoàn toàn cho Transformer (dễ sinh ra ảo giác - Hallucination), dự án áp dụng hệ thống điều phối 3 lớp thông minh:
+## 🧠 Kiến Trúc Hệ Thống (Pure Transformer)
+Trưởng nhóm quyết định loại bỏ hoàn toàn hệ thống truy xuất (RAG - Lớp 1 & 2) để sử dụng **100% sức mạnh của mạng Nơ-ron Transformer**.
 
-- 🛡️ **Lớp 1 (Exact Match - Khớp chính xác):** Sử dụng thuật toán TF-IDF. Chặn đứng các câu hỏi trùng khớp 100% với sách giáo khoa và trả về đáp án siêu tốc trong `0.02s`.
-- 🔮 **Lớp 2 (Semantic Search - Tìm kiếm ngữ nghĩa):** Tích hợp Vector Embedding để tính toán Jaccard + TF-IDF. Dù người dùng gõ tiếng lóng, sai chính tả hay đảo từ, hệ thống vẫn "hiểu ý" và trích xuất đúng định nghĩa toán học. (Ngưỡng an toàn tối ưu: `0.45`).
-- 🧬 **Lớp 3 (Transformer AI - Suy luận sáng tạo):** Nếu câu hỏi hoàn toàn mới (Vượt ngoài sách), mạng Nơ-ron Transformer 26 triệu tham số sẽ tự động tiếp quản và tự múa bút sáng tác câu trả lời.
-
-👉 **Tính năng bổ sung:** Tích hợp **Lớp 0 (Chit-Chat Filter)** giúp Bot có "Kỹ năng mềm" - Biết chào hỏi và cảm ơn cực kỳ dẻo miệng!
+- 🧬 **Transformer AI (Suy luận sáng tạo):** Mạng Nơ-ron Transformer sẽ tự động phân tích ngữ cảnh câu hỏi và tiến hành quá trình Decoding để tự múa bút sáng tác câu trả lời cho bất kỳ vấn đề nào về Toán rời rạc.
+- 🛡️ **Lớp 0 (Chit-Chat Filter):** Kỹ năng giao tiếp cơ bản (chào hỏi, cảm ơn).
 
 ---
 

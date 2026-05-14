@@ -142,14 +142,7 @@ function addMessage(role, content, meta = null, isError = false) {
     let metaHTML = '';
     if (meta && role === 'bot') {
         // Tạo badge hiển thị Layer nguồn gốc
-        let layerBadge = '';
-        if (meta.source_layer === 1) {
-            layerBadge = `<span class="meta-badge layer-badge layer-1">🛡️ Lớp 1 · Chính xác</span>`;
-        } else if (meta.source_layer === 2) {
-            layerBadge = `<span class="meta-badge layer-badge layer-2">🔮 Lớp 2 · Ngữ nghĩa</span>`;
-        } else if (meta.source_layer === 3) {
-            layerBadge = `<span class="meta-badge layer-badge layer-3">🧬 Lớp 3 · AI Sáng tạo</span>`;
-        }
+        let layerBadge = `<span class="meta-badge layer-badge layer-3">🧬 Transformer AI</span>`;
 
         // Badge độ tin cậy (chỉ hiện cho Layer 1 & 2)
         let confidenceBadge = '';
