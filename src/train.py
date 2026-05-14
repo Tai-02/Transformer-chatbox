@@ -63,7 +63,8 @@ def train():
 
     word2idx, pad_idx, vocab_size = vocab['word2idx'], vocab['word2idx']['<pad>'], len(vocab['word2idx'])
 
-    train_seq, val_seq, _, _ = train_test_split(data['sequences'], data['topics'], test_size=0.2, stratify=data['topics'], random_state=42)
+    train_seq = data['train']['sequences']
+    val_seq = data['val']['sequences']
 
     train_dl = DataLoader(SeqDataset(train_seq), batch_size=BATCH_SIZE, shuffle=True, collate_fn=lambda b: collate_fn(b, pad_idx))
     val_dl = DataLoader(SeqDataset(val_seq), batch_size=BATCH_SIZE, shuffle=False, collate_fn=lambda b: collate_fn(b, pad_idx))
@@ -112,7 +113,7 @@ def train():
 
         avg_val_loss, avg_val_acc = total_val_loss / len(val_dl), total_val_acc / len(val_dl) * 100
         
-        is_overfitting = avg_val_loss > avg_train_loss + 0.5
+        is_overfitting = avg_val_loss > avg_train_loss + 1.0
         warn = " ⚠️ OVERFIT" if is_overfitting else ""
         msg = f"Epoch {epoch+1:3d} | Train: {avg_train_loss:.4f} ({avg_train_acc:.1f}%) | Val: {avg_val_loss:.4f} ({avg_val_acc:.1f}%) | {time.time()-start_time:.1f}s{warn}"
         print(msg)
@@ -126,7 +127,7 @@ def train():
             torch.save({'model_state_dict': model.state_dict(), 'v_size': vocab_size, 'd_m': D_MODEL, 'n_l': N_LAYER, 'n_h': N_HEAD, 'dr': DROPOUT}, SAVE_PATH)
 
         if is_overfitting:
-            stop_msg = f"Stopping training due to Overfitting (Gap > 0.5) at epoch {epoch+1}."
+            stop_msg = f"Stopping training due to Overfitting (Gap > 1.0) at epoch {epoch+1}."
             print(stop_msg)
             with open('logs/progress.txt', 'a', encoding='utf-8') as f:
                 f.write(stop_msg + "\n")

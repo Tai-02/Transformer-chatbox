@@ -1,9 +1,11 @@
 import pandas as pd
 import random
 import os
+from sklearn.model_selection import train_test_split
 
 INPUT_CSV = 'data/raw/output.csv'
-OUTPUT_CSV = 'data/augmented/output_augmented.csv'
+TRAIN_CSV = 'data/augmented/train.csv'
+VAL_CSV = 'data/augmented/val.csv'
 
 def augment_question(question):
     variations = [question]
@@ -49,12 +51,28 @@ def main():
     df.columns = ['topic', 'question', 'answer']
     df = df.dropna(subset=['question', 'answer'])
     
-    augmented_data = []
-    for _, row in df.iterrows():
-        for v in augment_question(row['question']):
-            augmented_data.append({'topic': row['topic'], 'question': v, 'answer': row['answer']})
+    print(f"Original data size: {len(df)}")
+    
+    # Split BEFORE augmentation
+    train_df, val_df = train_test_split(df, test_size=0.20, stratify=df['topic'], random_state=42)
+    
+    print(f"Train size (before augment): {len(train_df)}")
+    print(f"Val size: {len(val_df)}")
 
-    pd.DataFrame(augmented_data).to_csv(OUTPUT_CSV, index=False, header=True, encoding='utf-8-sig')
+    # Augment ONLY train data
+    augmented_train = []
+    for _, row in train_df.iterrows():
+        for v in augment_question(row['question']):
+            augmented_train.append({'topic': row['topic'], 'question': v, 'answer': row['answer']})
+
+    train_augmented_df = pd.DataFrame(augmented_train)
+    print(f"Train size (after augment): {len(train_augmented_df)}")
+
+    # Save both
+    os.makedirs('data/augmented', exist_ok=True)
+    train_augmented_df.to_csv(TRAIN_CSV, index=False, header=True, encoding='utf-8-sig')
+    val_df.to_csv(VAL_CSV, index=False, header=True, encoding='utf-8-sig')
+    print("Saved augmented train and original val to data/augmented/")
 
 if __name__ == "__main__":
     main()
