@@ -54,16 +54,16 @@ MODEL_CONFIGS = {
 }
 
 class EarlyStopping:
-    def __init__(self, patience=30, delta=0.0):
+    def __init__(self, patience=50, delta=0.0):
         self.patience = patience
         self.delta = delta
-        self.best_loss = float('inf')
+        self.best_acc = 0.0  # track accuracy (higher = better)
         self.counter = 0
         self.early_stop = False
 
-    def __call__(self, val_loss):
-        if val_loss < self.best_loss - self.delta:
-            self.best_loss = val_loss
+    def __call__(self, val_acc):
+        if val_acc > self.best_acc + self.delta:
+            self.best_acc = val_acc
             self.counter = 0
         else:
             self.counter += 1
@@ -132,6 +132,7 @@ def train_one_model(config_name, config, device, train_seq, val_seq, pad_idx, vo
     val_dl = DataLoader(SeqDataset(val_seq), batch_size=BATCH_SIZE, shuffle=False,
                         collate_fn=lambda b: collate_fn(b, pad_idx), pin_memory=True)
 
+    print("Initializing model...")
     model = make_model(vocab_size, n_layer=N_LAYER, d_model=D_MODEL, n_head=N_HEAD, dropout=DROPOUT)
     model.to(device)
     

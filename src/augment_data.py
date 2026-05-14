@@ -4,7 +4,8 @@ import os
 import re
 
 INPUT_CSV = 'data/raw/output.csv'
-OUTPUT_CSV = 'data/augmented/output_augmented.csv'
+TRAIN_CSV = 'data/augmented/train.csv'
+VAL_CSV = 'data/augmented/val.csv'
 
 # ============================================================
 # CÁC MẪU ĐA DẠNG HÓA CÂU HỎI (QUESTION AUGMENTATION)

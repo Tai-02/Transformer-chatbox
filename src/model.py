@@ -83,18 +83,28 @@ class Model(nn.Module):
         return logits, loss
 
     @torch.no_grad()
-    def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None):
+    def generate(self, idx, max_new_tokens, temperature=1.0, top_k=None, repetition_penalty=1.2):
         for _ in range(max_new_tokens):
             idx_cond = idx if idx.size(1) <= self.max_len else idx[:, -self.max_len:]
             logits, _ = self(idx_cond)
             logits = logits[:, -1, :] / temperature
+            
+            # Apply repetition penalty
+            for idx_row in range(idx.size(0)):
+                for token_id in set(idx[idx_row].tolist()):
+                    if logits[idx_row, token_id] > 0:
+                        logits[idx_row, token_id] /= repetition_penalty
+                    else:
+                        logits[idx_row, token_id] *= repetition_penalty
+
             if top_k is not None:
                 v, _ = torch.topk(logits, min(top_k, logits.size(-1)))
                 logits[logits < v[:, [-1]]] = -float('Inf')
+            
             probs = F.softmax(logits, dim=-1)
             idx_next = torch.multinomial(probs, num_samples=1)
             idx = torch.cat((idx, idx_next), dim=1)
-            if idx_next.item() == 2:
+            if idx_next.item() == 2: # <eos> is usually 2, let's be careful
                 break
         return idx
 

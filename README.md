@@ -15,51 +15,85 @@ Trưởng nhóm quyết định loại bỏ hoàn toàn hệ thống truy xuất
 
 ## 📂 Cấu trúc thư mục
 
+---
+
+## 📂 Cấu trúc thư mục
 ```text
 Transformer/
 ├── data/
-│   ├── raw/           <-- Dữ liệu gốc (output.csv)
-│   ├── augmented/     <-- Dữ liệu đã nhân bản (output_augmented.csv)
-│   └── processed/     <-- Dữ liệu đã mã hóa (vocab.pkl, data.pkl)
-├── models/            <-- Lưu trữ 'model.pt' (Pre-trained Transformer)
-├── src/               
-│   ├── brain_rag.py   <-- 🧠 Bộ não lai RAG (Core)
-│   ├── model.py       <-- Kiến trúc mạng Transformer
-│   ├── augment_data.py<-- Script nhân bản dữ liệu
-│   └── preprocess.py  <-- Tokenization
-├── web/               <-- Giao diện Frontend (HTML, CSS, JS)
-├── api.py             <-- Máy chủ FastAPI điều phối hệ thống
-└── README.md
+│   ├── raw/           <-- Chứa 'output.csv' (Dữ liệu gốc)
+│   ├── augmented/     <-- Dữ liệu sau khi tăng cường (Tự động)
+│   └── processed/     <-- Dữ liệu đã Tokenize (Tự động)
+├── models/            <-- Lưu trữ model tốt nhất ('model.pt')
+├── logs/              <-- Nhật ký quá trình huấn luyện
+├── src/               <-- Mã nguồn cốt lõi
+│   ├── model.py       │   - Định nghĩa kiến trúc Transformer
+│   ├── preprocess.py  │   - Tiền xử lý văn bản
+│   ├── train_gpu.py   │   - Huấn luyện trên GPU (Khuyên dùng)
+│   └── train.py       │   - Huấn luyện trên CPU
+└── chat.py            <-- Giao diện trò chuyện với Bot
 ```
 
 ---
 
-## 🛠 Hướng dẫn chạy Hệ thống
+## 🛠 Hướng dẫn sử dụng
 
-### 1. Chuẩn bị Dữ liệu & Huấn luyện (Nếu chưa có model)
-Dù bạn chọn chạy bằng CPU hay GPU, quy trình chuẩn bị dữ liệu là bắt buộc:
+### 1. Cài đặt môi trường
+Đảm bảo bạn đã có Python 3.8+. Cài đặt các thư viện phụ thuộc:
 ```powershell
-python src/augment_data.py  # Nhân bản dữ liệu
-python src/preprocess.py    # Xây dựng từ điển (Vocab)
-python src/train.py         # Huấn luyện mô hình
+pip install -r requirements.txt
 ```
 
-### 2. Khởi động Máy chủ API & Giao diện Web (Khuyên dùng)
-Dự án được trang bị một hệ thống Web cực kỳ hiện đại mang phong cách Cyber-Academic. Để bật Web:
+### 2. Chuẩn bị dữ liệu
+1. **Tải dữ liệu thô**: 
+   Tải file dữ liệu mẫu tại đây: [Google Drive - Dữ liệu mẫu](https://drive.google.com/drive/folders/17U5mYwNusa2OKSnUFA4fyNiI6aPK1_vd?usp=sharing)
+   Sau đó, copy file vào đường dẫn: `data/raw/output.csv`.
+   *(Lưu ý: Định dạng CSV sử dụng dấu chấm phẩy `;` làm dấu phân cách)*
 
+2. **Tăng cường dữ liệu**:
+   ```powershell
+   python src/augment_data.py
+   ```
+3. **Tiền xử lý và Tokenize**:
+   ```powershell
+   python src/preprocess.py
+   ```
+
+### 3. Huấn luyện mô hình (Training)
+Tùy chọn phương thức phù hợp với phần cứng của bạn:
+
+*   **Nếu có GPU NVIDIA (Nên dùng):**
+    ```powershell
+    python src/train_gpu.py
+    ```
+*   **Nếu chỉ có CPU:**
+    ```powershell
+    python src/train.py
+    ```
+
+### 4. Chat với Bot
+Sau khi huấn luyện kết thúc, chạy script sau để bắt đầu trò chuyện:
 ```powershell
-python api.py
+python chat.py
 ```
-👉 Sau đó, mở trình duyệt và truy cập: **`http://localhost:8000`**
-
-Dưới mỗi câu trả lời của Bot, bạn sẽ thấy các **Huy hiệu (Badge)** nhiều màu sắc (Xanh/Tím/Cam) minh bạch hóa quá trình suy luận và độ tin cậy (Confidence Score) của Bot!
 
 ---
 
-## 🛠 Thông số kỹ thuật Model (Cấu hình Large)
-- **Kiến trúc:** Transformer Decoder (8 Layers, 16 Heads)
-- **D_Model:** 512 | **Tham số:** ~26 Triệu
-- **Dropout:** 0.4 (Chống học vẹt tối đa)
-- **Cơ chế Attention:** Masked Multi-Head Self-Attention
-- **API Server:** FastAPI + Uvicorn
+## ⚙️ Thông số kỹ thuật (Hyperparameters)
+Mô hình hiện tại đang sử dụng cấu hình **"Efficient-Base"**:
 
+| Tham số | Giá trị | Ghi chú |
+| :--- | :--- | :--- |
+| **Layers** | 3 | Số lớp Transformer Block |
+| **Heads** | 8 | Số đầu Attention |
+| **D_Model** | 192 | Kích thước vector nhúng |
+| **Dropout** | 0.35 | Tỉ lệ loại bỏ (Chống Overfit) |
+| **Optimizer** | AdamW | Tốc độ học: 8e-4, Weight Decay: 0.1 |
+| **Scheduler** | Cosine | Giảm dần LR theo chu kỳ |
+| **Patience** | 10 Epochs | Tự động dừng nếu Loss không giảm |
+
+---
+
+## ⚠️ Lưu ý
+- File `output.csv` trong `data/raw/` cần định dạng: `Chủ đề;Câu hỏi;Câu trả lời`.
+- Nếu gặp lỗi bộ nhớ trên GPU (OOM), hãy giảm `BATCH_SIZE` trong file `train_gpu.py`.
