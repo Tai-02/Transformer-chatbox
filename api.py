@@ -123,8 +123,8 @@ class HistoryItem(BaseModel):
 class ChatRequest(BaseModel):
     message: str
     history: Optional[List[HistoryItem]] = None
-    temperature: float = 0.5
-    top_k: int = 3
+    temperature: float = 0.1
+    top_k: int = 1
     max_tokens: int = 100
 
 
