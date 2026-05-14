@@ -1,14 +1,19 @@
 # 🤖 Transformer Chatbot - Toán Rời Rạc
+*(Mô hình Generative AI dựa trên Transformer)*
 
-Dự án xây dựng một chatbot dựa trên kiến trúc **Transformer (Decoder-only)** chuyên biệt cho việc giải đáp các câu hỏi trong lĩnh vực **Toán rời rạc**. Mô hình được thiết kế tinh gọn để đạt hiệu năng tối ưu trên cả CPU và GPU cá nhân.
+Dự án xây dựng một AI Chatbot giải đáp câu hỏi môn Toán rời rạc. Bot sử dụng kiến trúc **Transformer (Decoder-only)** tự huấn luyện từ con số 0 để tiếp nhận câu hỏi và tự động sinh ra (generate) câu trả lời dựa trên lượng tri thức đã học được.
 
 ---
 
-## ✨ Tính năng nổi bật
-- **Kiến trúc Modern GPT-style**: Sử dụng cơ chế Decoder-only với Self-Attention đa đầu.
-- **Dual-Training Support**: Hỗ trợ huấn luyện tăng tốc bằng GPU (CUDA) hoặc chạy ổn định trên CPU.
-- **Data Augmentation**: Tích hợp công cụ tăng cường dữ liệu tự động để cải thiện độ chính xác.
-- **Early Stopping & Anti-Overfit**: Cơ chế tự động dừng và điều chỉnh giúp mô hình không bị "học vẹt".
+## 🧠 Kiến Trúc Hệ Thống (Pure Transformer)
+Trưởng nhóm quyết định loại bỏ hoàn toàn hệ thống truy xuất (RAG - Lớp 1 & 2) để sử dụng **100% sức mạnh của mạng Nơ-ron Transformer**.
+
+- 🧬 **Transformer AI (Suy luận sáng tạo):** Mạng Nơ-ron Transformer sẽ tự động phân tích ngữ cảnh câu hỏi và tiến hành quá trình Decoding để tự múa bút sáng tác câu trả lời cho bất kỳ vấn đề nào về Toán rời rạc.
+- 🛡️ **Lớp 0 (Chit-Chat Filter):** Kỹ năng giao tiếp cơ bản (chào hỏi, cảm ơn).
+
+---
+
+## 📂 Cấu trúc thư mục
 
 ---
 

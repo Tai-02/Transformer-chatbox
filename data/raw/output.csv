@@ -1,0 +1,1299 @@
+﻿topic,question,answer
+Lý thuyết đồ thị,đồ thị là gì?,Đồ thị Là một cấu trúc toán học gồm tập hợp các đỉnh và tập hợp các cạnh nối các cặp đỉnh đó.
+Bài toán tổ hợp,hoán vị là gì?,Hoán vị Là một cách sắp xếp có thứ tự của n phần tử khác nhau.
+Bài toán tổ hợp,chỉnh hợp là gì?,Chỉnh hợp Là một cách chọn ra k phần tử từ n phần tử và có sắp xếp theo thứ tự nhất định.
+Bài toán tổ hợp,tổ hợp là gì?,Tổ hợp Là một cách chọn ra k phần tử từ n phần tử mà không tính đến thứ tự sắp xếp của chúng.
+Bài toán tổ hợp,quy tắc cộng là gì?,"Nếu một công việc có thể được thực hiện theo nhiều phương án độc lập, số cách thực hiện là tổng số cách của các phương án đó."
+Bài toán tổ hợp,quy tắc nhân là gì?,"Nếu một công việc gồm nhiều giai đoạn thực hiện liên tiếp, số cách thực hiện là tích số cách của từng giai đoạn."
+Ánh xạ,ánh xạ là gì?,Ánh xạ Là một quy tắc gán mỗi phần tử của tập hợp A với duy nhất một phần tử của tập hợp B.
+Ánh xạ,đơn ánh là gì?,Đơn ánh Là ánh xạ mà hai phần tử khác nhau của tập nguồn luôn có hai ảnh khác nhau trong tập đích.
+Ánh xạ,toàn ánh là gì?,Toàn ánh Là ánh xạ mà mọi phần tử của tập đích đều là ảnh của ít nhất một phần tử của tập nguồn.
+Ánh xạ,song ánh là gì?,"Song ánh Là ánh xạ vừa là đơn ánh, vừa là toàn ánh."
+Ánh xạ,Mối liên hệ giữa song ánh và hoán vị?,Mỗi hoán vị của một tập hữu hạn chính là một song ánh từ tập đó vào chính nó.
+Ánh xạ,Mối liên hệ giữa ánh xạ và đồ thị hàm số?,"Đồ thị là tập hợp các cặp $(x, f(x))$ trong tích Descartes $A \times B$."
+Ánh xạ,Số lượng song ánh từ tập A đến chính nó là bao nhiêu?,Bằng $n!$ (số hoán vị của n phần tử).
+Ánh xạ,Số lượng ánh xạ từ tập A đến tập B là bao nhiêu?,Bằng $m^n$.
+Ánh xạ,Số lượng đơn ánh từ tập A đến tập B với n le m là bao nhiêu?,"Bằng $P(m, n) = \frac{m!}{(m-n)!}$."
+Ánh xạ,mở rộng của một ánh xạ là gì?,Mở rộng của một ánh xạ Là ánh xạ mới có tập nguồn chứa tập nguồn ban đầu và trùng với ánh xạ cũ trên tập nguồn cũ.
+Ánh xạ,nhúng trong lý thuyết ánh xạ là gì?,Nhúng trong lý thuyết ánh xạ Là một đơn ánh bảo toàn một số cấu trúc toán học nhất định giữa hai tập hợp.
+Ánh xạ,thu hẹp của một ánh xạ là gì?,Thu hẹp của một ánh xạ Là ánh xạ mới thu được bằng cách giới hạn tập nguồn vào một tập con nhỏ hơn.
+Ánh xạ,tập nguồn của một ánh xạ là gì?,Tập nguồn của một ánh xạ Là tập hợp A chứa tất cả các phần tử đầu vào của ánh xạ f: A -> B.
+Ánh xạ,tập đích của một ánh xạ là gì?,Tập đích của một ánh xạ Là tập hợp B chứa các phần tử mà ánh xạ f có thể gán giá trị tới.
+Ánh xạ,tập ảnh của một ánh xạ là gì?,"Tập ảnh của một ánh xạ Là tập hợp tất cả các giá trị $f(x)$ trong B với mọi $x \in A$, ký hiệu là $Im(f)$ hoặc $f(A)$."
+Ánh xạ,ánh xạ hằng là gì?,Ánh xạ hằng Là ánh xạ gán tất cả các phần tử của tập nguồn cho duy nhất một phần tử của tập đích.
+Ánh xạ,ánh xạ đồng nhất là gì?,"Ánh xạ đồng nhất Là ánh xạ gán mỗi phần tử cho chính nó, ký hiệu là $id_A(x) = x$."
+Ánh xạ,Tại sao hàm sàn và hàm trần lại là các ánh xạ từ tập số thực vào tập số nguyên?,Vì mỗi số thực chỉ có duy nhất một giá trị nguyên thỏa mãn điều kiện của hàm.
+Ánh xạ,Tại sao khái niệm toàn ánh liên quan đến tính tồn tại nghiệm của phương trình f = y?,"Vì nếu f là toàn ánh, phương trình $f(x) = y$ luôn có ít nhất một nghiệm với mọi $y \in B$."
+Ánh xạ,Tại sao khái niệm đơn ánh liên quan đến tính giải được của phương trình f = y?,"Vì nếu f là đơn ánh, phương trình $f(x) = y$ có tối đa một nghiệm duy nhất."
+Ánh xạ,Tại sao nguyên lý chuồng bồ câu có thể phát biểu qua đơn ánh?,Nếu lực lượng tập nguồn lớn hơn tập đích thì không tồn tại đơn ánh từ tập nguồn vào tập đích.
+Ánh xạ,Tại sao song ánh lại quan trọng trong việc so sánh lực lượng tập hợp?,Vì nếu tồn tại một song ánh giữa hai tập hợp thì hai tập hợp đó có cùng số phần tử (lực lượng bằng nhau).
+Ánh xạ,Tại sao ánh xạ hợp của hai toàn ánh là một toàn ánh?,"Vì với mọi $z \in C$, tồn tại $y \in B$ sao cho $g(y) = z$, và tồn tại $x \in A$ sao cho $f(x) = y$."
+Ánh xạ,Tại sao ánh xạ hợp của hai đơn ánh là một đơn ánh?,"Vì nếu $g(f(x_1)) = g(f(x_2))$, do g đơn ánh nên $f(x_1) = f(x_2)$, và do f đơn ánh nên $x_1 = x_2$."
+Ánh xạ,Ánh xạ hợp có tính chất giao hoán không?,"Không, nhìn chung $f \circ g$ khác với $g \circ f$."
+Ánh xạ,Ánh xạ hợp có tính chất kết hợp không?,"Có, $(f \circ g) \circ h = f \circ (g \circ h)$."
+Ánh xạ,Điều kiện cần và đủ để một ánh xạ có ánh xạ ngược là gì?,Ánh xạ đó phải là một song ánh.
+Ánh xạ,Điều kiện toán học để f là toàn ánh?,"Tập ảnh của f trùng với tập đích, tức là $f(A) = B$."
+Ánh xạ,Điều kiện toán học để f là đơn ánh?,"Với mọi $x_1, x_2 \in A$, nếu $f(x_1) = f(x_2)$ thì $x_1 = x_2$."
+Ánh xạ,Điều kiện để tồn tại ánh xạ hợp g circ f là gì?,Tập đích của f phải là tập con (hoặc trùng) với tập nguồn của g.
+Ánh xạ,hàm sàn là gì?,"Hàm sàn Là ánh xạ gán mỗi số thực x cho số nguyên lớn nhất không vượt quá x, ký hiệu $\lfloor x \rfloor$."
+Ánh xạ,hàm trần là gì?,"Hàm trần Là ánh xạ gán mỗi số thực x cho số nguyên nhỏ nhất không nhỏ hơn x, ký hiệu $\lceil x \rceil$."
+Ánh xạ,nghịch ảnh là gì?,Nghịch ảnh Là tập hợp các phần tử $x \in A$ sao cho $f(x) = y$ với một giá trị $y$ cho trước trong B.
+Ánh xạ,ảnh của một phần tử là gì?,"Với mỗi $x \in A$, phần tử $y = f(x) \in B$ được gọi là ảnh của $x$ qua ánh xạ $f$."
+Ánh xạ,chiếu là gì?,"Chiếu Là ánh xạ từ một tích Descartes xuống một trong các tập hợp thành phần (ví dụ $f(x, y) = x$)."
+Ánh xạ,tích Descartes của hai tập hợp qua ánh xạ là gì?,"Tích Descartes của hai tập hợp qua ánh xạ Là tập hợp các cặp thứ tự $(x, y)$ mà ánh xạ có thể nhận làm đầu vào hoặc đầu ra."
+Ánh xạ,ánh xạ là gì?,Ánh xạ Là một quy tắc gán mỗi phần tử của tập hợp A với duy nhất một phần tử của tập hợp B.
+Ánh xạ,ánh xạ hợp là gì?,"Ánh xạ hợp Là ánh xạ tạo thành bằng cách thực hiện liên tiếp hai ánh xạ f và g, ký hiệu là $g \circ f$."
+Ánh xạ,ánh xạ ngược là gì?,"Nếu f là một song ánh từ A đến B, thì tồn tại ánh xạ $f^{-1}$ từ B đến A sao cho $f^{-1}(y) = x$ khi $f(x) = y$."
+Ánh xạ,ánh xạ đặc trưng của một tập con là gì?,Ánh xạ đặc trưng của một tập con Là ánh xạ nhận giá trị 1 nếu phần tử thuộc tập con và giá trị 0 nếu ngược lại.
+Ánh xạ,ảnh của một tập hợp qua ánh xạ là gì?,"Ảnh của một tập hợp qua ánh xạ Là tập hợp tất cả các ảnh của các phần tử thuộc tập hợp đó, ký hiệu $f(A)$."
+Ánh xạ,nghịch ảnh của một tập hợp là gì?,Nghịch ảnh của một tập hợp Là tập hợp các phần tử trong tập nguồn mà ảnh của chúng rơi vào tập hợp đích cho trước.
+Ánh xạ,Ảnh của phép giao hai tập hợp có bằng giao của hai ảnh không?,"Không nhất thiết, nói chung $f(A \cap B) \subseteq f(A) \cap f(B)$."
+Ánh xạ,Khi nào ảnh của phép giao bằng giao các ảnh?,Khi ánh xạ f là một đơn ánh.
+Ánh xạ,Nghịch ảnh của phép giao hai tập hợp bằng gì?,Bằng giao các nghịch ảnh của từng tập hợp.
+Ánh xạ,Nghịch ảnh của phép hợp hai tập hợp bằng gì?,Bằng hợp các nghịch ảnh của từng tập hợp.
+Ánh xạ,ánh xạ riêng là gì?,Ánh xạ riêng Là ánh xạ mà nghịch ảnh của mọi tập hợp compact là một tập hợp compact.
+Ánh xạ,lực lượng của tập hữu hạn là gì?,Lực lượng của tập hữu hạn Là số lượng các phần tử có trong tập hợp đó.
+Ánh xạ,hai tập hợp có cùng lực lượng là gì?,Nếu tồn tại một song ánh giữa hai tập hợp đó.
+Ánh xạ,tập hợp đếm được là gì?,Tập hợp đếm được Là tập hợp có cùng lực lượng với tập các số tự nhiên $\mathbb{N}$.
+Ánh xạ,Tập hợp các số hữu tỷ có đếm được không?,"Có, vì có thể thiết lập một song ánh giữa $\mathbb{Q}$ và $\mathbb{N}$."
+Ánh xạ,Tập hợp các số thực có đếm được không?,"Không, tập số thực là tập vô hạn không đếm được (lực lượng continuum)."
+Ánh xạ,Phương pháp đường chéo của Cantor dùng để chứng minh điều gì?,Dùng để chứng minh rằng tập số thực có lực lượng lớn hơn tập số tự nhiên.
+Ánh xạ,ánh xạ nhúng là gì?,Ánh xạ nhúng Là một đơn ánh bảo toàn cấu trúc giữa hai không gian toán học.
+Ánh xạ,biến đổi trên tập A là gì?,Biến đổi trên tập A Là một ánh xạ từ tập A vào chính nó.
+Ánh xạ,phép hoán vị trên tập hữu hạn là gì?,Phép hoán vị trên tập hữu hạn Là một song ánh từ tập hữu hạn đó vào chính nó.
+Ánh xạ,Ánh xạ ngược của một song ánh có phải là song ánh không?,"Có, nó luôn là một song ánh."
+Ánh xạ,Nghịch đảo của ánh xạ hợp $^{-1}$ bằng gì?,Bằng $f^{-1} \circ g^{-1}$.
+Ánh xạ,ánh xạ bao hàm là gì?,Ánh xạ bao hàm Là ánh xạ từ tập con A vào tập mẹ B gán mỗi phần tử cho chính nó.
+Ánh xạ,hàm số hợp của f và g là gì?,Hàm số hợp của f và g Là hàm số nhận giá trị $g(f(x))$.
+Bài toán tổ hợp,Công thức Pascal là gì?,$C_n^k = C_{n-1}^k + C_{n-1}^{k-1}$.
+Bài toán tổ hợp,Công thức tính số chỉnh hợp chập k của n phần tử?,$A_n^k = \frac{n!}{(n-k)!}$.
+Bài toán tổ hợp,Công thức tính số chỉnh hợp lặp chập k của n phần tử là gì?,$F_n^k = n^k$.
+Bài toán tổ hợp,Công thức tính số hoán vị của n phần tử là gì?,"Ký hiệu là Pn, công thức $P_n = n!$."
+Bài toán tổ hợp,Công thức tính số hoán vị lặp của n phần tử?,"$P_n(n_1, n_2, \dots, n_k) = \frac{n!}{n_1! n_2! \dots n_k!}$."
+Bài toán tổ hợp,Công thức tính số tổ hợp chập k của n phần tử?,$C_n^k = \binom{n}{k} = \frac{n!}{k!(n-k)!}$.
+Bài toán tổ hợp,Công thức tính số tổ hợp lặp chập k của n phần tử là gì?,$\bar{C}_n^k = C_{n+k-1}^k = \binom{n+k-1}{k}$.
+Bài toán tổ hợp,Khi nào thì một bài toán tồn tại được giải bằng phương pháp phản chứng?,"Khi việc chỉ ra trực tiếp phần tử đó quá khó, ta giả sử ngược lại để tìm ra sự mâu thuẫn với các giả thiết đã cho."
+Bài toán tổ hợp,nhánh cận trong liệt kê là gì?,Nhánh cận trong liệt kê Là kỹ thuật quay lui có thêm điều kiện đánh giá để loại bỏ sớm các nhánh không thể chứa nghiệm tối ưu.
+Bài toán tổ hợp,Làm sao để biết một bài toán đếm có sử dụng nguyên lý bù trừ?,Khi các điều kiện trong bài toán có sự chồng lấn lên nhau (ví dụ: đếm số người thích bóng đá HOẶC bóng chuyền).
+Bài toán tổ hợp,Làm sao để biết một hệ thức truy hồi là thuần nhất hay không?,"Nếu tất cả các số hạng đều có chứa biến của dãy số ($a_n$, $a_{n-1}$...) và không có số hạng tự do $f(n)$ thì là thuần nhất."
+Bài toán tổ hợp,Làm sao để nhận diện một bài toán sử dụng nguyên lý chuồng bồ câu?,"""""""Khi đề bài hỏi về sự tồn tại của một nhóm phần tử có cùng tính chất (ví dụ """"""""ít nhất 2 người cùng ngày sinh"""""""")."""""""
+Bài toán tổ hợp,Làm sao để phân biệt khi nào dùng quy tắc cộng và khi nào dùng quy tắc nhân?,"Dùng quy tắc cộng khi các phương án là độc lập (hoàn thành công việc), dùng quy tắc nhân khi các bước là liên tiếp (chưa hoàn thành công việc)."
+Bài toán tổ hợp,Làm sao để xác định số lượng 'chuồng' và 'bồ câu' trong một bài toán thực tế?,"'Bồ câu' là đối tượng ta có, 'chuồng' là các thuộc tính hoặc loại mà đối tượng đó có thể thuộc về."
+Bài toán tổ hợp,Làm thế nào để biết một bài toán đếm có cho phép lặp hay không?,"Dựa vào đề bài: nếu các phần tử có thể được chọn lại nhiều lần thì là bài toán lặp, nếu chọn xong mất đi thì không lặp."
+Bài toán tổ hợp,Làm thế nào để liệt kê tất cả các xâu nhị phân độ dài n?,Bắt đầu từ xâu toàn số 0 và liên tiếp cộng 1 theo hệ nhị phân cho đến khi đạt xâu toàn số 1.
+Bài toán tổ hợp,Làm thế nào để nhận biết một hệ thức truy hồi có nghiệm kép?,"Khi giải phương trình đặc trưng, nếu biệt thức delta bằng 0 hoặc phương trình có các nghiệm trùng nhau."
+Bài toán tổ hợp,Làm thế nào để phân biệt hoán vị lặp và tổ hợp lặp?,"Hoán vị lặp là sắp xếp n vật có nhóm giống nhau, tổ hợp lặp là chọn k vật từ n loại vật khác nhau."
+Bài toán tổ hợp,Làm thế nào để xử lý trường hợp phương trình đặc trưng có nghiệm kép?,Nghiệm tổng quát sẽ có dạng kết hợp giữa $r^n$ và n nhân $r^n$.
+Bài toán tổ hợp,Mối liên hệ giữa hệ thức truy hồi và các bài toán chia để trị ?,Hệ thức truy hồi mô tả thời gian thực hiện của thuật toán thông qua thời gian thực hiện của các bài toán con nhỏ hơn.
+Bài toán tổ hợp,Mối liên hệ giữa nguyên lý chuồng bồ câu và giá trị trung bình là gì?,Nó khẳng định rằng không phải mọi phần tử đều nhỏ hơn giá trị trung bình của cả tập hợp.
+Bài toán tổ hợp,Mối quan hệ giữa định lý Ramsey và nguyên lý chuồng bồ câu là gì?,Định lý Ramsey có thể được coi là một sự tổng quát hóa sâu sắc và phức tạp hơn của nguyên lý chuồng bồ câu.
+Bài toán tổ hợp,Nguyên lý bù trừ cho 3 tập hợp được phát biểu như thế nào?,"Cộng số phần tử mỗi tập, trừ đi giao từng đôi, và cộng lại giao của cả ba tập hợp."
+Bài toán tổ hợp,Nguyên lý chuồng bồ câu mở rộng được phát biểu như thế nào?,"Nếu nhốt N con bồ câu vào n cái chuồng, thì ít nhất có một chuồng chứa ít nhất $\lceil N/n \rceil$ con bồ câu."
+Bài toán tổ hợp,Nguyên tắc của thuật toán sinh hoán vị kế tiếp là gì?,"Tìm từ phải sang trái vị trí i đầu tiên mà ai < ai+1, sau đó thực hiện đổi chỗ và sắp xếp lại phần đuôi."
+Bài toán tổ hợp,Nội dung nguyên lý bù trừ cho 2 tập hợp?,$|A \cup B| = |A| + |B| - |A \cap B|$.
+Bài toán tổ hợp,Phát biểu nguyên lý chuồng bồ câu ?,"Nếu nhốt n+1 con bồ câu vào n cái chuồng, thì ít nhất có một chuồng chứa từ 2 con bồ câu trở lên."
+Bài toán tổ hợp,Phát biểu nguyên lý chuồng bồ câu dạng tổng quát?,Nếu xếp N phần tử vào n ngăn thì có ít nhất một ngăn chứa ít nhất $\lceil N/n \rceil$ phần tử.
+Bài toán tổ hợp,Phát biểu tổng quát của nguyên lý bù trừ cho n tập hợp?,"Số phần tử của hợp n tập bằng tổng số phần tử mỗi tập, trừ đi tổng giao từng đôi, cộng giao từng ba, và cứ thế hoán đổi dấu."
+Bài toán tổ hợp,Phát biểu định lý Hall ?,Một họ các tập hợp có hệ đại diện phân biệt khi và chỉ khi mọi họ con gồm k tập hợp đều chứa ít nhất k phần tử khác nhau.
+Bài toán tổ hợp,Phương trình đặc trưng là gì?,Là phương trình đại số được lập từ các hệ số của hệ thức truy hồi để tìm nghiệm tổng quát.
+Bài toán tổ hợp,Sự khác biệt cốt lõi giữa chỉnh hợp và tổ hợp là gì?,"Chỉnh hợp có tính thứ tự (ví dụ xếp hàng), còn tổ hợp không tính thứ tự (ví dụ chọn nhóm)."
+Bài toán tổ hợp,Sự khác biệt giữa bài toán đếm và bài toán liệt kê là gì?,"Bài toán đếm chỉ cần tìm số lượng, còn bài toán liệt kê yêu cầu chỉ ra cụ thể từng phần tử."
+Bài toán tổ hợp,Sự khác biệt giữa chứng minh tồn tại xây dựng và không xây dựng là gì?,"Chứng minh xây dựng chỉ ra cụ thể phần tử đó, còn không xây dựng chỉ chứng minh nó phải có mặt mà không chỉ ra là cái nào."
+Bài toán tổ hợp,Sự khác biệt giữa thuật toán sinh và thuật toán quay lui?,"Thuật toán sinh tìm cấu hình tiếp theo từ cấu hình trước, còn quay lui xây dựng cấu hình từng thành phần một."
+Bài toán tổ hợp,Sự khác biệt giữa xấp xỉ số Ramsey và tìm số Ramsey chính xác là gì?,"Xấp xỉ là tìm các khoảng chặn (lower/upper bound), còn tìm chính xác là xác định một con số cụ thể duy nhất."
+Bài toán tổ hợp,Tam giác Pascal có mối liên hệ gì với số tổ hợp?,"Mỗi dòng của tam giác Pascal liệt kê các số tổ hợp $C(n, k)$ tương ứng với n tăng dần."
+Bài toán tổ hợp,Thuật toán Floyd-Warshall dùng để làm gì?,Tìm đường đi ngắn nhất giữa mọi cặp đỉnh trong đồ thị.
+Bài toán tổ hợp,Thuật toán Johnson được dùng để giải bài toán nào?,Dùng để giải bài toán lập lịch gia công trên hai máy (hoặc ba máy trong trường hợp đặc biệt).
+Bài toán tổ hợp,Thuật toán sinh kế tiếp hoạt động như thế nào?,"Từ một cấu hình hiện tại, thuật toán xác định cấu hình đứng ngay sau nó theo một thứ tự xác định (thường là từ điển)."
+Bài toán tổ hợp,bài toán chia đồ vật khác nhau vào các hộp giống nhau là gì?,Bài toán chia đồ vật khác nhau vào các hộp giống nhau Là bài toán phân hoạch một tập hợp thành các tập con không phân biệt (số Stirling loại 2).
+Bài toán tổ hợp,bài toán tồn tại trong hình học tổ hợp là gì?,Ví dụ như định lý Happy Ending khẳng định 5 điểm bất kỳ luôn chứa 4 điểm tạo thành tứ giác lồi.
+Bài toán tổ hợp,bài toán tồn tại trong lý thuyết mã hóa là gì?,Bài toán tồn tại trong lý thuyết mã hóa Là việc xác định xem có tồn tại mã có khoảng cách Hamming đủ lớn để sửa lỗi hay không.
+Bài toán tổ hợp,bài toán đếm các cấu hình logic là gì?,Bài toán đếm các cấu hình logic Là việc đếm số lượng các hàm Boole hoặc các mạch logic thỏa mãn một điều kiện nhất định.
+Bài toán tổ hợp,bậc của một hệ thức truy hồi là gì?,Bậc của một hệ thức truy hồi Là số lượng các số hạng đứng trước được dùng để tính số hạng hiện tại.
+Bài toán tổ hợp,chỉnh hợp lặp chập k của n phần tử là gì?,"Chỉnh hợp lặp chập k của n phần tử Là cách chọn có thứ tự k phần tử từ n phần tử, trong đó một phần tử có thể được chọn nhiều lần."
+Bài toán tổ hợp,giới hạn dưới và giới hạn trên của số Ramsey là gì?,Là các khoảng giá trị mà số Ramsey chắc chắn nằm trong đó khi không thể xác định được giá trị chính xác.
+Bài toán tổ hợp,hoán vị lặp là gì?,Hoán vị lặp Là cách sắp xếp n phần tử trong đó có các nhóm phần tử giống hệt nhau.
+Bài toán tổ hợp,hệ thức truy hồi có hệ số thay đổi là gì?,Là hệ thức mà các hệ số đứng trước các số hạng không phải là hằng số mà phụ thuộc vào n.
+Bài toán tổ hợp,hệ thức truy hồi tuyến tính không thuần nhất là gì?,Là hệ thức truy hồi có thêm một hàm số phụ thuộc vào n ở vế phải ($f(n)$).
+Bài toán tổ hợp,bài toán phân hoạch số nguyên là gì?,Bài toán phân hoạch số nguyên Là cách biểu diễn một số nguyên dương dưới dạng tổng của các số nguyên dương khác mà không quan tâm đến thứ tự các số hạng.
+Bài toán tổ hợp,bài toán tồn tại trong toán rời rạc là gì?,Bài toán tồn tại trong toán rời rạc Là bài toán yêu cầu xác định xem có tồn tại ít nhất một cấu hình thỏa mãn điều kiện cho trước hay không.
+Bài toán tổ hợp,bài toán tồn tại trong đếm là gì?,Bài toán tồn tại trong đếm Là bài toán yêu cầu chứng minh có ít nhất một cấu hình thỏa mãn điều kiện mà không nhất thiết phải liệt kê ra.
+Bài toán tổ hợp,bài toán đếm bằng cách sử dụng song ánh là gì?,Bài toán đếm bằng cách sử dụng song ánh Là cách đếm số phần tử của tập hợp A bằng cách thiết lập một song ánh đến tập hợp B đã biết số phần tử.
+Bài toán tổ hợp,bài toán đếm đa thức là gì?,"Bài toán đếm đa thức Là việc chia n phần tử thành nhiều nhóm có kích thước cố định n1, n2, ..., nk."
+Bài toán tổ hợp,bài toán đếm đệ quy là gì?,"Bài toán đếm đệ quy Là bài toán mà số cách thực hiện ở quy mô n được tính thông qua kết quả ở các quy mô nhỏ hơn (n-1, n-2...)."
+Bài toán tổ hợp,chỉnh hợp chập k của n phần tử là gì?,Chỉnh hợp chập k của n phần tử Là một cách chọn có thứ tự k phần tử từ tập hợp n phần tử.
+Bài toán tổ hợp,cấu hình trong bài toán liệt kê là gì?,"Cấu hình trong bài toán liệt kê Là một kết quả cụ thể (như một xâu, một tập con, một hoán vị) thỏa mãn các điều kiện ràng buộc."
+Bài toán tổ hợp,hoán vị của n phần tử là gì?,Hoán vị của n phần tử Là một cách sắp xếp có thứ tự của tất cả n phần tử đó.
+Bài toán tổ hợp,hệ thức truy hồi là gì?,Hệ thức truy hồi Là một công thức biểu diễn số hạng thứ n của một dãy số thông qua một hoặc nhiều số hạng đứng trước nó.
+Bài toán tổ hợp,hệ thức truy hồi phi tuyến là gì?,Là hệ thức mà các số hạng trước đó xuất hiện ở dạng lũy thừa hoặc nhân với nhau (ví dụ $a_n = a_{n-1} * a_{n-2}$).
+Bài toán tổ hợp,hệ đại diện phân biệt là gì?,"Hệ đại diện phân biệt Là một tập hợp các phần tử khác nhau, trong đó mỗi phần tử đại diện cho một tập hợp trong một họ các tập hợp cho trước."
+Bài toán tổ hợp,lát cắt trong ngữ cảnh bài toán tồn tại SDR là gì?,"Lát cắt trong ngữ cảnh bài toán tồn tại SDR Là việc xác định các giới hạn mà tại đó điều kiện Hall bị vi phạm, dẫn đến không tồn tại SDR."
+Bài toán tổ hợp,tổ hợp chập k của n phần tử là gì?,Tổ hợp chập k của n phần tử Là một cách chọn không tính thứ tự k phần tử từ tập hợp n phần tử.
+Bài toán tổ hợp,tổ hợp có lặp là gì?,Tổ hợp có lặp Là cách chọn k vật từ n loại vật mà một loại có thể xuất hiện nhiều lần và không tính thứ tự.
+Bài toán tổ hợp,định nghĩa đệ quy là gì?,Định nghĩa đệ quy Là cách định nghĩa một khái niệm thông qua chính nó ở các quy mô nhỏ hơn cùng với một trường hợp cơ sở.
+Bài toán tổ hợp,nguyên lý Dirichlet là gì?,Là nguyên lý khẳng định nếu mật độ phần tử vượt quá mật độ ngăn thì phải có ít nhất một ngăn chứa nhiều hơn 1 phần tử.
+Bài toán tổ hợp,phương pháp giải lặp là gì?,"Phương pháp giải lặp Là cách giải bài toán bằng cách thực hiện lặp đi lặp lại một quy trình cho đến khi đạt được kết quả, thay vì dùng đệ quy."
+Bài toán tổ hợp,phương pháp liệt kê trong toán rời rạc là gì?,"Phương pháp liệt kê trong toán rời rạc Là cách tìm ra tất cả các cấu hình (hoán vị, tổ hợp, xâu nhị phân...) thỏa mãn điều kiện bài toán theo một trình tự nhất định."
+Bài toán tổ hợp,thuật toán duyệt toàn bộ là gì?,Thuật toán duyệt toàn bộ Là thuật toán liệt kê và kiểm tra mọi cấu hình trong không gian trạng thái để tìm nghiệm.
+Bài toán tổ hợp,thuật toán nhánh cận trong tối ưu hóa đồ thị là gì?,Thuật toán nhánh cận trong tối ưu hóa đồ thị Là kỹ thuật duyệt có hệ thống các nghiệm khả thi và sử dụng các giá trị biên để loại bỏ các tập nghiệm không chứa nghiệm tối ưu.
+Bài toán tổ hợp,thuật toán quay lui là gì?,"Thuật toán quay lui Là phương pháp thử sai có hệ thống, xây dựng dần cấu hình và quay lại bước trước nếu hướng đi hiện tại không dẫn đến kết quả."
+Bài toán tổ hợp,thuật toán sinh tập con kế tiếp là gì?,"Thuật toán sinh tập con kế tiếp Là cách liệt kê tất cả các tập con của tập n phần tử, thường dựa trên việc sinh xâu nhị phân độ dài n."
+Bài toán tổ hợp,thứ tự từ điển là gì?,Thứ tự từ điển Là cách sắp xếp các chuỗi hoặc tập hợp tương tự như cách sắp xếp từ trong từ điển ngôn ngữ.
+Bài toán tổ hợp,tổ hợp lặp chập k của n phần tử là gì?,"Tổ hợp lặp chập k của n phần tử Là cách chọn không tính thứ tự k phần tử từ n loại phần tử, mỗi loại có thể chọn nhiều lần."
+Bài toán tổ hợp,điều kiện dừng trong thuật toán liệt kê là gì?,Là trạng thái mà thuật toán đã duyệt hết toàn bộ không gian trạng thái hoặc đã tìm đủ số lượng nghiệm cần thiết.
+Bài toán tổ hợp,định lý Erdos-Szekeres về dãy con đơn điệu là gì?,Định lý Erdos-Szekeres về dãy con đơn điệu Là một ứng dụng của bài toán tồn tại khẳng định một dãy số đủ dài luôn chứa dãy con tăng hoặc giảm có độ dài cho trước.
+Bài toán tổ hợp,Triết lý cốt lõi của định lý Ramsey là gì?,"Khẳng định rằng trong một hệ thống đủ lớn, sự hỗn loạn hoàn toàn là không thể, luôn tồn tại các cấu trúc con có trật tự."
+Bài toán tổ hợp,Tại sao 0 giai thừa lại được quy ước bằng 1?,"Để đảm bảo tính nhất quán của các công thức tổ hợp, ví dụ $C(n, n)$ $=$ 1 và $C(n, 0)$ $=$ 1."
+Bài toán tổ hợp,Tại sao DFS lại sử dụng cấu trúc dữ liệu ngăn xếp ?,Để lưu trữ các đỉnh đang trong quá trình duyệt và thực hiện việc quay lui (Backtracking) khi gặp đường cụt.
+Bài toán tổ hợp,Tại sao R = 6 được coi là ví dụ kinh điển của định lý Ramsey?,"Vì trong một nhóm 6 người, luôn tồn tại ít nhất 3 người đôi một quen nhau hoặc 3 người đôi một không quen nhau."
+Bài toán tổ hợp,Tại sao bài toán người du lịch lại có thể giải bằng nhánh cận?,"Vì nhánh cận giúp cắt tỉa các hướng đi có chi phí đã vượt quá kỷ lục tốt nhất hiện tại, giảm bớt việc duyệt."
+Bài toán tổ hợp,Tại sao bài toán người du lịch lại thuộc nhóm NP-khó?,Vì số lượng chu trình Hamilton tăng rất nhanh và không có thuật toán đa thức nào tìm được nghiệm tối ưu trong mọi trường hợp.
+Bài toán tổ hợp,Tại sao bài toán phân chia số nguyên lại khó hơn bài toán tổ hợp lặp?,"""""""Vì các """"""""hộp"""""""" và các """"""""vật"""""""" đều không phân biệt, đòi hỏi các kỹ thuật hàm sinh phức tạp hơn."""""""
+Bài toán tổ hợp,Tại sao công thức Pascal lại đúng về mặt logic?,"Vì để chọn k người từ n người, ta có thể chọn k người không có người A, hoặc chọn người A và chọn thêm k-1 người còn lại."
+Bài toán tổ hợp,Tại sao công thức tổ hợp chập k của n lại có k giai thừa ở mẫu số?,"Để loại bỏ các hoán vị của k phần tử đã chọn, vì trong tổ hợp thứ tự của chúng không quan trọng."
+Bài toán tổ hợp,Tại sao cần có cấu hình đầu tiên và cấu hình cuối cùng trong thuật toán sinh?,Để biết điểm bắt đầu và điểm kết thúc của quá trình liệt kê toàn bộ tập hợp.
+Bài toán tổ hợp,Tại sao cần dùng hàm sinh lũy thừa cho các bài toán chỉnh hợp?,Vì thứ tự sắp xếp trong chỉnh hợp yêu cầu xử lý các hệ số giai thừa trong chuỗi lũy thừa.
+Bài toán tổ hợp,Tại sao cần dùng sơ đồ cây trong bài toán đếm?,Để liệt kê một cách có hệ thống tất cả các khả năng xảy ra trong các giai đoạn của quy tắc nhân.
+Bài toán tổ hợp,Tại sao cần xác định điều kiện đầu cho hệ thức truy hồi?,"Để xác định duy nhất một dãy số, vì nếu không có điều kiện đầu, hệ thức truy hồi sẽ có vô số nghiệm."
+Bài toán tổ hợp,Tại sao dãy số Fibonacci lại xuất hiện trong các bài toán đếm bậc thang?,"Vì để lên bậc n, ta có thể bước từ bậc n-1 hoặc từ bậc n-2."
+Bài toán tổ hợp,Tại sao dãy số Fibonacci được coi là một hệ thức truy hồi bậc hai?,Vì mỗi số hạng được xác định bởi tổng của hai số hạng liền trước nó ($F_n = F_{n-1} + F_{n-2}$).
+Bài toán tổ hợp,Tại sao hàm sinh lại giúp giải quyết các bài toán đếm có điều kiện phức tạp?,"Vì các phép toán trên đa thức (nhân, cộng) tương ứng hoàn hảo với các quy tắc đếm cơ bản."
+Bài toán tổ hợp,Tại sao mã Gray lại được coi là một phương pháp liệt kê xâu nhị phân?,Vì nó liệt kê tất cả xâu nhị phân sao cho hai xâu liên tiếp chỉ khác nhau đúng một bit.
+Bài toán tổ hợp,Tại sao mọi đồ thị hữu hạn đều có ít nhất hai đỉnh cùng bậc?,Đây là một ứng dụng của nguyên lý chuồng bồ câu trong lý thuyết đồ thị.
+Bài toán tổ hợp,Tại sao nghiệm của phương trình đặc trưng lại có dạng lũy thừa ?,Vì cấu trúc của hệ thức truy hồi tuyến tính cho phép các hàm lũy thừa thỏa mãn phương trình sai phân tương ứng.
+Bài toán tổ hợp,Tại sao nguyên lý bù trừ lại cần thiết khi các tập hợp không rời nhau?,"Vì nếu không trừ đi các phần giao, các phần tử chung sẽ bị đếm nhiều lần, làm sai lệch kết quả."
+Bài toán tổ hợp,Tại sao nguyên lý bù trừ lại liên quan đến việc đếm các phần tử không có tính chất nào trong n tính chất?,"Vì nó cho phép tính số phần tử của hợp các tập có tính chất, rồi lấy tổng số phần tử trừ đi."
+Bài toán tổ hợp,Tại sao nguyên lý bù trừ lại được dùng để đếm số các hàm số là toàn ánh?,Vì ta lấy tổng số hàm trừ đi các trường hợp mà miền giá trị bị thiếu ít nhất một phần tử.
+Bài toán tổ hợp,Tại sao nguyên lý chuồng bồ câu lại hữu ích trong các bài toán tồn tại?,Vì nó giúp chứng minh sự tồn tại của một cấu trúc mà không cần chỉ ra cấu trúc đó một cách cụ thể.
+Bài toán tổ hợp,Tại sao nguyên lý chuồng bồ câu lại được coi là một công cụ mạnh trong số học?,Vì nó có thể chứng minh các tính chất chia hết hoặc tồn tại các số có tính chất đặc biệt mà không cần liệt kê.
+Bài toán tổ hợp,Tại sao nguyên lý chuồng bồ câu được coi là một chứng minh không xây dựng?,Vì nó khẳng định sự tồn tại của một ngăn chứa nhiều phần tử nhưng không chỉ ra cụ thể đó là ngăn nào.
+Bài toán tổ hợp,Tại sao phương pháp hàm sinh lại mạnh mẽ trong việc giải hệ thức truy hồi?,Vì nó chuyển đổi các phép toán truy hồi phức tạp trên dãy số thành các phép toán đại số đơn giản trên đa thức.
+Bài toán tổ hợp,Tại sao phương pháp phản chứng lại mạnh mẽ trong bài toán tồn tại?,"Vì bằng cách giả sử không tồn tại phần tử nào thỏa mãn, ta dẫn đến một điều vô lý, từ đó khẳng định sự tồn tại."
+Bài toán tổ hợp,Tại sao phương pháp phản chứng thường kết hợp với nguyên lý chuồng bồ câu?,"Vì ta giả sử mỗi ngăn chứa ít hơn mức trung bình, dẫn đến tổng số phần tử nhỏ hơn thực tế, tạo ra mâu thuẫn."
+Bài toán tổ hợp,Tại sao phương pháp quay lui thường được minh họa bằng cây tìm kiếm ?,"Vì mỗi nhánh của cây đại diện cho một lựa chọn tại một bước, và quá trình quay lui là việc duyệt cây theo chiều sâu."
+Bài toán tổ hợp,Tại sao phương pháp đặt vách ngăn dùng để giải bài toán tổ hợp lặp?,Vì việc đặt k vật vào n ngăn tương đương với sắp xếp k ngôi sao và n-1 vách ngăn.
+Bài toán tổ hợp,Tại sao phương pháp đếm hai cách lại giúp chứng minh các đẳng thức tổ hợp?,Vì cùng một tập hợp thì dù đếm theo cách nào kết quả cũng phải bằng nhau.
+Bài toán tổ hợp,Tại sao phải trừ đi phần giao trong nguyên lý bù trừ?,Để loại bỏ việc tính lặp các phần tử thuộc cả hai tập hợp (đã được cộng 2 lần trong |A| và |B|).
+Bài toán tổ hợp,Tại sao quy tắc cộng chỉ áp dụng cho các phương án rời nhau?,"Vì nếu các phương án có phần chung, việc cộng trực tiếp sẽ dẫn đến tính lặp (cần dùng nguyên lý bù trừ)."
+Bài toán tổ hợp,Tại sao quy tắc nhân lại dùng cho các giai đoạn liên tiếp?,Vì mỗi cách chọn ở giai đoạn trước sẽ tạo ra một tập hợp các khả năng mới ở giai đoạn sau.
+Bài toán tổ hợp,Tại sao số Catalan lại có hệ thức truy hồi dạng tích ?,Vì nó mô tả các cấu trúc được chia thành hai phần độc lập (như cây nhị phân con trái và phải).
+Bài toán tổ hợp,Tại sao số Ramsey R lại bằng 6 mà không phải là 5?,"Vì với 5 đỉnh, ta có thể tô màu sao cho không có tam giác cùng màu nào, nhưng với 6 đỉnh thì điều đó là không thể."
+Bài toán tổ hợp,Tại sao số Stirling loại hai lại quan trọng trong bài toán phân hoạch?,Vì nó đếm số cách chia n phần tử khác nhau vào k nhóm không phân biệt và không trống.
+Bài toán tổ hợp,Tại sao số chỉnh hợp lại quan trọng khi thứ tự là cần thiết?,"Vì trong các bài toán như xếp hàng, lập số, mỗi thứ tự khác nhau tạo ra một kết quả khác nhau."
+Bài toán tổ hợp,Tại sao số cách sắp xếp n cặp ngoặc hợp lệ lại liên quan đến số Catalan?,Vì cấu trúc đệ quy của việc mở và đóng ngoặc tuân theo công thức truy hồi của số Catalan.
+Bài toán tổ hợp,Tại sao số hoán vị của n phần tử lại bằng n giai thừa?,"Vì vị trí thứ nhất có n cách chọn, vị trí thứ hai có n-1 cách chọn, tiếp tục cho đến vị trí cuối cùng."
+Bài toán tổ hợp,Tại sao số hoán vị lặp lại chính là hệ số đa thức?,Vì việc xếp n vật (có các nhóm giống nhau) tương đương với việc chọn vị trí cho từng nhóm vật đó.
+Bài toán tổ hợp,Tại sao số hoán vị vòng quanh của n phần tử là !?,"Vì ta phải cố định một phần tử để làm mốc, tránh việc tính lặp các trường hợp chỉ khác nhau do phép quay."
+Bài toán tổ hợp,Tại sao số lượng các tập con của tập hợp n phần tử là 2 mũ n?,"Vì mỗi phần tử có 2 lựa chọn: hoặc thuộc tập con, hoặc không thuộc tập con."
+Bài toán tổ hợp,Tại sao thuật toán tham lam lại hiệu quả cho bài toán Kruskal?,"Vì bài toán cây khung nhỏ nhất thỏa mãn cấu trúc Matroid, đảm bảo lựa chọn cục bộ dẫn đến tối ưu toàn cục."
+Bài toán tổ hợp,Tại sao thứ tự từ điển lại quan trọng trong phương pháp liệt kê?,Vì nó giúp đảm bảo rằng không có cấu hình nào bị bỏ sót và không có cấu hình nào bị tính lặp.
+Bài toán tổ hợp,Tại sao thứ tự từ điển lại được dùng phổ biến nhất trong liệt kê?,"Vì nó tự nhiên, dễ cài đặt bằng thuật toán và giúp kiểm soát trạng thái liệt kê một cách chặt chẽ."
+Bài toán tổ hợp,"Tại sao trong công thức Pascal, C lại bằng tổng của hai tổ hợp chập n-1?","Vì nó phản ánh hai trường hợp: chọn k phần tử mà không có phần tử cuối, hoặc chọn k-1 phần tử và chắc chắn có phần tử cuối."
+Bài toán tổ hợp,Tại sao tổ hợp chập k của n lại bằng tổ hợp chập n-k của n?,Vì việc chọn ra k phần tử để lấy cũng tương đương với việc chọn ra n-k phần tử để bỏ lại.
+Bài toán tổ hợp,Tại sao việc giải hệ thức truy hồi không thuần nhất cần tìm nghiệm riêng ?,Để bù đắp cho phần hàm số $f(n)$ không được triệt tiêu bởi phần thuần nhất của hệ thức.
+Bài toán tổ hợp,Tại sao việc giải hệ thức truy hồi phi tuyến thường khó hơn hệ thức tuyến tính?,Vì chúng không có phương pháp giải tổng quát dựa trên phương trình đặc trưng như hệ thức tuyến tính.
+Bài toán tổ hợp,Tại sao việc liệt kê toàn bộ cấu hình thường chỉ khả thi với n nhỏ?,"Vì số lượng cấu hình thường tăng theo hàm mũ hoặc giai thừa, vượt quá khả năng xử lý của máy tính khi n lớn."
+Bài toán tổ hợp,Tại sao việc tính toán các số Ramsey chính xác lại cực kỳ khó khăn?,"Vì không gian trạng thái của việc tô màu cạnh đồ thị tăng theo hàm mũ cực lớn, vượt xa khả năng tính toán hiện nay."
+Bài toán tổ hợp,Tại sao đại số logic lại hỗ trợ việc đếm các cấu hình mạch điện?,"Vì mỗi hàm Boole tương ứng với một bảng chân trị duy nhất, giúp xác định số lượng mạch logic khả thi."
+Bài toán tổ hợp,Tại sao định lý Erdos-Szekeres có thể chứng minh bằng nguyên lý chuồng bồ câu?,Bằng cách gán nhãn cho mỗi phần tử dựa trên độ dài dãy con tăng/giảm dài nhất kết thúc tại đó.
+Bài toán tổ hợp,Tại sao định lý Hall có thể phát biểu dưới dạng ngôn ngữ đồ thị hai phía?,Vì việc tìm SDR tương đương với việc tìm một bộ ghép có kích thước bằng số lượng tập hợp trong đồ thị hai phía.
+Bài toán tổ hợp,Tại sao định lý Hall lại quan trọng trong lý thuyết ghép cặp ?,Vì nó cung cấp điều kiện cần và đủ để có thể thực hiện một phép ghép cặp hoàn hảo giữa hai tập hợp.
+Bài toán tổ hợp,Tại sao định lý Hall lại được gọi là Định lý đám cưới?,Vì nó mô tả điều kiện để có thể ghép cặp hoàn hảo giữa một tập hợp nam và một tập hợp nữ sao cho ai cũng hài lòng.
+Bài toán tổ hợp,Tại sao độ phức tạp của việc liệt kê tất cả hoán vị là O?,Vì có $n!$ hoán vị khác nhau và việc in ra mỗi hoán vị tốn O(n) thời gian.
+Bài toán tổ hợp,Tại tại sao số tổ hợp luôn nhỏ hơn số chỉnh hợp ?,Vì mỗi nhóm k phần tử trong tổ hợp sẽ tương ứng với $k!$ cách sắp xếp khác nhau trong chỉnh hợp.
+Bài toán tổ hợp,Điều kiện Hall là gì?,Là điều kiện đòi hỏi hợp của bất kỳ k tập hợp nào trong họ cũng phải có số phần tử lớn hơn hoặc bằng k.
+Bài toán tổ hợp,Đường đi Hamilton trong đồ thị đấu loại luôn tồn tại đúng hay sai?,"Đúng, mọi đồ thị đấu loại đều chứa ít nhất một đường đi Hamilton."
+Bài toán tổ hợp,Định lý Ramsey cho đồ thị được phát biểu như thế nào?,"Với mọi số nguyên dương m, n, luôn tồn tại một số $R(m, n)$ đảm bảo sự hiện diện của các đồ thị con đầy đủ cùng màu."
+Bài toán tổ hợp,Định lý Thạc sĩ dùng để làm gì trong hệ thức truy hồi?,Để giải nhanh các hệ thức truy hồi có dạng n $=$ a * T(n/b) + $f(n)$ trong phân tích thuật toán.
+Bài toán tổ hợp,bài toán lập lịch trên hai máy là gì?,Bài toán lập lịch trên hai máy Là bài toán tìm thứ tự gia công các chi tiết trên 2 máy sao cho tổng thời gian hoàn thành là nhỏ nhất.
+Bài toán tổ hợp,bài toán người du lịch là gì?,Bài toán người du lịch Là bài toán tìm chu trình Hamilton có tổng trọng số các cạnh là nhỏ nhất trong đồ thị có trọng số.
+Bài toán tổ hợp,hoán vị vòng quanh của n phần tử là gì?,Hoán vị vòng quanh của n phần tử Là cách sắp xếp n phần tử trên một vòng tròn mà không phân biệt vị trí đầu tiên.
+Bài toán tổ hợp,hệ thức truy hồi tuyến tính thuần nhất là gì?,Là hệ thức mà mỗi số hạng là một tổ hợp tuyến tính của các số hạng trước đó với hệ số hằng.
+Bài toán tổ hợp,hệ thức truy hồi đồng thời là gì?,Hệ thức truy hồi đồng thời Là một hệ gồm nhiều hệ thức truy hồi phụ thuộc lẫn nhau giữa các dãy số khác nhau.
+Bài toán tổ hợp,bài toán phân chia số nguyên là gì?,Bài toán phân chia số nguyên Là cách viết một số nguyên dương n thành tổng các số nguyên dương mà không tính thứ tự.
+Bài toán tổ hợp,chuỗi nhị phân là gì?,"""""""Là một dãy các ký tự chỉ gồm hai giá trị 0 và 1, đại diện cho các lựa chọn """"""""có"""""""" hoặc """"""""không""""""""."""""""
+Bài toán tổ hợp,chỉnh hợp lặp khi có giới hạn số lần lặp là gì?,"Chỉnh hợp lặp khi có giới hạn số lần lặp Là bài toán đếm các dãy có độ dài k từ n loại phần tử, mỗi loại i xuất hiện tối đa ri lần."
+Bài toán tổ hợp,hoán vị của một đa tập là gì?,Hoán vị của một đa tập Là cách sắp xếp các phần tử trong đó có một số phần tử giống nhau (hoán vị lặp).
+Bài toán tổ hợp,hoán vị không có điểm cố định là gì?,Là hoán vị mà không có phần tử nào ở đúng vị trí ban đầu của nó.
+Bài toán tổ hợp,hàm lặp để giải hệ thức truy hồi là gì?,Hàm lặp để giải hệ thức truy hồi Là cách tìm công thức tổng quát bằng cách thay thế liên tiếp các số hạng cho đến khi đạt tới điều kiện đầu.
+Bài toán tổ hợp,hàm sinh trong bài toán đếm là gì?,Hàm sinh trong bài toán đếm Là một chuỗi lũy thừa mà các hệ số của nó đại diện cho các giá trị trong một dãy số cần đếm.
+Bài toán tổ hợp,hàm đệ quy là gì?,Hàm đệ quy Là hàm số mà trong quá trình tính toán nó có lời gọi đến chính nó với đối số khác.
+Bài toán tổ hợp,không gian trạng thái là gì?,Không gian trạng thái Là tập hợp tất cả các cấu hình có thể có của bài toán mà thuật toán liệt kê cần duyệt qua.
+Bài toán tổ hợp,phân hoạch tập hợp là gì?,Phân hoạch tập hợp Là việc chia một tập hợp thành các tập con rời nhau mà hợp của chúng chính bằng tập hợp ban đầu.
+Bài toán tổ hợp,sơ đồ cây trong phương pháp liệt kê là gì?,Là công cụ trực quan hóa các bước lựa chọn để đảm bảo liệt kê đầy đủ các trường hợp của bài toán.
+Bài toán tổ hợp,số Ramsey R là gì?,"Số Ramsey R Là số nguyên dương nhỏ nhất sao cho bất kỳ đồ thị đầy đủ nào có $R(m, n)$ đỉnh, được tô màu cạnh bằng 2 màu, đều chứa đồ thị con đầy đủ m đỉnh màu 1 hoặc n đỉnh màu 2."
+Bài toán tổ hợp,thuật toán sinh là gì?,Thuật toán sinh Là thuật toán xây dựng một chuỗi các cấu hình rời rạc theo một thứ tự xác định mà không cần dùng đệ quy.
+Bài toán tổ hợp,thuật toán tối ưu trong đếm và liệt kê là gì?,Thuật toán tối ưu trong đếm và liệt kê Là thuật toán tìm ra kết quả với số bước tính toán hoặc bộ nhớ sử dụng là ít nhất.
+Bài toán tổ hợp,tập hợp các hoán vị là gì?,Tập hợp các hoán vị Là tập hợp chứa tất cả các cách sắp xếp khác nhau của một tập hợp phần tử cho trước.
+Bài toán tổ hợp,tổ hợp không tránh khỏi là gì?,Là các cấu hình chắc chắn phải xuất hiện trong bất kỳ hệ thống nào vượt quá một ngưỡng kích thước nhất định.
+Bài toán tổ hợp,đếm hai cách là gì?,Đếm hai cách Là kỹ thuật chứng minh một đẳng thức bằng cách đếm số phần tử của một tập hợp theo hai phương pháp khác nhau.
+Bài toán tổ hợp,đồ thị con đầy đủ trong định lý Ramsey là gì?,Đồ thị con đầy đủ trong định lý Ramsey Là một tập hợp các đỉnh mà bất kỳ hai đỉnh nào trong đó cũng được nối với nhau bởi một cạnh cùng màu.
+Bài toán tổ hợp,nguyên lý chuồng bồ câu dạng cơ bản là gì?,Nếu xếp n+1 phần tử vào n ngăn thì có ít nhất một ngăn chứa từ 2 phần tử trở lên.
+Bài toán tổ hợp,phương pháp thử sai trong liệt kê là gì?,Phương pháp thử sai trong liệt kê Là việc kiểm tra từng khả năng một cho đến khi tìm thấy cấu hình thỏa mãn yêu cầu.
+Bài toán tổ hợp,quy tắc cộng trong bài toán đếm là gì?,"Nếu một công việc có thể thực hiện theo n phương án khác nhau, phương án i có mi cách thực hiện, thì tổng số cách là tổng các mi."
+Bài toán tổ hợp,quy tắc nhân trong bài toán đếm là gì?,"Nếu một công việc gồm n giai đoạn liên tiếp, giai đoạn i có mi cách thực hiện, thì tổng số cách là tích các mi."
+Bài toán tổ hợp,tính đối xứng của số tổ hợp là gì?,"$C_n^k = C_n^{n-k}$, nghĩa là chọn k phần tử cũng giống như chọn ra n-k phần tử để loại bỏ."
+Bài toán tổ hợp,số Stirling loại hai S là gì?,Số Stirling loại hai S Là số cách phân hoạch một tập hợp n phần tử thành k tập con khác rỗng không phân biệt.
+Bài toán tổ hợp,Số cách xếp n quả bóng giống nhau vào k cái hộp phân biệt là bao nhiêu?,Bằng số tổ hợp lặp $\bar{C}_k^n = C_{n+k-1}^n$.
+Bài toán tổ hợp,Số cách xếp n quả bóng phân biệt vào k cái hộp phân biệt là bao nhiêu?,Bằng $k^n$ cách.
+Bài toán tổ hợp,số Stirling loại một s là gì?,Số Stirling loại một s Là số cách xếp n phần tử thành k chu trình rời nhau.
+Bài toán tổ hợp,số Bell B_n là gì?,Là tổng số cách phân hoạch một tập hợp n phần tử thành các tập con khác rỗng.
+Bài toán tổ hợp,Mối liên hệ giữa số Bell và số Stirling loại hai là gì?,"$B_n = \sum_{k=1}^n S(n, k)$."
+Bài toán tổ hợp,hoán vị không điểm bất động là gì?,Là hoán vị của n phần tử sao cho không có phần tử nào ở đúng vị trí ban đầu của nó.
+Bài toán tổ hợp,Số lượng hoán vị không điểm bất động của n phần tử tính như thế nào?,$D_n = n! \sum_{k=0}^n \frac{(-1)^k}{k!}$.
+Bài toán tổ hợp,số Catalan C_n là gì?,"Số Catalan C_n Là số xuất hiện trong các bài toán đếm như số cách đặt ngoặc hợp lệ, số cây nhị phân, số đường đi không vượt quá đường chéo."
+Bài toán tổ hợp,Công thức tính số Catalan C_n?,$C_n = \frac{1}{n+1} C_{2n}^n$.
+Bài toán tổ hợp,đa thức lựa chọn là gì?,Là đa thức mà hệ số $r_k$ của $x^k$ biểu diễn số cách đặt k quân xe không ăn nhau trên một bàn cờ có hình dạng bất kỳ.
+Bài toán tổ hợp,Đa thức lựa chọn dùng để giải bài toán gì?,Dùng để giải các bài toán đếm hoán vị có điều kiện hạn chế (ví dụ bài toán gán việc).
+Bài toán tổ hợp,Phát biểu nguyên lý Dirichlet dạng hình học?,"Nếu một vùng có diện tích S được phủ bởi n vùng có tổng diện tích nhỏ hơn S, thì có ít nhất hai vùng chồng lên nhau."
+Bài toán tổ hợp,số Ramsey R là gì?,Số Ramsey R Là số nguyên dương n nhỏ nhất sao cho mọi đồ thị n đỉnh đều chứa một clique kích thước k hoặc một tập độc lập kích thước l.
+Bài toán tổ hợp,Giá trị của số Ramsey R bằng bao nhiêu?,Bằng 6.
+Bài toán tổ hợp,Tại sao việc tìm các số Ramsey lớn lại cực kỳ khó?,Vì số lượng đồ thị cần kiểm tra tăng theo hàm mũ và chưa có thuật toán hiệu quả nào được tìm ra.
+Bài toán tổ hợp,phương pháp hàm sinh là gì?,Phương pháp hàm sinh Là phương pháp chuyển đổi một dãy số thành một chuỗi lũy thừa để sử dụng các công thức đại số trong việc đếm.
+Bài toán tổ hợp,Hàm sinh cho tổ hợp chập k của n phần tử là gì?,Là khai triển của nhị thức $(1+x)^n$.
+Bài toán tổ hợp,Hàm sinh cho tổ hợp lặp chập k của n phần tử là gì?,Là khai triển của chuỗi $(1-x)^{-n}$.
+Bài toán tổ hợp,hàm sinh mũ là gì?,Dùng để giải các bài toán đếm hoán vị và cấu hình có tính thứ tự.
+Bài toán tổ hợp,Công thức truy hồi của số Stirling loại hai là gì?,"$S(n, k) = S(n-1, k-1) + k \cdot S(n-1, k)$."
+Bài toán tổ hợp,Tại sao số cách phân tích số n thành tổng các số nguyên dương lại khó đếm?,Vì nó không có công thức đóng đơn giản và phụ thuộc vào tính chất của các số hạng.
+Bài toán tổ hợp,biểu đồ Ferrers là gì?,Biểu đồ Ferrers Là cách biểu diễn trực quan một phép phân tích số n thành tổng các số nguyên dưới dạng các hàng nút.
+Bài toán tổ hợp,Tính chất đối ngẫu trong biểu đồ Ferrers là gì?,Việc đổi hàng thành cột tạo ra một phép phân tích số mới gọi là phép phân tích liên hợp.
+Bài toán tổ hợp,Nguyên lý bù trừ có thể dùng để tính số các hàm toàn ánh từ A đến B không?,"Có, bằng cách trừ đi các hàm mà tập ảnh thiếu ít nhất một phần tử của B."
+Bài toán tổ hợp,Số các toàn ánh từ tập n phần tử đến tập m phần tử là bao nhiêu?,"Bằng $m! \cdot S(n, m)$."
+Bài toán tổ hợp,bài toán liệt kê là gì?,"Bài toán liệt kê Là bài toán yêu cầu viết ra tất cả các cấu hình thỏa mãn điều kiện, không chỉ là đếm số lượng."
+Bài toán tổ hợp,Tại sao thuật toán quay lui thường dùng cho liệt kê?,Vì nó cho phép duyệt qua không gian nghiệm dưới dạng cây và loại bỏ sớm các nhánh không thỏa mãn.
+Bài toán tổ hợp,thứ tự từ điển của các cấu hình là gì?,Thứ tự từ điển của các cấu hình Là cách sắp xếp các dãy số hoặc xâu ký tự giống như cách sắp xếp từ trong từ điển.
+Bài toán tổ hợp,Tại sao liệt kê theo thứ tự từ điển lại quan trọng?,Vì nó giúp chúng ta xác định được cấu hình kế tiếp và cấu hình thứ k một cách hệ thống.
+Bài toán tổ hợp,mã Gray là gì?,Mã Gray Là một dãy các xâu nhị phân mà hai xâu liên tiếp chỉ khác nhau đúng một bit.
+Bài toán tổ hợp,Ưu điểm của mã Gray trong việc liệt kê các tập con là gì?,"Mỗi bước sinh chỉ cần thay đổi một phần tử duy nhất, giúp thuật toán chạy nhanh và ổn định hơn."
+Bài toán tổ hợp,Làm thế nào để sinh hoán vị kế tiếp của một dãy số?,"Tìm vị trí i cuối cùng mà ai < ai+1, sau đó tìm aj nhỏ nhất lớn hơn ai ở phía sau để đổi chỗ và sắp xếp lại."
+Bài toán tổ hợp,Làm thế nào để sinh tập con kế tiếp của một tập hợp?,Thường sử dụng biểu diễn nhị thức và thực hiện phép cộng 1 trong hệ cơ số 2.
+Bài toán tổ hợp,bài toán tối ưu tổ hợp là gì?,"Bài toán tối ưu tổ hợp Là bài toán tìm cấu hình tổ hợp sao cho một hàm mục tiêu (chi phí, độ dài...) đạt giá trị cực tiểu hoặc cực đại."
+Bài toán tổ hợp,Tại sao bài toán người du lịch lại là bài toán tối ưu tổ hợp?,Vì nó yêu cầu tìm một hoán vị của các đỉnh sao cho tổng độ dài các cạnh là nhỏ nhất.
+Bài toán tổ hợp,thuật toán tham lam trong tối ưu tổ hợp là gì?,Thuật toán tham lam trong tối ưu tổ hợp Là thuật toán tại mỗi bước luôn chọn phương án tốt nhất cục bộ với hy vọng tìm được tối ưu toàn cục.
+Bài toán tổ hợp,Khi nào thuật toán tham lam cho ra kết quả tối ưu?,Khi bài toán có cấu trúc Matroid hoặc các điều kiện đặc biệt khác.
+Bài toán tổ hợp,phương pháp nhánh cận là gì?,Phương pháp nhánh cận Là kỹ thuật quay lui kết hợp với việc tính toán các cận để cắt tỉa các nhánh không thể chứa nghiệm tốt hơn nghiệm hiện tại.
+Bài toán tổ hợp,bài toán lập lịch là gì?,Bài toán lập lịch Là việc phân chia các công việc cho các máy sao cho thời gian hoàn thành hoặc chi phí là thấp nhất.
+Bài toán tổ hợp,thuật toán Johnson cho bài toán lập lịch trên hai máy là gì?,Thuật toán Johnson cho bài toán lập lịch trên hai máy Là thuật toán tối ưu để sắp xếp thứ tự công việc sao cho tổng thời gian hoàn thành trên hai máy là nhỏ nhất.
+Bài toán tổ hợp,Bài toán cái túi là gì?,Bài toán cái túi Là bài toán chọn các đồ vật có trọng lượng và giá trị sao cho tổng giá trị lớn nhất mà không vượt quá sức chứa của túi.
+Bài toán tổ hợp,Sự khác biệt giữa bài toán cái túi 0/1 và bài toán cái túi phân số là gì?,"Bài toán 0/1 chỉ được chọn hoặc không chọn vật, còn phân số cho phép lấy một phần của vật (giải được bằng tham lam)."
+Bài toán tổ hợp,Tại sao bài toán cái túi 0/1 lại khó giải ?,"Vì nó yêu cầu duyệt qua các tổ hợp của các vật phẩm, không có quy tắc tham lam đơn giản nào đảm bảo tối ưu."
+Bài toán tổ hợp,bài toán phủ tập hợp là gì?,Tìm số lượng ít nhất các tập con sao cho hợp của chúng phủ hết tập hợp đích.
+Bài toán tổ hợp,bài toán gán là gì?,Bài toán gán Là việc phân công n người vào n công việc sao cho tổng chi phí là nhỏ nhất (giải bằng thuật toán Hungary).
+Bài toán tổ hợp,hoán vị vòng quanh là gì?,"Hoán vị vòng quanh Là cách sắp xếp n phần tử xung quanh một vòng tròn, trong đó các cách xoay của cùng một cấu hình được coi là một."
+Bài toán tổ hợp,Số lượng hoán vị vòng quanh của n phần tử là bao nhiêu?,Bằng $(n-1)!$.
+Bài toán tổ hợp,"Số lượng hoán vị lặp của n phần tử gồm các nhóm n1, n2... phần tử giống nhau?","$P_n(n_1, n_2, \dots) = \frac{n!}{n_1! n_2! \dots}$."
+Bài toán tổ hợp,hệ thức Pascal cho số tổ hợp là gì?,$C_{n+1}^k = C_n^k + C_n^{k-1}$.
+Bài toán tổ hợp,Số các hoán vị của n phần tử trong đó có k phần tử cố định?,"Bằng số hoán vị của $n-k$ phần tử còn lại, tức là $(n-k)!$."
+Bài toán tổ hợp,đa tập là gì?,"Đa tập Là tập hợp mà một phần tử có thể xuất hiện nhiều lần, số lần xuất hiện gọi là bội của phần tử đó."
+Bài toán tổ hợp,Số lượng tổ hợp lặp chập k của n phần tử?,Ký hiệu $\bar{C}_n^k = C_{n+k-1}^k$.
+Bài toán tổ hợp,Công thức Vandermonde cho số tổ hợp là gì?,$C_{m+n}^r = \sum_{k=0}^r C_m^k C_n^{r-k}$.
+Bài toán tổ hợp,số hạng tổng quát của nhị thức Newton là gì?,$T_{k+1} = C_n^k a^{n-k} b^k$.
+Bài toán tổ hợp,Tổng các bình phương của các số tổ hợp trong dòng n bằng bao nhiêu?,$\sum_{k=0}^n (C_n^k)^2 = C_{2n}^n$.
+Bài toán tổ hợp,bài toán chia kẹo của Euler là gì?,Bài toán chia kẹo của Euler Là bài toán tìm số nghiệm nguyên không âm của phương trình $x_1 + x_2 + \dots + x_k = n$.
+Bài toán tổ hợp,Số nghiệm nguyên không âm của phương trình $x_1 + x_2 + \dots + x_k = n$ là bao nhiêu?,Bằng $C_{n+k-1}^{k-1}$.
+Bài toán tổ hợp,Số nghiệm nguyên dương của phương trình $x_1 + x_2 + \dots + x_k = n$ là bao nhiêu?,Bằng $C_{n-1}^{k-1}$.
+Bài toán tổ hợp,số Stirling loại hai S là gì?,"Luôn bằng 1, vì chỉ có 1 cách chia n phần tử vào 1 tập con."
+Bài toán tổ hợp,số Stirling loại hai S là gì?,"Luôn bằng 1, vì mỗi phần tử phải ở trong một tập con riêng biệt."
+Bài toán tổ hợp,Giá trị của số Stirling loại hai S bằng bao nhiêu?,$2^{n-1} - 1$.
+Bài toán tổ hợp,số Bell B_0 là gì?,Bằng 1 (theo quy ước cho tập rỗng).
+Bài toán tổ hợp,Số cách sắp xếp n người vào một bàn tròn k chỗ ?,Bằng $A_n^k / k$.
+Bài toán tổ hợp,bài toán phân chia là gì?,Bài toán phân chia Là việc chia một số nguyên hoặc một tập hợp thành các phần thỏa mãn điều kiện nhất định.
+Bài toán tổ hợp,số các phép phân tích số n thành tổng các số nguyên dương là gì?,Ký hiệu là p(n).
+Bài toán tổ hợp,Tại sao hàm sinh lại giúp giải bài toán đếm?,Vì nó biến các quy tắc cộng và nhân tổ hợp thành các phép toán trên đa thức hoặc chuỗi lũy thừa.
+Bài toán tổ hợp,hệ thức truy hồi tuyến tính bậc k là gì?,Là hệ thức mà $a_n$ được tính dựa trên k số hạng trước đó theo một tổ hợp tuyến tính.
+Bài toán tổ hợp,Nghiệm của hệ thức truy hồi phụ thuộc vào yếu tố nào?,Phụ thuộc vào các nghiệm của phương trình đặc trưng và các điều kiện ban đầu.
+Bài toán tổ hợp,bài toán liệt kê tối ưu là gì?,Bài toán liệt kê tối ưu Là việc liệt kê các cấu hình theo một thứ tự mà chi phí chuyển đổi giữa hai cấu hình liên tiếp là nhỏ nhất (như mã Gray).
+Bài toán tổ hợp,bài toán phân công là gì?,Bài toán phân công Là việc tìm một bộ ghép hoàn hảo có tổng trọng số nhỏ nhất trong đồ thị hai phía đầy đủ.
+Bài toán tổ hợp,Thuật toán Hungary dùng để giải bài toán nào?,Dùng để giải bài toán phân công (gán việc) tối ưu.
+Bài toán tổ hợp,bài toán luồng cực đại chi phí cực tiểu là gì?,Tìm luồng có giá trị cho trước sao cho tổng chi phí trên các cạnh là thấp nhất.
+Bài toán tổ hợp,độ phức tạp thời gian của một thuật toán là gì?,Độ phức tạp thời gian của một thuật toán Là hàm số mô tả số lượng các phép tính cơ bản mà thuật toán thực hiện theo kích thước đầu vào n.
+Bài toán tổ hợp,lớp bài toán P là gì?,Lớp bài toán P Là tập hợp các bài toán có thể giải được bằng thuật toán có độ phức tạp đa thức $O(n^k)$.
+Bài toán tổ hợp,lớp bài toán NP là gì?,Lớp bài toán NP Là tập hợp các bài toán mà lời giải của chúng có thể kiểm chứng được trong thời gian đa thức.
+Bài toán tổ hợp,bài toán NP-đầy đủ là gì?,Bài toán NP-đầy đủ Là bài toán thuộc lớp NP và mọi bài toán khác trong NP đều có thể quy dẫn về nó trong thời gian đa thức.
+Bài toán tổ hợp,Tại sao bài toán P = NP lại là bài toán lớn nhất của tin học lý thuyết?,Vì nó đặt câu hỏi liệu mọi bài toán có thể kiểm chứng nhanh thì có thể giải nhanh được hay không.
+Bài toán tổ hợp,thuật toán xấp xỉ là gì?,Thuật toán xấp xỉ Là thuật toán tìm ra lời giải gần đúng cho các bài toán khó (NP-khó) trong thời gian nhanh.
+Đại số Logic,Chức năng của Bộ chọn trong máy tính là gì?,Dùng các cổng logic để chọn một trong nhiều đầu vào.
+Đại số Logic,Chức năng của Bộ cộng trong máy tính là gì?,Thực hiện phép cộng nhị phân dựa trên XOR và AND.
+Đại số Logic,Chức năng của Thanh ghi trong máy tính là gì?,Dùng các mạch logic có nhớ để lưu trữ bit.
+Đại số Logic,Chức năng của Đơn vị logic trong máy tính là gì?,Trung tâm xử lý các phép toán logic trong CPU.
+Đại số Logic,Công thức của luật De Morgan là gì?,$\neg(x \wedge y) = \neg x \vee \neg y$
+Đại số Logic,Công thức của luật Giao hoán là gì?,$x \vee y = y \vee x$
+Đại số Logic,Công thức của luật Hấp thụ là gì?,$x \vee (x \wedge y) = x$
+Đại số Logic,Công thức của luật Kết hợp là gì?,$(x \wedge y) \wedge z = x \wedge (y \wedge z)$
+Đại số Logic,Công thức của luật Luật bù là gì?,$x \wedge \neg x = 0$
+Đại số Logic,Công thức của luật Luật thống trị là gì?,$x \vee 1 = 1$
+Đại số Logic,Công thức của luật Lũy đẳng là gì?,$x \wedge x = x$
+Đại số Logic,Công thức của luật Phần tử trung hòa là gì?,$x \vee 0 = x$
+Đại số Logic,Công thức của luật Phần tử đơn vị là gì?,$x \wedge 1 = x$
+Đại số Logic,Công thức của luật Phủ định kép là gì?,$\neg(\neg x) = x$
+Đại số Logic,Dấu kéo theo và dấu suy ra khác nhau như thế nào?,"Dấu $\rightarrow$ là phép toán logic trong biểu thức, còn ($\Rightarrow$) dùng để chỉ quan hệ kéo theo giữa hai mệnh đề hằng đúng."
+Đại số Logic,Dấu tương đương có ý nghĩa gì khác so với dấu bằng ?,"Dấu $\leftrightarrow$ dùng cho mệnh đề (cùng giá trị chân lý), còn dấu ($=$) dùng cho các giá trị số hoặc biểu thức đại số."
+Đại số Logic,Khi nào thì nên dùng bìa Karnaugh thay vì rút gọn bằng công thức?,Nên dùng bìa Karnaugh khi số biến từ 3 đến 5 để tránh sai sót trong biến đổi đại số phức tạp.
+Đại số Logic,"Khi rút gọn bằng bìa Karnaugh, tại sao phải gom nhóm có kích thước lớn nhất?","Để triệt tiêu được nhiều biến nhất có thể, dẫn đến đơn thức kết quả đơn giản nhất."
+Đại số Logic,Ký hiệu của phép toán Hội là gì?,Ký hiệu chuẩn là $\wedge$.
+Đại số Logic,Ký hiệu của phép toán Kéo theo là gì?,Ký hiệu chuẩn là $\rightarrow$.
+Đại số Logic,Ký hiệu của phép toán NAND là gì?,Ký hiệu chuẩn là $\uparrow$.
+Đại số Logic,Ký hiệu của phép toán NOR là gì?,Ký hiệu chuẩn là $\downarrow$.
+Đại số Logic,Ký hiệu của phép toán Phủ định là gì?,Ký hiệu chuẩn là $\neg$.
+Đại số Logic,Ký hiệu của phép toán Tuyển là gì?,Ký hiệu chuẩn là $\vee$.
+Đại số Logic,Ký hiệu của phép toán Tương đương là gì?,Ký hiệu chuẩn là $\leftrightarrow$.
+Đại số Logic,Ký hiệu của phép toán Tồn tại là gì?,Ký hiệu chuẩn là $\exists$.
+Đại số Logic,Ký hiệu của phép toán Với mọi là gì?,Ký hiệu chuẩn là $\forall$.
+Đại số Logic,Ký hiệu của phép toán XOR là gì?,Ký hiệu chuẩn là $\oplus$.
+Đại số Logic,Làm sao để xác định một nhóm 4 ô 1 kề nhau tạo thành một tế bào hợp lệ?,"Khi 4 ô đó tạo thành một hình chữ nhật 1x4, 4x1 hoặc hình vuông 2x2 trong bìa Karnaugh."
+Đại số Logic,Làm thế nào để chuyển đổi từ dạng chuẩn tắc hội sang dạng chuẩn tắc tuyển?,Có thể dùng luật De Morgan trên phần bù của hàm hoặc dựa vào các ô 0 trong bảng chân trị.
+Đại số Logic,Làm thế nào để nhận biết một ô 1 là ô 1 độc quyền của một tế bào thiết yếu?,"Khi trong bìa Karnaugh, ô 1 đó chỉ có thể thuộc duy nhất về nhóm (tế bào) đang xét."
+Đại số Logic,Mối quan hệ giữa kích thước của tế bào và số lượng biến được rút gọn là gì?,Kích thước tế bào càng lớn ($2^k$) thì số lượng biến bị triệt tiêu càng nhiều (k biến).
+Đại số Logic,Phát biểu nội dung luật De Morgan?,Luật De Morgan có công thức: $\neg(x \wedge y) = \neg x \vee \neg y$.
+Đại số Logic,Phát biểu nội dung luật Giao hoán?,Luật Giao hoán có công thức: $x \vee y = y \vee x$.
+Đại số Logic,Phát biểu nội dung luật Hấp thụ?,Luật Hấp thụ có công thức: $x \vee (x \wedge y) = x$.
+Đại số Logic,Phát biểu nội dung luật Kết hợp?,Luật Kết hợp có công thức: $(x \wedge y) \wedge z = x \wedge (y \wedge z)$.
+Đại số Logic,Phát biểu nội dung luật Luật bù?,Luật Luật bù có công thức: $x \wedge \neg x = 0$.
+Đại số Logic,Phát biểu nội dung luật Luật thống trị?,Luật Luật thống trị có công thức: $x \vee 1 = 1$.
+Đại số Logic,Phát biểu nội dung luật Lũy đẳng?,Luật Lũy đẳng có công thức: $x \wedge x = x$.
+Đại số Logic,Phát biểu nội dung luật Phần tử trung hòa?,Luật Phần tử trung hòa có công thức: $x \vee 0 = x$.
+Đại số Logic,Phát biểu nội dung luật Phần tử đơn vị?,Luật Phần tử đơn vị có công thức: $x \wedge 1 = x$.
+Đại số Logic,Phát biểu nội dung luật Phủ định kép?,Luật phủ định ($\neg$) ($\neg$) kép có công thức: $\neg(\neg x) = x$.
+Đại số Logic,toán gạch đứng Sheffer đại diện cho cổng nào?,Đại diện cho cổng NAND.
+Đại số Logic,toán mũi tên Peirce đại diện cho cổng nào?,Đại diện cho cổng NOR.
+Đại số Logic,Sự khác biệt giữa biến tự do và biến ràng buộc trong vị từ là gì?,"Biến ràng buộc bị chi phối bởi lượng từ (forall, exists), còn biến tự do thì không và có thể nhận giá trị từ bên ngoài."
+Đại số Logic,Sự khác biệt giữa x hội y và x tuyển y trong ngôn ngữ tự nhiên là gì?,"'hội ($\wedge$) ($\wedge$)' tương ứng với chữ 'VÀ' (cả hai cùng đúng), 'tuyển ($\vee$) ($\vee$)' tương ứng với chữ 'HOẶC' (ít nhất một cái đúng)."
+Đại số Logic,dạng chuẩn tắc của một hàm Boole là gì?,Dạng chuẩn tắc của một hàm Boole Là cách biểu diễn hàm duy nhất và không phụ thuộc vào phương pháp biến đổi (ví dụ DNF đầy đủ).
+Đại số Logic,hệ cổng logic đầy đủ là gì?,Hệ cổng logic đầy đủ Là một tập hợp các cổng logic mà từ đó ta có thể tạo ra bất kỳ hàm Boole nào.
+Đại số Logic,hàm Boole tự đối ngẫu là gì?,Hàm Boole tự đối ngẫu Là hàm số mà giá trị của nó không thay đổi khi ta lấy đối ngẫu của toàn bộ biểu thức.
+Đại số Logic,lượng từ bị lồng nhau là gì?,"Là trường hợp một lượng từ nằm bên trong phạm vi tác động của một lượng từ khác (ví dụ Với mọi x, tồn tại y)."
+Đại số Logic,tế bào trong bìa Karnaugh là gì?,"Tế bào trong bìa Karnaugh Là một nhóm các ô 1 kề nhau có kích thước là lũy thừa của 2 (1, 2, 4, 8...)."
+Đại số Logic,tế bào phát biểu không thiết yếu là gì?,Là tế bào phát biểu mà mọi ô 1 của nó đều được bao phủ bởi các tế bào phát biểu khác (không nhất thiết là thiết yếu).
+Đại số Logic,vị từ n ngôi là gì?,"Là vị từ có chứa n biến độc lập (ví dụ P(x, y, z) là vị từ 3 ngôi)."
+Đại số Logic,tế bào phát biểu dư thừa là gì?,Là tế bào phát biểu mà tất cả các ô 1 của nó đã được bao phủ hoàn toàn bởi các tế bào thiết yếu khác.
+Đại số Logic,tế bào phát biểu thiết yếu là gì?,Là tế bào phát biểu chứa ít nhất một ô 1 mà không có tế bào phát biểu nào khác bao phủ được ô 1 đó.
+Đại số Logic,"Trong toán logic, Hội được ký hiệu như thế nào?",$\wedge$
+Đại số Logic,"Trong toán logic, Kéo theo được ký hiệu như thế nào?",$\rightarrow$
+Đại số Logic,"Trong toán logic, NAND được ký hiệu như thế nào?",$\uparrow$
+Đại số Logic,"Trong toán logic, NOR được ký hiệu như thế nào?",$\downarrow$
+Đại số Logic,"Trong toán logic, Phủ định được ký hiệu như thế nào?",$\neg$
+Đại số Logic,"Trong toán logic, Tuyển được ký hiệu như thế nào?",$\vee$
+Đại số Logic,"Trong toán logic, Tương đương được ký hiệu như thế nào?",$\leftrightarrow$
+Đại số Logic,"Trong toán logic, Tồn tại được ký hiệu như thế nào?",$\exists$
+Đại số Logic,"Trong toán logic, Với mọi được ký hiệu như thế nào?",$\forall$
+Đại số Logic,"Trong toán logic, XOR được ký hiệu như thế nào?",$\oplus$
+Đại số Logic,Tại sao Bộ chọn lại liên quan đến đại số logic?,Vì Bộ chọn (Multiplexer) được xây dựng hoàn toàn từ các cổng logic cơ bản.
+Đại số Logic,Tại sao Bộ cộng lại liên quan đến đại số logic?,Vì Bộ cộng (Adder) được xây dựng hoàn toàn từ các cổng logic cơ bản.
+Đại số Logic,Tại sao Thanh ghi lại liên quan đến đại số logic?,Vì Thanh ghi (Register) được xây dựng hoàn toàn từ các cổng logic cơ bản.
+Đại số Logic,Tại sao bìa Karnaugh chỉ hiệu quả với số biến nhỏ?,Vì khả năng biểu diễn hình học 2 chiều bị giới hạn khi số biến tăng cao.
+Đại số Logic,Tại sao bảng chân trị của n biến có 2 mũ n dòng?,"Vì mỗi biến có 2 trạng thái độc lập, tổ hợp lại thành 2*2*... (n lần)."
+Đại số Logic,Tại sao chúng ta loại bỏ các tế bào phát biểu dư thừa?,Để đạt được biểu thức logic tối thiểu nhất (ít đơn thức nhất và ít biến nhất).
+Đại số Logic,Tại sao các ô ở 4 góc của bìa Karnaugh 4 biến lại có thể tạo thành một tế bào?,"Do tính chất cuộn tròn (torus) của bìa Karnaugh, các cạnh đối diện và các góc được coi là kề nhau."
+Đại số Logic,Tại sao cần phân biệt biến tự do và biến ràng buộc?,Để tránh nhầm lẫn khi áp dụng lượng từ và xác định giá trị chân lý của vị từ.
+Đại số Logic,Tại sao cần sử dụng Biến ràng buộc trong toán rời rạc?,Để biến nằm dưới sự kiểm soát của một lượng từ.
+Đại số Logic,Tại sao cần sử dụng Biến tự do trong toán rời rạc?,Để biến không chịu sự kiểm soát của lượng từ nào.
+Đại số Logic,Tại sao cần sử dụng Bìa Karnaugh trong toán rời rạc?,Để sơ đồ 2 chiều giúp rút gọn hàm logic trực quan.
+Đại số Logic,Tại sao cần sử dụng Bảng chân trị trong toán rời rạc?,Để bảng liệt kê tất cả trường hợp giá trị của hàm.
+Đại số Logic,Tại sao cần sử dụng Cổng NAND trong toán rời rạc?,Để cổng vạn năng có thể thay thế mọi loại cổng khác.
+Đại số Logic,Tại sao cần sử dụng Cổng NOR trong toán rời rạc?,Để cổng vạn năng có thể thay thế mọi loại cổng khác.
+Đại số Logic,Tại sao cần sử dụng Cổng XNOR trong toán rời rạc?,Để cổng thực hiện phép tương đương (đúng khi giống nhau).
+Đại số Logic,Tại sao cần sử dụng Cổng XOR trong toán rời rạc?,Để cổng thực hiện phép tuyển ($\vee$) ($\vee$) loại trừ (đúng khi khác nhau).
+Đại số Logic,Tại sao cần sử dụng Dạng chuẩn tắc hội trong toán rời rạc?,Để tích của các tuyển ($\vee$) ($\vee$) sơ cấp.
+Đại số Logic,Tại sao cần sử dụng Dạng chuẩn tắc hội đầy đủ trong toán rời rạc?,Để mỗi tuyển ($\vee$) ($\vee$) sơ cấp trong cnf đều chứa đủ n biến.
+Đại số Logic,Tại sao cần sử dụng Dạng chuẩn tắc tuyển trong toán rời rạc?,Để tổng của các hội ($\wedge$) ($\wedge$) sơ cấp.
+Đại số Logic,Tại sao cần sử dụng Dạng chuẩn tắc tuyển đầy đủ trong toán rời rạc?,Để mỗi hội ($\wedge$) ($\wedge$) sơ cấp trong dnf đều chứa đủ n biến.
+Đại số Logic,Tại sao cần sử dụng Giá trị chân lý trong toán rời rạc?,Để trạng thái đúng (1) hoặc sai (0) của một mệnh đề.
+Đại số Logic,Tại sao cần sử dụng Hàm Boole trong toán rời rạc?,Để hàm số biến đầu vào nhị phân thành đầu ra nhị phân.
+Đại số Logic,Tại sao cần sử dụng Hằng đúng trong toán rời rạc?,Để biểu thức luôn có giá trị đúng với mọi biến.
+Đại số Logic,Tại sao cần sử dụng Hệ tiên đề Huntington trong toán rời rạc?,Để bộ các tiên đề cơ bản định nghĩa đại số boole.
+Đại số Logic,Tại sao cần sử dụng Hội sơ cấp trong toán rời rạc?,Để tích các literal chứa đầy đủ n biến của hàm.
+Đại số Logic,Tại sao cần sử dụng Lượng từ phổ dụng trong toán rời rạc?,Để khẳng định tính chất đúng cho toàn bộ tập xác định.
+Đại số Logic,Tại sao cần sử dụng Lượng từ tồn tại trong toán rời rạc?,Để khẳng định tính chất đúng cho ít nhất một phần tử.
+Đại số Logic,Tại sao cần sử dụng Mâu thuẫn trong toán rời rạc?,Để biểu thức luôn có giá trị sai với mọi biến.
+Đại số Logic,Tại sao cần sử dụng Mã Gray trong toán rời rạc?,Để mã nhị phân mà hai giá trị liên tiếp chỉ khác nhau 1 bit.
+Đại số Logic,Tại sao cần sử dụng Mệnh đề phức hợp trong toán rời rạc?,Để kết hợp mệnh đề đơn bằng các phép toán logic.
+Đại số Logic,Tại sao cần sử dụng Mệnh đề trong toán rời rạc?,Để câu khẳng định có giá trị chân lý đúng hoặc sai.
+Đại số Logic,Tại sao cần sử dụng Nguyên lý đối ngẫu trong toán rời rạc?,Để quy tắc hoán đổi hội ($\wedge$) ($\wedge$)/tuyển ($\vee$) ($\vee$) và 0/1 trong biểu thức.
+Đại số Logic,Tại sao cần sử dụng Thuật toán Quine-McCluskey trong toán rời rạc?,Để phương pháp rút gọn hàm boole bằng tính toán.
+Đại số Logic,Tại sao cần sử dụng Tiếp biến trong toán rời rạc?,Để biểu thức có thể đúng hoặc sai tùy vào biến.
+Đại số Logic,Tại sao cần sử dụng Tuyển sơ cấp trong toán rời rạc?,Để tổng các literal chứa đầy đủ n biến của hàm.
+Đại số Logic,Tại sao cần sử dụng Tế bào phát biểu trong toán rời rạc?,Để nhóm các ô 1 lớn nhất có thể trong k-map.
+Đại số Logic,Tại sao cần sử dụng Tế bào thiết yếu trong toán rời rạc?,Để tế bào chứa ô 1 không thuộc bất kỳ nhóm nào khác.
+Đại số Logic,Tại sao cần sử dụng Vị từ trong toán rời rạc?,"Để khẳng định có chứa biến số, trở thành mệnh đề khi gán giá trị."
+Đại số Logic,Tại sao cần tìm tất cả các tế bào phát biểu khi rút gọn hàm Boole?,Vì tập hợp tối ưu của các đơn thức chắc chắn phải là một tập con của các tế bào phát biểu này.
+Đại số Logic,Tại sao cần xác định miền xác định cho lượng từ?,"""""""Để biết được phạm vi """"""""với mọi"""""""" hoặc """"""""tồn tại"""""""" đang được áp dụng trên tập hợp cụ thể nào."""""""
+Đại số Logic,Tại sao cổng NAND và NOR được gọi là cổng vạn năng?,Vì ta có thể xây dựng bất kỳ hàm logic nào chỉ từ một loại cổng này.
+Đại số Logic,Tại sao dạng chuẩn tắc hội là tích của các tổng?,Vì nó liệt kê tất cả các tổ hợp biến làm cho hàm nhận giá trị 0.
+Đại số Logic,Tại sao dạng chuẩn tắc tuyển là tổng của các tích?,Vì nó liệt kê tất cả các tổ hợp biến làm cho hàm nhận giá trị 1.
+Đại số Logic,Tại sao logic Boole lại là nền tảng của kỹ thuật số?,Vì các linh kiện bán dẫn có hai trạng thái dẫn/ngắt tương ứng với 0 và 1.
+Đại số Logic,Tại sao luật De Morgan quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng \neg x \vee \neg y$.
+Đại số Logic,Tại sao luật Giao hoán quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng y \vee x$.
+Đại số Logic,Tại sao luật Hấp thụ quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng x$.
+Đại số Logic,Tại sao luật Kết hợp quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng x \wedge (y \wedge z)$.
+Đại số Logic,Tại sao luật Luật bù quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng 0$.
+Đại số Logic,Tại sao luật Luật thống trị quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng 1$.
+Đại số Logic,Tại sao luật Lũy đẳng quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng x$.
+Đại số Logic,Tại sao luật Phần tử trung hòa quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng x$.
+Đại số Logic,Tại sao luật Phần tử đơn vị quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng x$.
+Đại số Logic,Tại sao luật Phủ định kép quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng x$.
+Đại số Logic,Tại sao mã Gray lại giúp tránh lỗi trong các hệ thống mạch số?,"Vì khi chuyển trạng thái chỉ có 1 bit thay đổi, giúp loại bỏ các trạng thái trung gian không xác định do độ trễ của linh kiện."
+Đại số Logic,Tại sao mã Gray được dùng cho bìa Karnaugh?,"Để hai ô kề nhau chỉ khác nhau đúng một biến, giúp việc gom nhóm chính xác."
+Đại số Logic,Tại sao một tế bào phải có kích thước là lũy thừa của 2?,Để đảm bảo rằng nó có thể được biểu diễn bằng một đơn thức duy nhất sau khi triệt tiêu các biến.
+Đại số Logic,Tại sao phép kéo theo P->Q chỉ sai khi P đúng Q sai?,Vì nó mô tả sự cam kết: nếu giả thiết đúng mà kết quả sai thì quy luật bị vi phạm.
+Đại số Logic,Tại sao phép kéo theo P->Q lại đúng khi P sai?,"Vì khi giả thiết sai, ta không thể bác bỏ được tính đúng đắn của lời cam kết, nên mặc định nó là đúng (Vacuously true)."
+Đại số Logic,Tại sao phải học đại số logic khi đã có ngôn ngữ lập trình?,Vì đại số logic giúp tối ưu hóa các điều kiện rẽ nhánh (if-else) và là nền tảng để hiểu cách máy tính hoạt động ở mức phần cứng.
+Đại số Logic,Tại sao phải rút gọn hàm Boole trước khi thiết kế mạch?,"Để giảm số lượng cổng logic, tiết kiệm chi phí và tăng tốc độ mạch."
+Đại số Logic,Tại sao phủ định của 'Với mọi' lại là 'Tồn tại'?,"Vì để bác bỏ một khẳng định đúng cho tất cả, ta chỉ cần chỉ ra ít nhất một trường hợp sai."
+Đại số Logic,Tại sao thuật toán Quine-McCluskey cũng dựa trên khái niệm tế bào phát biểu?,Vì nó tìm cách kết hợp các cặp hội ($\wedge$) ($\wedge$) sơ cấp để tạo ra các tế bào lớn hơn cho đến khi không thể kết hợp được nữa.
+Đại số Logic,Tại sao thứ tự của các lượng từ lồng nhau lại quan trọng?,Vì việc hoán đổi thứ tự của lượng từ VỚI MỌI và TỒN TẠI có thể làm thay đổi hoàn toàn ý nghĩa của câu.
+Đại số Logic,"Tại sao trong logic vị từ, thứ tự của hai lượng từ tồn tại có thể hoán đổi cho nhau?","""""""Vì """"""""Tồn tại x và tồn tại y"""""""" không phụ thuộc vào việc cái nào được xét trước, miễn là cả hai đều có mặt trong miền xác định."""""""
+Đại số Logic,Tại sao trong một số trường hợp ta vẫn cần chọn tế bào phát biểu không thiết yếu?,Khi các tế bào thiết yếu chưa phủ hết tất cả các ô 1 của hàm.
+Đại số Logic,Tại sao tính duy nhất của dạng chuẩn tắc lại quan trọng?,Để giúp kiểm tra xem hai biểu thức logic khác nhau có thực chất là cùng một hàm hay không.
+Đại số Logic,"Tại sao tập hợp cổng {AND, NOT} được coi là đầy đủ?","Vì từ hai cổng này ta có thể tạo ra cổng OR (theo luật De Morgan), từ đó tạo ra mọi hàm khác."
+Đại số Logic,Tại sao tế bào phát biểu thiết yếu bắt buộc phải có mặt trong biểu thức rút gọn cuối cùng?,"Vì nếu không có nó, sẽ có ít nhất một ô 1 của hàm không được phủ, dẫn đến kết quả sai."
+Đại số Logic,Tại sao việc chọn tế bào lớn nhất luôn được ưu tiên trong bìa Karnaugh?,Vì tế bào càng lớn thì đơn thức kết quả càng ngắn gọn (càng ít biến).
+Đại số Logic,Tại sao việc chứng minh tương đương logic bằng bảng chân trị lại bị hạn chế?,"Vì số dòng tăng theo hàm mũ ($2^n$), gây khó khăn khi số biến lớn."
+Đại số Logic,Tại sao Đơn vị logic lại liên quan đến đại số logic?,Vì Đơn vị logic (ALU) được xây dựng hoàn toàn từ các cổng logic cơ bản.
+Đại số Logic,Tại sao điều kiện Don't Care lại giúp rút gọn hàm tốt hơn?,"Vì ta có thể coi chúng là 1 để tạo ra các tế bào lớn hơn, hoặc là 0 để loại bỏ đơn thức."
+Đại số Logic,Ý nghĩa thực tiễn của Biến ràng buộc là gì?,Giúp biến nằm dưới sự kiểm soát của một lượng từ.
+Đại số Logic,Ý nghĩa thực tiễn của Biến tự do là gì?,Giúp biến không chịu sự kiểm soát của lượng từ nào.
+Đại số Logic,Ý nghĩa thực tiễn của Bìa Karnaugh là gì?,Giúp sơ đồ 2 chiều giúp rút gọn hàm logic trực quan.
+Đại số Logic,Ý nghĩa thực tiễn của Bảng chân trị là gì?,Giúp bảng liệt kê tất cả trường hợp giá trị của hàm.
+Đại số Logic,Ý nghĩa thực tiễn của Cổng NAND là gì?,Giúp cổng vạn năng có thể thay thế mọi loại cổng khác.
+Đại số Logic,Ý nghĩa thực tiễn của Cổng NOR là gì?,Giúp cổng vạn năng có thể thay thế mọi loại cổng khác.
+Đại số Logic,Ý nghĩa thực tiễn của Cổng XNOR là gì?,Giúp cổng thực hiện phép tương đương (đúng khi giống nhau).
+Đại số Logic,Ý nghĩa thực tiễn của Cổng XOR là gì?,Giúp cổng thực hiện phép tuyển ($\vee$) ($\vee$) loại trừ (đúng khi khác nhau).
+Đại số Logic,Ý nghĩa thực tiễn của Dạng chuẩn tắc hội là gì?,Giúp tích của các tuyển ($\vee$) ($\vee$) sơ cấp.
+Đại số Logic,Ý nghĩa thực tiễn của Dạng chuẩn tắc hội đầy đủ là gì?,Giúp mỗi tuyển ($\vee$) ($\vee$) sơ cấp trong cnf đều chứa đủ n biến.
+Đại số Logic,Ý nghĩa thực tiễn của Dạng chuẩn tắc tuyển là gì?,Giúp tổng của các hội ($\wedge$) ($\wedge$) sơ cấp.
+Đại số Logic,Ý nghĩa thực tiễn của Dạng chuẩn tắc tuyển đầy đủ là gì?,Giúp mỗi hội ($\wedge$) ($\wedge$) sơ cấp trong dnf đều chứa đủ n biến.
+Đại số Logic,Ý nghĩa thực tiễn của Giá trị chân lý là gì?,Giúp trạng thái đúng (1) hoặc sai (0) của một mệnh đề.
+Đại số Logic,Ý nghĩa thực tiễn của Hàm Boole là gì?,Giúp hàm số biến đầu vào nhị phân thành đầu ra nhị phân.
+Đại số Logic,Ý nghĩa thực tiễn của Hằng đúng là gì?,Giúp biểu thức luôn có giá trị đúng với mọi biến.
+Đại số Logic,Ý nghĩa thực tiễn của Hệ tiên đề Huntington là gì?,Giúp bộ các tiên đề cơ bản định nghĩa đại số boole.
+Đại số Logic,Ý nghĩa thực tiễn của Hội sơ cấp là gì?,Giúp tích các literal chứa đầy đủ n biến của hàm.
+Đại số Logic,Ý nghĩa thực tiễn của Lượng từ phổ dụng là gì?,Giúp khẳng định tính chất đúng cho toàn bộ tập xác định.
+Đại số Logic,Ý nghĩa thực tiễn của Lượng từ tồn tại là gì?,Giúp khẳng định tính chất đúng cho ít nhất một phần tử.
+Đại số Logic,Ý nghĩa thực tiễn của Mâu thuẫn là gì?,Giúp biểu thức luôn có giá trị sai với mọi biến.
+Đại số Logic,Ý nghĩa thực tiễn của Mã Gray là gì?,Giúp mã nhị phân mà hai giá trị liên tiếp chỉ khác nhau 1 bit.
+Đại số Logic,Ý nghĩa thực tiễn của Mệnh đề là gì?,Giúp câu khẳng định có giá trị chân lý đúng hoặc sai.
+Đại số Logic,Ý nghĩa thực tiễn của Mệnh đề phức hợp là gì?,Giúp kết hợp mệnh đề đơn bằng các phép toán logic.
+Đại số Logic,Ý nghĩa thực tiễn của Nguyên lý đối ngẫu là gì?,Giúp quy tắc hoán đổi hội ($\wedge$) ($\wedge$)/tuyển ($\vee$) ($\vee$) và 0/1 trong biểu thức.
+Đại số Logic,Ý nghĩa thực tiễn của Thuật toán Quine-McCluskey là gì?,Giúp phương pháp rút gọn hàm boole bằng tính toán.
+Đại số Logic,Ý nghĩa thực tiễn của Tiếp biến là gì?,Giúp biểu thức có thể đúng hoặc sai tùy vào biến.
+Đại số Logic,Ý nghĩa thực tiễn của Tuyển sơ cấp là gì?,Giúp tổng các literal chứa đầy đủ n biến của hàm.
+Đại số Logic,Ý nghĩa thực tiễn của Tế bào phát biểu là gì?,Giúp nhóm các ô 1 lớn nhất có thể trong k-map.
+Đại số Logic,Ý nghĩa thực tiễn của Tế bào thiết yếu là gì?,Giúp tế bào chứa ô 1 không thuộc bất kỳ nhóm nào khác.
+Đại số Logic,Ý nghĩa thực tiễn của Vị từ là gì?,"Giúp khẳng định có chứa biến số, trở thành mệnh đề khi gán giá trị."
+Đại số Logic,Điều kiện Don't Care trong bìa Karnaugh là gì?,Là các tổ hợp biến đầu vào mà giá trị của hàm không quan trọng (có thể là 0 hoặc 1).
+Đại số Logic,hàm Boole đơn điệu là gì?,Hàm Boole đơn điệu Là hàm số mà giá trị đầu ra không bao giờ giảm (từ 1 về 0) khi ta thay đổi đầu vào từ 0 lên 1.
+Đại số Logic,Biến ràng buộc là gì?,Biến nằm dưới sự kiểm soát của một lượng từ.
+Đại số Logic,Biến tự do là gì?,Biến không chịu sự kiểm soát của lượng từ nào.
+Đại số Logic,Bìa Karnaugh là gì?,Sơ đồ 2 chiều giúp rút gọn hàm logic trực quan.
+Đại số Logic,Bảng chân trị là gì?,Bảng liệt kê tất cả trường hợp giá trị của hàm.
+Đại số Logic,Cổng NAND là gì?,Cổng vạn năng có thể thay thế mọi loại cổng khác.
+Đại số Logic,Cổng NOR là gì?,Cổng vạn năng có thể thay thế mọi loại cổng khác.
+Đại số Logic,Cổng XNOR là gì?,Cổng thực hiện phép tương đương (đúng khi giống nhau).
+Đại số Logic,Cổng XOR là gì?,Cổng thực hiện phép tuyển ($\vee$) ($\vee$) loại trừ (đúng khi khác nhau).
+Đại số Logic,Dạng chuẩn tắc hội là gì?,Tích của các tuyển ($\vee$) ($\vee$) sơ cấp.
+Đại số Logic,Dạng chuẩn tắc hội đầy đủ là gì?,Mỗi tuyển ($\vee$) ($\vee$) sơ cấp trong CNF đều chứa đủ n biến.
+Đại số Logic,Dạng chuẩn tắc tuyển là gì?,Tổng của các hội ($\wedge$) ($\wedge$) sơ cấp.
+Đại số Logic,Dạng chuẩn tắc tuyển đầy đủ là gì?,Mỗi hội ($\wedge$) ($\wedge$) sơ cấp trong DNF đều chứa đủ n biến.
+Đại số Logic,Giá trị chân lý là gì?,Trạng thái Đúng (1) hoặc Sai (0) của một mệnh đề.
+Đại số Logic,Hàm Boole là gì?,Hàm số biến đầu vào nhị phân thành đầu ra nhị phân.
+Đại số Logic,Hằng đúng là gì?,Biểu thức luôn có giá trị đúng với mọi biến.
+Đại số Logic,Hệ tiên đề Huntington là gì?,Bộ các tiên đề cơ bản định nghĩa đại số Boole.
+Đại số Logic,Hội sơ cấp là gì?,Tích các literal chứa đầy đủ n biến của hàm.
+Đại số Logic,Lượng từ phổ dụng là gì?,Khẳng định tính chất đúng cho toàn bộ tập xác định.
+Đại số Logic,Lượng từ tồn tại là gì?,Khẳng định tính chất đúng cho ít nhất một phần tử.
+Đại số Logic,Mâu thuẫn là gì?,Biểu thức luôn có giá trị sai với mọi biến.
+Đại số Logic,Mã Gray là gì?,Mã nhị phân mà hai giá trị liên tiếp chỉ khác nhau 1 bit.
+Đại số Logic,Mệnh đề phức hợp là gì?,Kết hợp mệnh đề đơn bằng các phép toán logic.
+Đại số Logic,Mệnh đề là gì?,Câu khẳng định có giá trị chân lý đúng hoặc sai.
+Đại số Logic,Nguyên lý đối ngẫu là gì?,Quy tắc hoán đổi hội ($\wedge$) ($\wedge$)/tuyển ($\vee$) ($\vee$) và 0/1 trong biểu thức.
+Đại số Logic,Thuật toán Quine-McCluskey là gì?,Phương pháp rút gọn hàm Boole bằng tính toán.
+Đại số Logic,Tiếp biến là gì?,Biểu thức có thể đúng hoặc sai tùy vào biến.
+Đại số Logic,Tuyển sơ cấp là gì?,Tổng các literal chứa đầy đủ n biến của hàm.
+Đại số Logic,Tế bào phát biểu là gì?,Nhóm các ô 1 lớn nhất có thể trong K-map.
+Đại số Logic,Tế bào thiết yếu là gì?,Tế bào chứa ô 1 không thuộc bất kỳ nhóm nào khác.
+Đại số Logic,Vị từ là gì?,"Khẳng định có chứa biến số, trở thành mệnh đề khi gán giá trị."
+Đại số Logic,biến bù là gì?,Biến bù Là biến logic có giá trị ngược lại hoàn toàn với biến gốc trong mọi trường hợp.
+Đại số Logic,miền xác định của vị từ là gì?,Miền xác định của vị từ Là tập hợp tất cả các giá trị mà biến của vị từ có thể nhận.
+Đại số Logic,phủ tối thiểu của một hàm Boole là gì?,Phủ tối thiểu của một hàm Boole Là tập hợp các tế bào phát biểu có tổng số biến và số đơn thức là nhỏ nhất mà vẫn phủ hết các ô 1.
+Đại số Logic,sự tương đương logic là gì?,Hai biểu thức được gọi là tương đương khi chúng có cùng bảng chân trị.
+Đại số Logic,tế bào phát biểu là gì?,Tế bào phát biểu Là một tế bào không nằm hoàn toàn bên trong bất kỳ một tế bào nào khác lớn hơn.
+Đại số Logic,Quy tắc suy luận Modus Ponens là gì?,Nếu p kéo theo q đúng và p đúng thì q đúng.
+Đại số Logic,Quy tắc suy luận Modus Tollens là gì?,Nếu p kéo theo q đúng và phủ định của q đúng thì phủ định của p đúng.
+Đại số Logic,Quy tắc tam đoạn luận giả thiết ?,Nếu p kéo theo q và q kéo theo r thì p kéo theo r.
+Đại số Logic,Quy tắc tam đoạn luận rời ?,Nếu p hoặc q đúng và p sai thì q đúng.
+Đại số Logic,Quy tắc cộng trong suy luận?,Nếu p đúng thì p hoặc q cũng đúng với mọi q.
+Đại số Logic,Quy tắc rút gọn trong suy luận?,Nếu p và q đúng thì p đúng.
+Đại số Logic,Quy tắc hợp thành trong suy luận?,Nếu p đúng và q đúng thì p và q đúng.
+Đại số Logic,vị từ là gì?,Vị từ Là một câu khẳng định chứa biến mà giá trị chân lý phụ thuộc vào giá trị của biến đó.
+Đại số Logic,lượng từ chung là gì?,"Ký hiệu $\forall$, dùng để khẳng định tính chất đúng cho mọi phần tử trong tập xác định."
+Đại số Logic,lượng từ tồn tại là gì?,"Ký hiệu $\exists$, dùng để khẳng định tính chất đúng cho ít nhất một phần tử trong tập xác định."
+Đại số Logic,Phủ định của một câu chứa lượng từ chung là gì?,Phủ định của một câu chứa lượng từ chung Là một câu chứa lượng từ tồn tại với vị từ bị phủ định.
+Đại số Logic,Phủ định của một câu chứa lượng từ tồn tại là gì?,Phủ định của một câu chứa lượng từ tồn tại Là một câu chứa lượng từ chung với vị từ bị phủ định.
+Đại số Logic,chứng minh trực tiếp là gì?,Chứng minh trực tiếp Là cách chứng minh p kéo theo q bằng cách giả sử p đúng và dùng các quy tắc để suy ra q đúng.
+Đại số Logic,chứng minh bằng phản chứng là gì?,Giả sử kết luận là sai rồi suy ra một điều mâu thuẫn với giả thiết hoặc một chân lý đã biết.
+Đại số Logic,Chứng minh bằng cách liệt kê là gì?,Chia bài toán thành các trường hợp rời nhau và chứng minh cho từng trường hợp.
+Đại số Logic,chứng minh không kiến thiết là gì?,Chứng minh sự tồn tại của một phần tử mà không chỉ ra cụ thể phần tử đó là gì.
+Đại số Logic,tập hợp rỗng là gì?,"Tập hợp rỗng Là tập hợp không chứa bất kỳ phần tử nào, ký hiệu là $\emptyset$."
+Đại số Logic,tập hợp con là gì?,Tập A là con của B nếu mọi phần tử của A đều thuộc B.
+Đại số Logic,tập hợp lũy thừa là gì?,Tập hợp lũy thừa Là tập hợp chứa tất cả các tập con của một tập hợp cho trước.
+Đại số Logic,Lực lượng của tập lũy thừa của tập n phần tử là bao nhiêu?,Bằng $2^n$.
+Đại số Logic,hợp của các tập hợp là gì?,Hợp của các tập hợp Là tập hợp chứa các phần tử thuộc ít nhất một trong các tập hợp đó.
+Đại số Logic,giao của các tập hợp là gì?,Giao của các tập hợp Là tập hợp chứa các phần tử thuộc tất cả các tập hợp đó.
+Đại số Logic,hiệu của hai tập hợp A và B là gì?,Hiệu của hai tập hợp A và B Là tập hợp chứa các phần tử thuộc A nhưng không thuộc B.
+Đại số Logic,phần bù của tập hợp là gì?,Phần bù của tập hợp Là tập hợp các phần tử trong tập vũ trụ U không thuộc tập hợp đang xét.
+Đại số Logic,hai tập hợp rời nhau là gì?,Là hai tập hợp có phép giao bằng tập hợp rỗng.
+Đại số Logic,Định luật De Morgan cho tập hợp là gì?,"Phần bù của hợp bằng giao các phần bù, và phần bù của giao bằng hợp các phần bù."
+Đại số Logic,tích Descartes của n tập hợp là gì?,"Tích Descartes của n tập hợp Là tập hợp các bộ n phần tử $(a_1, a_2, \dots, a_n)$ với $a_i$ thuộc tập $A_i$."
+Đại số Logic,hệ thống tiên đề là gì?,Hệ thống tiên đề Là một tập hợp các khẳng định được coi là đúng mà không cần chứng minh để làm nền tảng cho một lý thuyết.
+Đại số Logic,Tính nhất quán của hệ tiên đề là gì?,Nghĩa là không thể suy ra cả p và phủ định của p từ hệ tiên đề đó.
+Đại số Logic,Tính độc lập của một tiên đề là gì?,Nghĩa là tiên đề đó không thể được suy ra từ các tiên đề khác trong hệ thống.
+Lý thuyết đồ thị,Bán kính của đồ thị là gì?,Là giá trị độ lệch nhỏ nhất trong số các đỉnh của đồ thị.
+Lý thuyết đồ thị,Bản đồ và đồ thị phẳng có mối liên hệ gì?,Mọi bản đồ trên mặt phẳng đều có thể biểu diễn bằng một đồ thị phẳng để giải bài toán tô màu.
+Lý thuyết đồ thị,Bộ ghép cực đại là gì?,Là bộ ghép có số lượng cạnh lớn nhất có thể.
+Lý thuyết đồ thị,Chu trình Euler là gì?,Là chu trình đi qua tất cả các cạnh của đồ thị mỗi cạnh đúng một lần.
+Lý thuyết đồ thị,Chu trình Hamilton là gì?,Là chu trình đi qua tất cả các đỉnh của đồ thị mỗi đỉnh đúng một lần.
+Lý thuyết đồ thị,Cách kiểm tra đồ thị hai phía bằng thuật toán BFS?,Nếu trong quá trình duyệt ta có thể tô màu các đỉnh bằng 2 màu xen kẽ mà không có hai đỉnh kề nhau cùng màu thì đó là đồ thị hai phía.
+Lý thuyết đồ thị,Duyệt theo mức của cây là gì?,Duyệt theo mức của cây Là việc thăm các nút theo thứ tự từ trên xuống dưới (từng mức) và từ trái sang phải trong mỗi mức.
+Lý thuyết đồ thị,Làm thế nào để duyệt cây nhị phân mà không dùng đệ quy?,Sử dụng một ngăn xếp (Stack) để mô phỏng lại quá trình gọi đệ quy và lưu trữ các nút chưa xử lý.
+Lý thuyết đồ thị,Làm thế nào để kiểm tra tính liên thông của đồ thị bằng phép duyệt?,Nếu sau khi thực hiện BFS hoặc DFS từ một đỉnh mà tất cả các đỉnh khác đều được thăm thì đồ thị là liên thông.
+Lý thuyết đồ thị,Lát cắt trong mạng luồng là gì?,"Lát cắt trong mạng luồng Là cách chia tập đỉnh thành hai phần rời nhau, một phần chứa đỉnh phát và phần kia chứa đỉnh thu."
+Lý thuyết đồ thị,Mối liên hệ giữa sắc số và số độc lập alpha là gì?,"$\chi(G) \ge \frac{n}{\alpha(G)}$, với $n$ là số đỉnh của đồ thị."
+Lý thuyết đồ thị,Mối liên hệ giữa số bao vây và sắc số là gì?,"$\chi(G) \ge \omega(G)$, vì các đỉnh trong clique đều kề nhau nên phải có màu khác nhau."
+Lý thuyết đồ thị,Phát biểu công thức Euler cho đồ thị phẳng?,"$V - E + F = 2$, trong đó $V$ là số đỉnh, $E$ là số cạnh và $F$ là số mặt."
+Lý thuyết đồ thị,Phát biểu định lý 4 màu ?,Mọi đồ thị phẳng đều có sắc số không quá 4 ($\chi(G) \le 4$).
+Lý thuyết đồ thị,Phát biểu định lý 5 màu ?,Mọi đồ thị phẳng đều có thể tô đúng bằng không quá 5 màu.
+Lý thuyết đồ thị,Phát biểu định lý Brooks về tô màu đỉnh?,"Sắc số $\chi(G) \le \Delta$, trừ khi đồ thị là đồ thị đầy đủ hoặc chu trình lẻ thì $\chi(G) = \Delta + 1$."
+Lý thuyết đồ thị,Phát biểu định lý Vizing về tô màu cạnh?,"Với đơn đồ thị, chỉ số sắc cạnh $\chi'(G)$ chỉ có thể bằng $\Delta$ hoặc $\Delta + 1$, với $\Delta$ là bậc lớn nhất."
+Lý thuyết đồ thị,Phát biểu định lý bắt tay ?,Tổng các bậc của tất cả các đỉnh trong đồ thị vô hướng bằng hai lần số cạnh.
+Lý thuyết đồ thị,Sắc số của một cây bất kỳ có ít nhất 2 đỉnh là bao nhiêu?,"Bằng 2, vì mọi cây đều là đồ thị hai phía."
+Lý thuyết đồ thị,Sắc số của đồ thị vòng C_n với n chẵn là bao nhiêu?,$\chi(C_n) = 2$.
+Lý thuyết đồ thị,Sắc số của đồ thị vòng C_n với n lẻ là bao nhiêu?,$\chi(C_n) = 3$.
+Lý thuyết đồ thị,Sắc số của đồ thị đầy đủ K_n là bao nhiêu?,$\chi(K_n) = n$.
+Lý thuyết đồ thị,Sắp xếp tô-pô là gì?,"Sắp xếp tô-pô Là việc sắp xếp các đỉnh của một DAG sao cho với mọi cạnh $(u, v)$, $u$ luôn đứng trước $v$."
+Lý thuyết đồ thị,Sự khác biệt giữa duyệt cây và duyệt đồ thị tổng quát là gì?,"Duyệt đồ thị cần thêm mảng đánh dấu (Visited) để tránh lặp lại hoặc rơi vào chu trình, còn cây thì không cần (nếu duyệt từ gốc xuống)."
+Lý thuyết đồ thị,Thuật toán Bellman-Ford khác Dijkstra ở điểm nào?,Bellman-Ford có thể xử lý đồ thị có cạnh trọng số âm và phát hiện chu trình âm.
+Lý thuyết đồ thị,Thuật toán Dijkstra dùng để làm gì?,Dùng để tìm đường đi ngắn nhất từ một đỉnh nguồn tới tất cả các đỉnh còn lại trong đồ thị có trọng số không âm.
+Lý thuyết đồ thị,Thuật toán Ford-Fulkerson dùng để làm gì?,Tìm luồng cực đại trong mạng luồng.
+Lý thuyết đồ thị,Thuật toán Kruskal và Prim có điểm chung gì?,Cả hai đều dùng để tìm cây khung nhỏ nhất (Minimum Spanning Tree) của đồ thị.
+Lý thuyết đồ thị,Thuật toán Tarjan hoặc Kosaraju dùng để làm gì?,Dùng để tìm các thành phần liên thông mạnh của đồ thị có hướng.
+Lý thuyết đồ thị,Thuật toán tham lam hoạt động như thế nào?,Duyệt qua các đỉnh theo một thứ tự và gán cho mỗi đỉnh màu có chỉ số nhỏ nhất chưa bị các đỉnh kề chiếm giữ.
+Lý thuyết đồ thị,bộ ghép hoàn hảo là gì?,Là bộ ghép phủ tất cả các đỉnh của đồ thị.
+Lý thuyết đồ thị,cây khung DFS là gì?,Là cây khung được tạo ra từ các cạnh được thuật toán DFS sử dụng để thăm các đỉnh mới.
+Lý thuyết đồ thị,cạnh cầu của đồ thị là gì?,Là cạnh mà nếu loại bỏ nó sẽ làm tăng số thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,duyệt hậu thứ tự trên cây nhị phân là gì?,"Là trình tự: Duyệt cây con trái, sau đó duyệt cây con phải, rồi thăm nút gốc."
+Lý thuyết đồ thị,duyệt tiền thứ tự trên cây nhị phân là gì?,"Là trình tự: Thăm nút gốc, sau đó duyệt cây con trái, rồi duyệt cây con phải."
+Lý thuyết đồ thị,duyệt trung thứ tự trên cây nhị phân là gì?,"Là trình tự: Duyệt cây con trái, sau đó thăm nút gốc, rồi duyệt cây con phải."
+Lý thuyết đồ thị,giả đồ thị là gì?,Giả đồ thị Là đồ thị cho phép có cả đa cạnh và khuyên (cạnh nối một đỉnh với chính nó).
+Lý thuyết đồ thị,hai đồ thị đẳng cấu là gì?,"Là hai đồ thị có cùng cấu trúc đỉnh và cạnh, chỉ khác nhau về cách đặt tên đỉnh hoặc cách vẽ."
+Lý thuyết đồ thị,bộ ghép trong đồ thị là gì?,Bộ ghép trong đồ thị Là một tập hợp các cạnh mà không có hai cạnh nào chung đỉnh.
+Lý thuyết đồ thị,chu trình là gì?,Chu trình Là một đường đi có đỉnh đầu và đỉnh cuối trùng nhau.
+Lý thuyết đồ thị,cây là gì?,"Cây Là đồ thị vô hướng, liên thông và không chứa chu trình."
+Lý thuyết đồ thị,phép tô màu đúng là gì?,Phép tô màu đúng Là phép tô màu đỉnh mà mọi cặp đỉnh kề nhau đều có màu khác nhau.
+Lý thuyết đồ thị,đường đi đơn là gì?,Là đường đi mà không có đỉnh nào bị lặp lại.
+Lý thuyết đồ thị,nút hậu duệ trong cây là gì?,Nút $v$ là hậu duệ của $u$ nếu $u$ là tổ tiên của $v$.
+Lý thuyết đồ thị,nút tổ tiên trong cây là gì?,Nút $u$ là tổ tiên của $v$ nếu $u$ nằm trên đường đi từ gốc đến $v$.
+Lý thuyết đồ thị,duyệt đồ thị là gì?,Duyệt đồ thị Là quá trình thăm tất cả các đỉnh của đồ thị theo một trình tự xác định sao cho mỗi đỉnh được thăm đúng một lần.
+Lý thuyết đồ thị,tâm của một cây là gì?,Là đỉnh (hoặc cặp đỉnh) mà khoảng cách lớn nhất từ nó tới các đỉnh khác là nhỏ nhất.
+Lý thuyết đồ thị,đa thức màu P là gì?,Đa thức màu P Là hàm số tính số cách tô màu đỉnh đồ thị $G$ bằng $k$ màu.
+Lý thuyết đồ thị,đơn đồ thị là gì?,Đơn đồ thị Là đồ thị không có khuyên và không có đa cạnh nối giữa hai đỉnh bất kỳ.
+Lý thuyết đồ thị,đường đi từ gốc là gì?,Là đường đi duy nhất nối từ nút gốc đến một nút bất kỳ trong cây.
+Lý thuyết đồ thị,đỉnh cô lập là gì?,Là đỉnh có bậc bằng $0$.
+Lý thuyết đồ thị,đỉnh khớp của đồ thị là gì?,Là đỉnh mà nếu loại bỏ nó sẽ làm tăng số thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,đỉnh treo là gì?,Là đỉnh có bậc bằng $1$.
+Lý thuyết đồ thị,đồ thị bù là gì?,"Đồ thị bù Là đồ thị có cùng tập đỉnh với $G$, nhưng hai đỉnh nối với nhau khi và chỉ khi chúng không nối với nhau trong $G$."
+Lý thuyết đồ thị,đồ thị con bao trùm là gì?,Đồ thị con bao trùm Là đồ thị con chứa tất cả các đỉnh của đồ thị gốc.
+Lý thuyết đồ thị,đồ thị con cảm sinh là gì?,Đồ thị con cảm sinh Là đồ thị con tạo bởi một tập đỉnh và tất cả các cạnh của đồ thị gốc nối giữa các đỉnh đó.
+Lý thuyết đồ thị,đồ thị có hướng không chu trình là gì?,"Đồ thị có hướng không chu trình Là đồ thị có hướng không chứa chu trình, thường dùng để biểu diễn các phụ thuộc công việc."
+Lý thuyết đồ thị,đồ thị có trọng số là gì?,"Đồ thị có trọng số Là đồ thị mà mỗi cạnh được gán một giá trị số đại diện cho chi phí, khoảng cách hoặc khả năng thông qua."
+Lý thuyết đồ thị,đồ thị hai phía là gì?,Đồ thị hai phía Là đồ thị mà tập đỉnh có thể chia thành hai tập rời nhau sao cho không có cạnh nào nối hai đỉnh trong cùng một tập.
+Lý thuyết đồ thị,đồ thị hoàn hảo là gì?,"Đồ thị hoàn hảo Là đồ thị mà với mọi đồ thị con cảm sinh, sắc số luôn bằng số bao vây ($\chi = \omega$)."
+Lý thuyết đồ thị,đồ thị k-sắc là gì?,Đồ thị k-sắc Là đồ thị có sắc số bằng đúng $k$.
+Lý thuyết đồ thị,đồ thị liên thông mạnh là gì?,Đồ thị liên thông mạnh Là đồ thị có hướng mà từ bất kỳ đỉnh $u$ nào cũng có đường đi tới bất kỳ đỉnh $v$ nào.
+Lý thuyết đồ thị,đồ thị liên thông yếu là gì?,Đồ thị liên thông yếu Là đồ thị có hướng mà đồ thị vô hướng tương ứng của nó là liên thông.
+Lý thuyết đồ thị,đồ thị phẳng là gì?,Đồ thị phẳng Là đồ thị có thể vẽ trên mặt phẳng sao cho không có hai cạnh nào cắt nhau (trừ tại các đỉnh).
+Lý thuyết đồ thị,đồ thị phẳng tối đại là gì?,Đồ thị phẳng tối đại Là đồ thị phẳng mà nếu thêm bất kỳ một cạnh nào vào cũng làm nó mất tính phẳng.
+Lý thuyết đồ thị,đồ thị đầy đủ là gì?,"Là đơn đồ thị mà mọi cặp đỉnh phân biệt đều được nối với nhau bởi một cạnh, ký hiệu là $K_n$."
+Lý thuyết đồ thị,Tại sao BFS lại sử dụng cấu trúc dữ liệu hàng đợi ?,Để đảm bảo các đỉnh được thăm theo đúng thứ tự khoảng cách tăng dần tính từ đỉnh bắt đầu.
+Lý thuyết đồ thị,Tại sao bài toán tìm cây khung nhỏ nhất lại có tính ứng dụng cao?,"Dùng để thiết kế mạng lưới liên lạc, điện lực với chi phí thấp nhất mà vẫn đảm bảo kết nối."
+Lý thuyết đồ thị,Tại sao bài toán tô màu đồ thị lại dùng trong xếp lịch thi?,"Vì các môn thi trùng giờ không được có sinh viên chung (đỉnh kề nhau), giúp xác định số ca thi ít nhất."
+Lý thuyết đồ thị,Tại sao cây n đỉnh luôn có đúng n-1 cạnh?,Vì đây là cấu trúc tối thiểu để kết nối n đỉnh mà không tạo ra chu trình.
+Lý thuyết đồ thị,Tại sao duyệt theo mức của cây thực chất là một phép duyệt BFS?,Vì nó thăm các nút dựa trên khoảng cách (số cạnh) tính từ gốc.
+Lý thuyết đồ thị,Tại sao duyệt trung thứ tự trên cây tìm kiếm nhị phân lại cho kết quả là dãy tăng dần?,Vì tính chất của BST là nút trái nhỏ hơn gốc và nút phải lớn hơn gốc.
+Lý thuyết đồ thị,Tại sao phép duyệt DFS có thể dùng để phát hiện chu trình trong đồ thị có hướng?,"Nếu trong quá trình duyệt ta gặp lại một đỉnh đang nằm trong ngăn xếp đệ quy (cạnh ngược), thì đồ thị có chu trình."
+Lý thuyết đồ thị,Tại sao thuật toán duyệt theo chiều rộng lại dùng hàng chờ ?,Để đảm bảo các đỉnh được thăm theo đúng thứ tự khoảng cách tăng dần từ đỉnh nguồn.
+Lý thuyết đồ thị,Tại sao thuật toán duyệt theo chiều sâu lại dùng ngăn xếp ?,Để ghi nhớ các đỉnh đã đi qua và quay lại các đỉnh trước đó khi gặp đường cụt.
+Lý thuyết đồ thị,Tại sao thứ tự đỉnh lại ảnh hưởng đến kết quả của thuật toán tham lam?,"Vì với các thứ tự khác nhau, thuật toán có thể cho ra số lượng màu sử dụng khác nhau."
+Lý thuyết đồ thị,"Tại sao trong mọi đồ thị, số đỉnh có bậc lẻ luôn là một số chẵn?","Vì theo định lý bắt tay, tổng các bậc là số chẵn, nên tổng các bậc lẻ cũng phải là số chẵn."
+Lý thuyết đồ thị,Tại sao tô màu mặt của đồ thị phẳng lại tương đương với tô màu đỉnh của đồ thị đối ngẫu?,Vì mỗi mặt trở thành một đỉnh và hai mặt chung cạnh trở thành hai đỉnh kề nhau.
+Lý thuyết đồ thị,Tại sao việc tìm chu trình Hamilton lại khó hơn chu trình Euler?,Vì không có điều kiện cần và đủ đơn giản cho chu trình Hamilton (đây là bài toán NP-đầy đủ).
+Lý thuyết đồ thị,Tại sao đệ quy là công cụ tự nhiên để thực hiện các phép duyệt cây?,Vì cấu trúc của cây mang tính đệ quy (mỗi nút gốc lại chứa các cây con bên dưới).
+Lý thuyết đồ thị,Tại sao độ phức tạp thuật toán lại quan trọng trong lý thuyết đồ thị?,"Để đánh giá hiệu quả và khả năng thực thi của thuật toán khi kích thước đồ thị (số đỉnh, số cạnh) tăng lên."
+Lý thuyết đồ thị,Đa thức màu của một cây n đỉnh là gì?,"$P(T, k) = k(k-1)^{n-1}$."
+Lý thuyết đồ thị,Đa thức màu của đồ thị rỗng n đỉnh là gì?,"$P(G, k) = k^n$."
+Lý thuyết đồ thị,Đa thức màu của đồ thị đầy đủ K_n là gì?,"$P(K_n, k) = k(k-1)(k-2)\dots(k-n+1)$."
+Lý thuyết đồ thị,Điều kiện cần và đủ để đồ thị vô hướng có chu trình Euler?,Đồ thị phải liên thông (trừ các đỉnh cô lập) và mọi đỉnh đều có bậc chẵn.
+Lý thuyết đồ thị,Điều kiện để đồ thị vô hướng có đường đi Euler?,Đồ thị liên thông và có đúng 0 hoặc 2 đỉnh bậc lẻ.
+Lý thuyết đồ thị,Đường kính của đồ thị là gì?,Là giá trị độ lệch lớn nhất trong số các đỉnh của đồ thị.
+Lý thuyết đồ thị,Đường tăng luồng là gì?,Là đường đi từ nguồn tới đích trong đồ thị thặng dư mà luồng còn có thể tăng thêm được.
+Lý thuyết đồ thị,Đường đi Euler là gì?,Là đường đi đi qua tất cả các cạnh của đồ thị mỗi cạnh đúng một lần.
+Lý thuyết đồ thị,Định lý 4 màu phát biểu gì?,Mọi đồ thị phẳng đều có thể được tô màu đỉnh bằng không quá 4 màu.
+Lý thuyết đồ thị,Định lý Kuratowski phát biểu gì?,"Một đồ thị là phẳng khi và chỉ khi nó không chứa đồ thị con đồng phôi với $K_5$ hoặc $K_{3,3}$."
+Lý thuyết đồ thị,Định lý Luồng cực đại - Cắt cực tiểu phát biểu gì?,Giá trị của luồng cực đại từ nguồn tới đích bằng khả năng thông qua của lát cắt nhỏ nhất.
+Lý thuyết đồ thị,Định lý Menger phát biểu gì?,Số lượng đường đi rời nhau về đỉnh giữa $u$ và $v$ bằng số lượng đỉnh ít nhất cần loại bỏ để ngắt mọi đường đi giữa chúng.
+Lý thuyết đồ thị,bậc của một đỉnh trong đồ thị vô hướng là gì?,"Bậc của một đỉnh trong đồ thị vô hướng Là số lượng cạnh kết hợp với đỉnh đó, ký hiệu là $deg(v)$."
+Lý thuyết đồ thị,bậc của đồ thị là gì?,Bậc của đồ thị Là số lượng đỉnh của đồ thị đó.
+Lý thuyết đồ thị,bậc ra của một đỉnh trong đồ thị có hướng là gì?,"Bậc ra của một đỉnh trong đồ thị có hướng Là số lượng cạnh có hướng đi ra từ đỉnh đó, ký hiệu là $deg^+(v)$."
+Lý thuyết đồ thị,bậc vào của một đỉnh trong đồ thị có hướng là gì?,"Bậc vào của một đỉnh trong đồ thị có hướng Là số lượng cạnh có hướng đi vào đỉnh đó, ký hiệu là $deg^-(v)$."
+Lý thuyết đồ thị,chiều cao của một nút trong cây là gì?,Là độ dài của đường đi dài nhất từ nút đó đến một lá.
+Lý thuyết đồ thị,chỉ số sắc cạnh của đồ thị là gì?,"Chỉ số sắc cạnh của đồ thị Là số màu ít nhất cần thiết để tô đúng các cạnh của đồ thị, ký hiệu $\chi'(G)$."
+Lý thuyết đồ thị,cây khung là gì?,"Cây khung Là một đồ thị con của đồ thị $G$, chứa tất cả các đỉnh của $G$ và là một cây."
+Lý thuyết đồ thị,khoảng cách giữa hai đỉnh là gì?,Là độ dài của đường đi ngắn nhất nối giữa hai đỉnh đó.
+Lý thuyết đồ thị,lá của cây trong quá trình duyệt là gì?,"Là các nút không có nút con, nơi các nhánh của phép duyệt kết thúc."
+Lý thuyết đồ thị,số bao vây omega là gì?,Là kích thước của đồ thị con đầy đủ lớn nhất có trong đồ thị $G$.
+Lý thuyết đồ thị,tập độc lập trong tô màu là gì?,"Tập độc lập trong tô màu Là tập hợp các đỉnh có cùng một màu trong một phép tô đúng, vì không có hai đỉnh nào trong đó kề nhau."
+Lý thuyết đồ thị,đa thức màu trong bài toán đếm là gì?,Đa thức màu trong bài toán đếm Là hàm số đếm số cách tô màu các đỉnh của đồ thị sao cho không có hai đỉnh kề nhau có cùng màu.
+Lý thuyết đồ thị,kích thước của đồ thị là gì?,Kích thước của đồ thị Là số lượng cạnh của đồ thị đó.
+Lý thuyết đồ thị,luồng trong mạng là gì?,Luồng trong mạng Là việc gán các giá trị số cho các cạnh trong đồ thị có hướng sao cho thỏa mãn các ràng buộc về khả năng thông qua và bảo toàn luồng tại các đỉnh.
+Lý thuyết đồ thị,lát cắt nhỏ nhất trong mạng là gì?,Là lát cắt có tổng khả năng thông qua của các cạnh đi từ tập chứa nguồn sang tập chứa đích là nhỏ nhất.
+Lý thuyết đồ thị,lớp bài toán NP trong lý thuyết độ phức tạp là gì?,Lớp bài toán NP trong lý thuyết độ phức tạp Là tập hợp các bài toán mà một lời giải có thể được kiểm chứng trong thời gian đa thức.
+Lý thuyết đồ thị,lớp bài toán P trong lý thuyết độ phức tạp là gì?,Lớp bài toán P trong lý thuyết độ phức tạp Là tập hợp các bài toán quyết định có thể giải được bằng thuật toán thời gian đa thức.
+Lý thuyết đồ thị,ma trận kề là gì?,"Là ma trận vuông $A$ trong đó $A_{ij}=1$ nếu có cạnh nối đỉnh $i$ và $j$, ngược lại bằng $0$."
+Lý thuyết đồ thị,ma trận liên thuộc là gì?,Là ma trận biểu diễn mối quan hệ giữa các đỉnh và các cạnh của đồ thị.
+Lý thuyết đồ thị,duyệt cây là gì?,"Là quy trình thăm mọi nút của cây theo một thứ tự cụ thể, thường được định nghĩa đệ quy cho cây nhị phân."
+Lý thuyết đồ thị,tô màu cạnh là gì?,Tô màu cạnh Là việc gán màu cho các cạnh sao cho không có hai cạnh nào chung đỉnh có cùng một màu.
+Lý thuyết đồ thị,tô màu mặt của đồ thị phẳng là gì?,Tô màu mặt của đồ thị phẳng Là việc gán màu cho các mặt sao cho hai mặt chung cạnh không có cùng một màu.
+Lý thuyết đồ thị,tô màu đỉnh là gì?,Tô màu đỉnh Là việc gán nhãn (màu) cho các đỉnh của đồ thị sao cho không có hai đỉnh kề nhau có cùng một màu.
+Lý thuyết đồ thị,sắc số của đồ thị là gì?,"Sắc số của đồ thị Là số màu ít nhất cần dùng để tô màu các đỉnh sao cho không có hai đỉnh kề nhau có cùng màu, ký hiệu $\chi(G)$."
+Lý thuyết đồ thị,số Catalan là gì?,Là dãy số tự nhiên xuất hiện trong nhiều bài toán đếm như số cách đặt ngoặc hợp lệ hoặc số cây nhị phân.
+Lý thuyết đồ thị,thuật toán duyệt theo chiều rộng là gì?,Thuật toán duyệt theo chiều rộng Là phương pháp duyệt thăm tất cả các đỉnh kề của đỉnh hiện tại trước khi chuyển sang các đỉnh ở mức xa hơn.
+Lý thuyết đồ thị,thuật toán duyệt theo chiều sâu là gì?,Thuật toán duyệt theo chiều sâu Là phương pháp duyệt ưu tiên đi sâu vào các đỉnh kề chưa thăm cho đến khi không thể đi tiếp mới quay lại.
+Lý thuyết đồ thị,thành phần liên thông là gì?,Thành phần liên thông Là đồ thị con liên thông tối đại của một đồ thị.
+Lý thuyết đồ thị,thành phần liên thông mạnh trong đồ thị có hướng là gì?,Thành phần liên thông mạnh trong đồ thị có hướng Là tập con các đỉnh tối đại mà giữa hai đỉnh bất kỳ trong đó luôn có đường đi qua lại.
+Lý thuyết đồ thị,vết trong lý thuyết đồ thị là gì?,Vết trong lý thuyết đồ thị Là một đường đi mà không có cạnh nào bị lặp lại.
+Lý thuyết đồ thị,đa thức màu P là gì?,Đa thức màu P Là hàm số đếm số cách khác nhau để tô đúng đồ thị $G$ bằng $k$ màu.
+Lý thuyết đồ thị,đa đồ thị là gì?,Đa đồ thị Là đồ thị cho phép có nhiều hơn một cạnh nối giữa cùng một cặp đỉnh.
+Lý thuyết đồ thị,đường đi độ dài k là gì?,"Đường đi độ dài k Là một dãy các đỉnh $v_0, v_1, \dots, v_k$ sao cho có cạnh nối giữa các đỉnh liên tiếp."
+Lý thuyết đồ thị,đỉnh phát trong mạng luồng là gì?,"Là đỉnh duy nhất trong mạng mà luồng chỉ đi ra, không có luồng đi vào."
+Lý thuyết đồ thị,đỉnh thu trong mạng luồng là gì?,"Là đỉnh duy nhất trong mạng mà luồng chỉ đi vào, không có luồng đi ra."
+Lý thuyết đồ thị,đồ thị là gì là gì?,Đồ thị là gì Là một cấu trúc gồm tập các đỉnh (Vertices) và tập các cạnh (Edges) nối các cặp đỉnh đó.
+Lý thuyết đồ thị,đồ thị chính quy là gì?,Đồ thị chính quy Là đồ thị mà tất cả các đỉnh đều có bậc bằng nhau.
+Lý thuyết đồ thị,đồ thị con là gì?,Đồ thị con Là đồ thị mà tập đỉnh và tập cạnh đều là tập con của một đồ thị khác.
+Lý thuyết đồ thị,độ lệch của một đỉnh là gì?,Là khoảng cách lớn nhất từ đỉnh đó tới bất kỳ đỉnh nào khác trong đồ thị.
+Lý thuyết đồ thị,Đồ thị 2-liên thông là gì?,Đồ thị 2-liên thông Là đồ thị liên thông không có đỉnh khớp.
+Lý thuyết đồ thị,Đồ thị bánh xe là gì?,Đồ thị bánh xe Là đồ thị được tạo ra bằng cách thêm một đỉnh trung tâm nối với tất cả các đỉnh của đồ thị vòng $C_n$.
+Lý thuyết đồ thị,Đồ thị có hướng là gì?,"Đồ thị có hướng Là đồ thị mà mỗi cạnh là một cặp đỉnh có thứ tự, xác định hướng đi từ đỉnh này sang đỉnh kia."
+Lý thuyết đồ thị,Đồ thị có sắc số bằng 2 có đặc điểm gì đặc biệt?,Đó chính là đồ thị hai phía (Bipartite Graph).
+Lý thuyết đồ thị,Đồ thị giải mã là gì?,Đồ thị giải mã Là đồ thị không chứa bất kỳ chu trình nào.
+Lý thuyết đồ thị,Đồ thị hai phía đầy đủ là gì?,"Đồ thị hai phía đầy đủ Là đồ thị hai phía mà mỗi đỉnh ở tập này đều nối với tất cả các đỉnh ở tập kia, ký hiệu là $K_{m,n}$."
+Lý thuyết đồ thị,Đồ thị k-chính quy là gì?,Đồ thị k-chính quy Là đồ thị chính quy mà mọi đỉnh đều có bậc bằng $k$.
+Lý thuyết đồ thị,Đồ thị liên thông là gì?,Đồ thị liên thông Là đồ thị vô hướng mà giữa hai đỉnh bất kỳ luôn có ít nhất một đường đi nối chúng.
+Lý thuyết đồ thị,Đồ thị lưỡng phân có mối liên hệ gì với chu trình lẻ?,Đồ thị là hai phía khi và chỉ khi nó không chứa bất kỳ chu trình lẻ nào.
+Lý thuyết đồ thị,Đồ thị tự đối ngẫu là gì?,Đồ thị tự đối ngẫu Là đồ thị phẳng đẳng cấu với đồ thị đối ngẫu của nó.
+Lý thuyết đồ thị,Đồ thị vòng là gì?,"Đồ thị vòng Là đồ thị gồm n đỉnh nối tiếp nhau thành một vòng khép kín, ký hiệu là $C_n$."
+Lý thuyết đồ thị,Đồ thị đấu loại là gì?,Đồ thị đấu loại Là đồ thị có hướng thu được bằng cách định hướng các cạnh của một đồ thị đầy đủ $K_n$.
+Lý thuyết đồ thị,Ứng dụng của BFS trong việc tìm đường đi ngắn nhất là gì?,BFS tìm được đường đi ngắn nhất (về số cạnh) giữa hai đỉnh trong đồ thị không có trọng số.
+Lý thuyết đồ thị,Ứng dụng của duyệt hậu thứ tự trong việc tính toán biểu thức toán học?,Dùng để chuyển đổi biểu thức sang dạng hậu tố (Ba Lan ngược) để máy tính dễ dàng tính toán.
+Lý thuyết đồ thị,Ứng dụng của tô màu đồ thị trong phân hoạch vùng tần số?,Dùng để gán tần số cho các tháp phát sóng sao cho các tháp gần nhau (kề nhau) không bị nhiễu sóng.
+Lý thuyết đồ thị,Ứng dụng của tô màu đồ thị trong việc sắp xếp lịch thi là gì?,"Mỗi môn thi là một đỉnh, cạnh nối hai môn có chung sinh viên"
+Lý thuyết đồ thị,số liên thông đỉnh kappa là gì?,Số liên thông đỉnh kappa Là số lượng đỉnh ít nhất cần loại bỏ để đồ thị trở nên không liên thông hoặc chỉ còn một đỉnh đơn.
+Lý thuyết đồ thị,số liên thông cạnh lambda là gì?,Số liên thông cạnh lambda Là số lượng cạnh ít nhất cần loại bỏ để đồ thị trở nên không liên thông.
+Lý thuyết đồ thị,Bất đẳng thức Whitney về tính liên thông là gì?,"$\kappa(G) \le \lambda(G) \le \delta(G)$, với $\delta(G)$ là bậc nhỏ nhất của đỉnh."
+Lý thuyết đồ thị,Phát biểu định lý Menger dạng đỉnh?,Số lượng đường đi đỉnh-rời-nhau lớn nhất giữa hai đỉnh bằng kích thước lát cắt đỉnh nhỏ nhất ngăn cách chúng.
+Lý thuyết đồ thị,Phát biểu định lý Menger dạng cạnh?,Số lượng đường đi cạnh-rời-nhau lớn nhất giữa hai đỉnh bằng kích thước lát cắt cạnh nhỏ nhất ngăn cách chúng.
+Lý thuyết đồ thị,đồ thị k-liên thông đỉnh là gì?,Đồ thị k-liên thông đỉnh Là đồ thị có số liên thông đỉnh lớn hơn hoặc bằng k.
+Lý thuyết đồ thị,đồ thị k-liên thông cạnh là gì?,Đồ thị k-liên thông cạnh Là đồ thị có số liên thông cạnh lớn hơn hoặc bằng k.
+Lý thuyết đồ thị,đồ thị con 2-liên thông là gì?,Đồ thị con 2-liên thông Là đồ thị con liên thông tối đại không chứa đỉnh khớp nào.
+Lý thuyết đồ thị,đỉnh tách trong đồ thị là gì?,Là đỉnh mà nếu loại bỏ nó sẽ làm tăng số thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,cạnh cầu trong đồ thị là gì?,Là cạnh mà nếu loại bỏ nó sẽ làm tăng số thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,bộ ghép hoàn hảo là gì?,"Là bộ ghép phủ tất cả các đỉnh của đồ thị, tức là mỗi đỉnh đều thuộc duy nhất một cạnh trong bộ ghép."
+Lý thuyết đồ thị,đường tăng cường trong bộ ghép là gì?,Đường tăng cường trong bộ ghép Là một đường đi xen kẽ bắt đầu và kết thúc tại các đỉnh chưa được ghép.
+Lý thuyết đồ thị,Bổ đề Berge về bộ ghép cực đại là gì?,Một bộ ghép là cực đại khi và chỉ khi nó không có bất kỳ đường tăng cường nào.
+Lý thuyết đồ thị,Thuật toán Edmonds dùng để làm gì?,Dùng để tìm bộ ghép cực đại trong đồ thị vô hướng tổng quát (có chứa chu trình lẻ).
+Lý thuyết đồ thị,Phát biểu định lý Hall về sự tồn tại của bộ ghép?,Đồ thị hai phía có bộ ghép phủ tập đỉnh X khi và chỉ khi mọi tập con của X đều kề với ít nhất số lượng đỉnh tương ứng ở tập Y.
+Lý thuyết đồ thị,số bao phủ đỉnh alpha là gì?,Số bao phủ đỉnh alpha Là số lượng đỉnh ít nhất cần chọn sao cho mọi cạnh của đồ thị đều có ít nhất một đỉnh đầu mút được chọn.
+Lý thuyết đồ thị,số độc lập alpha_0 là gì?,Số độc lập alpha_0 Là số lượng đỉnh lớn nhất trong một tập độc lập của đồ thị.
+Lý thuyết đồ thị,Mối liên hệ Gallai giữa số độc lập và số bao phủ đỉnh?,"$\alpha_0(G) + \alpha(G) = n$, với n là số đỉnh của đồ thị."
+Lý thuyết đồ thị,đồ thị đường L là gì?,"Đồ thị đường L Là đồ thị mà mỗi đỉnh tương ứng với một cạnh của G, và hai đỉnh nối nhau nếu hai cạnh đó chung đầu mút."
+Lý thuyết đồ thị,đồ thị khoảng là gì?,Đồ thị khoảng Là đồ thị mà các đỉnh tương ứng với các khoảng trên trục số và cạnh nối hai đỉnh nếu hai khoảng tương ứng giao nhau.
+Lý thuyết đồ thị,đồ thị dây cung là gì?,Đồ thị dây cung Là đồ thị mà mọi chu trình độ dài từ 4 trở lên đều có ít nhất một dây cung (cạnh nối hai đỉnh không kề nhau trong chu trình).
+Lý thuyết đồ thị,Tại sao đồ thị dây cung lại là đồ thị hoàn hảo?,Vì sắc số của nó luôn bằng số bao vây cho mọi đồ thị con cảm sinh.
+Lý thuyết đồ thị,Phát biểu định lý Max-flow Min-cut?,Giá trị luồng cực đại trong mạng bằng khả năng thông qua của lát cắt nhỏ nhất ngăn cách nguồn và đích.
+Lý thuyết đồ thị,Thuật toán Ford-Fulkerson hoạt động dựa trên nguyên lý nào?,Dựa trên việc liên tục tìm các đường tăng luồng từ nguồn đến đích cho đến khi không còn đường nào.
+Lý thuyết đồ thị,Thuật toán Edmonds-Karp khác gì Ford-Fulkerson?,"Edmonds-Karp sử dụng BFS để tìm đường tăng ngắn nhất, đảm bảo thuật toán dừng trong thời gian đa thức."
+Lý thuyết đồ thị,đồ thị thặng dư là gì?,Đồ thị thặng dư Là đồ thị mô tả các khả năng còn lại để đẩy luồng hoặc rút luồng trên các cạnh của mạng hiện tại.
+Lý thuyết đồ thị,đồ thị đối ngẫu của đồ thị phẳng là gì?,"Đồ thị đối ngẫu của đồ thị phẳng Là đồ thị mà mỗi đỉnh tương ứng với một mặt của đồ thị phẳng gốc, và cạnh nối hai đỉnh nếu hai mặt chung một cạnh."
+Lý thuyết đồ thị,Tại sao đồ thị đối ngẫu của một cây phẳng lại là đồ thị chỉ có một đỉnh?,Vì cây không có chu trình nên nó chỉ có duy nhất một mặt ngoài.
+Lý thuyết đồ thị,Phát biểu định lý Kuratowski về tính phẳng của đồ thị?,"Đồ thị là phẳng khi và chỉ khi nó không chứa đồ thị con là phân chia của K5 hoặc K3,3."
+Lý thuyết đồ thị,tiểu đồ thị của một đồ thị là gì?,"Tiểu đồ thị của một đồ thị Là đồ thị thu được bằng cách xóa đỉnh, xóa cạnh hoặc co cạnh của đồ thị gốc."
+Lý thuyết đồ thị,Phát biểu định lý Robertson-Seymour ?,Tập hợp các đồ thị bị chặn theo cấu trúc tiểu đồ thị luôn có một bộ các đồ thị cấm hữu hạn.
+Lý thuyết đồ thị,số màu cạnh của đồ thị là gì?,Số màu cạnh của đồ thị Là số lượng màu ít nhất để tô màu các cạnh sao cho không có hai cạnh chung đỉnh cùng màu.
+Lý thuyết đồ thị,Sắc số cạnh của đồ thị đầy đủ K_n với n chẵn là bao nhiêu?,Bằng n - 1.
+Lý thuyết đồ thị,Sắc số cạnh của đồ thị đầy đủ K_n với n lẻ là bao nhiêu?,Bằng n.
+Lý thuyết đồ thị,chu trình Hamilton là gì?,Là chu trình đi qua mọi đỉnh của đồ thị đúng một lần.
+Lý thuyết đồ thị,Phát biểu định lý Dirac về chu trình Hamilton?,Nếu đơn đồ thị n đỉnh (n >= 3) có bậc mỗi đỉnh ít nhất n/2 thì đồ thị có chu trình Hamilton.
+Lý thuyết đồ thị,Phát biểu định lý Ore về chu trình Hamilton?,Nếu đơn đồ thị n đỉnh có tổng bậc của mọi cặp đỉnh không kề nhau ít nhất là n thì đồ thị có chu trình Hamilton.
+Lý thuyết đồ thị,Tại sao kiểm tra chu trình Hamilton lại khó trong khi chu trình Euler lại dễ?,"Vì điều kiện Euler chỉ dựa trên bậc cục bộ của đỉnh, còn Hamilton yêu cầu cấu trúc toàn cục phức tạp hơn."
+Lý thuyết đồ thị,giải thuật xấp xỉ cho bài toán người du lịch là gì?,Giải thuật xấp xỉ cho bài toán người du lịch Là thuật toán tìm ra một chu trình Hamilton có độ dài không quá k lần so với độ dài tối ưu (ví dụ thuật toán 2-xấp xỉ bằng cây khung).
+Lý thuyết đồ thị,mạng luồng có nhiều nguồn và nhiều đích là gì?,Có thể quy về mạng một nguồn một đích bằng cách thêm một siêu nguồn (Super Source) và một siêu đích (Super Sink).
+Lý thuyết đồ thị,lát cắt s-t là gì?,Lát cắt s-t Là việc chia tập đỉnh thành hai tập rời nhau S và T sao cho nguồn s thuộc S và đích t thuộc T.
+Lý thuyết đồ thị,Khả năng thông qua của lát cắt là gì?,Là tổng khả năng thông qua của các cạnh đi từ tập S sang tập T.
+Lý thuyết đồ thị,Tại sao luồng cực đại không bao giờ vượt quá khả năng thông qua của lát cắt bất kỳ?,Vì mọi luồng từ nguồn tới đích đều bắt buộc phải đi qua các cạnh của lát cắt đó.
+Lý thuyết đồ thị,đồ thị phân chia của một đồ thị là gì?,Đồ thị phân chia của một đồ thị Là đồ thị thu được bằng cách thêm các đỉnh mới vào giữa các cạnh hiện có của đồ thị gốc.
+Lý thuyết đồ thị,"Đồ thị K3,3 có tính phẳng không?","Không, K3,3 là đồ thị không phẳng nhỏ nhất có cấu trúc hai phía."
+Lý thuyết đồ thị,Đồ thị K5 có tính phẳng không?,"Không, K5 là đồ thị không phẳng nhỏ nhất có cấu trúc đầy đủ."
+Lý thuyết đồ thị,bậc của một mặt trong đồ thị phẳng là gì?,Là độ dài của chu trình giới hạn mặt đó (cạnh cầu được đếm hai lần).
+Lý thuyết đồ thị,Mối liên hệ giữa tổng bậc các mặt và số cạnh trong đồ thị phẳng?,Tổng bậc của tất cả các mặt bằng hai lần số cạnh.
+Lý thuyết đồ thị,Tại sao đồ thị phẳng n đỉnh không thể có quá 3n-6 cạnh?,Vì mỗi mặt có bậc ít nhất là 3 và áp dụng công thức Euler.
+Lý thuyết đồ thị,Đồ thị phẳng n đỉnh không chứa chu trình độ dài 3 có tối đa bao nhiêu cạnh?,Có tối đa 2n - 4 cạnh.
+Lý thuyết đồ thị,đồ thị tựa-phẳng là gì?,Đồ thị tựa-phẳng Là đồ thị phẳng có thể vẽ sao cho tất cả các đỉnh đều nằm trên biên của mặt ngoài.
+Lý thuyết đồ thị,bao đóng Hamilton của một đồ thị là gì?,Bao đóng Hamilton của một đồ thị Là đồ thị thu được bằng cách nối tất cả các cặp đỉnh không kề nhau có tổng bậc ít nhất là n.
+Lý thuyết đồ thị,Tại sao đồ thị và bao đóng Hamilton của nó có cùng tính chất Hamilton?,"Theo định lý Bondy-Chvátal, việc thêm các cạnh thỏa mãn điều kiện tổng bậc không làm thay đổi tính Hamilton."
+Lý thuyết đồ thị,Đồ thị Peterssen có đặc điểm gì nổi bật về tính Hamilton?,Nó là một ví dụ nổi tiếng về đồ thị không có chu trình Hamilton dù có cấu trúc rất đối xứng.
+Lý thuyết đồ thị,đồ thị khoảng cách là gì?,Đồ thị khoảng cách Là đồ thị mà các cạnh được xác định dựa trên khoảng cách hình học giữa các điểm.
+Lý thuyết đồ thị,đồ thị n-khối Q_n là gì?,"Đồ thị n-khối Q_n Là đồ thị mà các đỉnh là các xâu nhị phân độ dài n, hai đỉnh nối nhau nếu chúng khác nhau đúng một bit."
+Lý thuyết đồ thị,Đồ thị Q_n có bao nhiêu đỉnh và bao nhiêu cạnh?,Có 2^n đỉnh và n * 2^(n-1) cạnh.
+Lý thuyết đồ thị,Tại sao Q_n là đồ thị hai phía?,Vì ta có thể chia tập đỉnh dựa trên tính chẵn lẻ của số lượng bit 1 trong xâu nhị phân.
+Lý thuyết đồ thị,đồ thị thưa là gì?,Đồ thị thưa Là đồ thị mà số lượng cạnh gần bằng số lượng đỉnh.
+Lý thuyết đồ thị,đồ thị dày là gì?,Đồ thị dày Là đồ thị mà số lượng cạnh gần đạt tới mức tối đa (n bình phương).
+Lý thuyết đồ thị,chu trình cơ bản đối với một cây khung là gì?,Là chu trình duy nhất được tạo ra khi thêm một cạnh không thuộc cây khung vào cây khung đó.
+Lý thuyết đồ thị,lát cắt cơ bản đối với một cây khung là gì?,Là lát cắt duy nhất chứa duy nhất một cạnh của cây khung.
+Lý thuyết đồ thị,Tại sao các chu trình cơ bản lại tạo thành một cơ sở cho không gian chu trình?,Vì mọi chu trình khác đều có thể biểu diễn dưới dạng tổng XOR của các chu trình cơ bản này.
+Lý thuyết đồ thị,Ma trận Laplacian của đồ thị là gì?,"Là ma trận L = D - A, trong đó D là ma trận bậc và A là ma trận kề."
+Lý thuyết đồ thị,Định lý Ma trận Cây dùng để làm gì?,Dùng để tính số lượng cây khung khác nhau của một đồ thị dựa trên các định thức của ma trận Laplacian.
+Lý thuyết đồ thị,đồ thị k-chân là gì?,Đồ thị k-chân Là đồ thị mà tập đỉnh có thể chia thành k tập rời nhau sao cho không có cạnh nào nối hai đỉnh trong cùng một tập.
+Lý thuyết đồ thị,Đồ thị Turan là gì?,Đồ thị Turan Là đồ thị n đỉnh k-chân đầy đủ có số lượng cạnh lớn nhất.
+Lý thuyết đồ thị,bán bậc vào và bán bậc ra của đỉnh trong đa đồ thị có hướng là gì?,"Bán bậc vào và bán bậc ra của đỉnh trong đa đồ thị có hướng Là số lượng cung đi vào và đi ra khỏi đỉnh đó, tính cả các đa cung."
+Lý thuyết đồ thị,đồ thị có hướng mạnh là gì?,Đồ thị có hướng mạnh Là đồ thị có hướng thu được từ một đồ thị vô hướng sao cho kết quả là liên thông mạnh.
+Lý thuyết đồ thị,Định lý Robbins về định hướng đồ thị là gì?,Một đồ thị vô hướng có thể định hướng thành đồ thị liên thông mạnh khi và chỉ khi nó là liên thông và không có cạnh cầu.
+Lý thuyết đồ thị,đồ thị chính quy bậc k là gì?,Đồ thị chính quy bậc k Là đồ thị mà tất cả các đỉnh đều có cùng bậc bằng k.
+Lý thuyết đồ thị,đồ thị tự đối ngẫu là gì?,Đồ thị tự đối ngẫu Là đồ thị đẳng cấu với đồ thị đối ngẫu của chính nó.
+Lý thuyết đồ thị,chu trình trong đồ thị là gì?,Chu trình trong đồ thị Là một đường đi đóng bắt đầu và kết thúc tại cùng một đỉnh và không lặp lại đỉnh nào khác.
+Lý thuyết đồ thị,chu trình sơ cấp là gì?,Là chu trình mà không có đỉnh nào bị lặp lại (ngoại trừ đỉnh đầu và cuối).
+Lý thuyết đồ thị,đồ thị có hướng phi chu trình là gì?,Đồ thị có hướng phi chu trình Là đồ thị có hướng không chứa bất kỳ chu trình có hướng nào.
+Lý thuyết đồ thị,Tại sao DAG quan trọng trong việc biểu diễn các phụ thuộc?,Vì nó cho phép thực hiện sắp xếp topo để xác định thứ tự thực hiện các công việc.
+Lý thuyết đồ thị,sắp xếp topo là gì?,"Sắp xếp topo Là việc sắp xếp các đỉnh của DAG thành một dãy sao cho với mọi cung (u, v), đỉnh u luôn đứng trước v."
+Lý thuyết đồ thị,đỉnh khớp là gì?,Là đỉnh mà nếu xóa đi sẽ làm tăng số thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,cạnh cầu là gì?,Là cạnh mà nếu xóa đi sẽ làm tăng số thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,kích thước của đồ thị là gì?,Kích thước của đồ thị Là số lượng cạnh của đồ thị.
+Lý thuyết đồ thị,bậc của đồ thị là gì?,Bậc của đồ thị Là số lượng đỉnh của đồ thị.
+Lý thuyết đồ thị,đồ thị rỗng là gì?,Đồ thị rỗng Là đồ thị không có cạnh nào.
+Lý thuyết đồ thị,đồ thị tầm thường là gì?,Đồ thị tầm thường Là đồ thị chỉ có duy nhất một đỉnh và không có cạnh.
+Lý thuyết đồ thị,đồ thị đầy đủ K_n là gì?,Là đơn đồ thị n đỉnh mà giữa hai đỉnh bất kỳ luôn có cạnh nối.
+Lý thuyết đồ thị,Số lượng cạnh của đồ thị đầy đủ K_n là bao nhiêu?,$n(n-1)/2$.
+Lý thuyết đồ thị,đồ thị tự đẳng cấu là gì?,Đồ thị tự đẳng cấu Là đồ thị đẳng cấu với đồ thị bù của nó.
+Lý thuyết đồ thị,khoảng cách giữa hai đỉnh là gì?,Là độ dài của đường đi ngắn nhất nối hai đỉnh đó.
+Lý thuyết đồ thị,đường kính của đồ thị là gì?,Là khoảng cách lớn nhất giữa hai đỉnh bất kỳ trong đồ thị.
+Lý thuyết đồ thị,bán kính của đồ thị là gì?,Là giá trị eccentricity nhỏ nhất trong số các đỉnh của đồ thị.
+Lý thuyết đồ thị,tâm của đồ thị là gì?,Tâm của đồ thị Là tập hợp các đỉnh có eccentricity bằng bán kính của đồ thị.
+Lý thuyết đồ thị,đồ thị phẳng là gì?,Đồ thị phẳng Là đồ thị có thể vẽ trên mặt phẳng sao cho các cạnh không cắt nhau (ngoại trừ tại các đầu mút).
+Lý thuyết đồ thị,cách nhúng phẳng là gì?,Cách nhúng phẳng Là một bản vẽ cụ thể của đồ thị phẳng trên mặt phẳng thỏa mãn điều kiện không cắt cạnh.
+Lý thuyết đồ thị,Số lượng mặt của đồ thị phẳng liên thông n đỉnh m cạnh là bao nhiêu?,"Theo công thức Euler, $f = m - n + 2$."
+Lý thuyết đồ thị,"Đồ thị K_3,3 có phẳng không?","Không, nó là một trong hai đồ thị không phẳng cơ bản."
+Lý thuyết đồ thị,Đồ thị K_5 có phẳng không?,"Không, nó là một trong hai đồ thị không phẳng cơ bản."
+Lý thuyết đồ thị,đồ thị con đẳng cấu tiểu hình là gì?,Là hai đồ thị thu được từ cùng một đồ thị bằng cách thêm các đỉnh vào giữa các cạnh.
+Lý thuyết đồ thị,Phát biểu định lý Kuratowski?,"Đồ thị là phẳng khi và chỉ khi không chứa đồ thị con đẳng cấu tiểu hình với K_5 hoặc K_3,3."
+Lý thuyết đồ thị,sắc số chi là gì?,Sắc số chi Là số màu ít nhất cần dùng để tô các đỉnh sao cho không có hai đỉnh kề nhau cùng màu.
+Lý thuyết đồ thị,đồ thị k-sắc là gì?,Đồ thị k-sắc Là đồ thị có sắc số bằng k.
+Lý thuyết đồ thị,Sắc số của đồ thị hai phía là bao nhiêu?,Bằng 2 (nếu đồ thị có ít nhất một cạnh).
+Lý thuyết đồ thị,lát cắt trong đồ thị là gì?,Lát cắt trong đồ thị Là tập hợp các cạnh mà nếu loại bỏ sẽ làm tăng số thành phần liên thông.
+Lý thuyết đồ thị,cây là gì?,Cây Là đồ thị liên thông và không chứa chu trình.
+Lý thuyết đồ thị,Mối liên hệ giữa số đỉnh và số cạnh của một cây?,Trong cây có n đỉnh thì luôn có đúng n-1 cạnh.
+Lý thuyết đồ thị,rừng là gì?,Rừng Là đồ thị không chứa chu trình (mỗi thành phần liên thông là một cây).
+Lý thuyết đồ thị,Tại sao mọi đồ thị liên thông đều có ít nhất một cây khung?,Vì ta luôn có thể loại bỏ các cạnh thuộc chu trình mà không làm mất tính liên thông cho đến khi không còn chu trình.
+Lý thuyết đồ thị,cây có gốc là gì?,Là cây trong đó có một đỉnh được chọn làm gốc.
+Lý thuyết đồ thị,mức của một nút trong cây có gốc là gì?,Là độ dài đường đi từ gốc đến nút đó.
+Lý thuyết đồ thị,chiều cao của cây có gốc là gì?,Là mức lớn nhất của các nút trong cây.
+Lý thuyết đồ thị,cây nhị phân là gì?,Là cây có gốc mà mỗi nút có tối đa hai con (con trái và con phải).
+Lý thuyết đồ thị,cây nhị phân đầy đủ là gì?,Là cây nhị phân mà mỗi nút hoặc là lá hoặc có đúng hai con.
+Lý thuyết đồ thị,duyệt tiền thứ tự là gì?,Gốc -> Cây con trái -> Cây con phải.
+Lý thuyết đồ thị,duyệt trung thứ tự là gì?,Cây con trái -> Gốc -> Cây con phải.
+Lý thuyết đồ thị,duyệt hậu thứ tự là gì?,Cây con trái -> Cây con phải -> Gốc.
+Lý thuyết đồ thị,cây khung nhỏ nhất là gì?,Là cây khung có tổng trọng số các cạnh là nhỏ nhất trong đồ thị có trọng số.
+Lý thuyết đồ thị,Thuật toán Kruskal dùng để làm gì?,Dùng để tìm cây khung nhỏ nhất bằng cách chọn các cạnh có trọng số nhỏ nhất mà không tạo chu trình.
+Lý thuyết đồ thị,Thuật toán Prim dùng để làm gì?,Dùng để tìm cây khung nhỏ nhất bằng cách mở rộng cây từ một đỉnh ban đầu.
+Lý thuyết đồ thị,bài toán đường đi ngắn nhất là gì?,Tìm đường đi giữa hai đỉnh sao cho tổng trọng số các cạnh là nhỏ nhất.
+Lý thuyết đồ thị,Thuật toán Bellman-Ford dùng để làm gì?,Tìm đường đi ngắn nhất trong đồ thị có thể có cạnh trọng số âm (nhưng không có chu trình âm).
+Lý thuyết đồ thị,mạng luồng là gì?,Mạng luồng Là đồ thị có hướng mà mỗi cạnh có một khả năng thông qua (Capacity).
+Lý thuyết đồ thị,luồng trong mạng là gì?,Luồng trong mạng Là việc gán giá trị cho mỗi cạnh sao cho không vượt quá capacity và tổng luồng vào bằng tổng luồng ra tại mỗi đỉnh (trừ nguồn và đích).
+Lý thuyết đồ thị,Định lý luồng cực đại lát cắt cực tiểu?,Giá trị luồng cực đại bằng khả năng thông qua của lát cắt nhỏ nhất.
+Lý thuyết đồ thị,bộ ghép là gì?,Bộ ghép Là tập hợp các cạnh không có đỉnh đầu mút chung.
+Lý thuyết đồ thị,bộ ghép cực đại là gì?,Là bộ ghép có số lượng cạnh lớn nhất.
+Lý thuyết đồ thị,Định lý Hall về bộ ghép trong đồ thị hai phía?,Điều kiện cần và đủ để tồn tại bộ ghép phủ một tập đỉnh trong đồ thị hai phía.
+Lý thuyết đồ thị,số bao phủ cạnh là gì?,Số lượng cạnh ít nhất cần chọn sao cho mọi đỉnh đều là đầu mút của ít nhất một cạnh được chọn.
+Lý thuyết đồ thị,tập độc lập đỉnh là gì?,Tập độc lập đỉnh Là tập hợp các đỉnh mà không có hai đỉnh nào kề nhau.
+Lý thuyết đồ thị,clique trong đồ thị là gì?,Clique trong đồ thị Là tập hợp các đỉnh mà giữa hai đỉnh bất kỳ luôn có cạnh nối (đồ thị con đầy đủ).
+Lý thuyết đồ thị,sắc số cạnh là gì?,Số màu ít nhất để tô các cạnh sao cho không có hai cạnh chung đỉnh cùng màu.
+Lý thuyết đồ thị,Định lý Vizing về sắc số cạnh?,Sắc số cạnh của đơn đồ thị chỉ có thể là Delta hoặc Delta+1.
+Lý thuyết đồ thị,đồ thị Euler là gì?,Đồ thị Euler Là đồ thị có chu trình Euler (đi qua mọi cạnh đúng một lần).
+Lý thuyết đồ thị,Điều kiện để đồ thị liên thông có chu trình Euler?,Mọi đỉnh của đồ thị đều có bậc chẵn.
+Lý thuyết đồ thị,đồ thị Hamilton là gì?,Đồ thị Hamilton Là đồ thị có chu trình Hamilton (đi qua mọi đỉnh đúng một lần).
+Lý thuyết đồ thị,mã Huffman là gì?,Mã Huffman Là thuật toán dùng cây nhị phân để tạo ra mã tối ưu cho việc nén dữ liệu.
+Lý thuyết đồ thị,cây nhị phân tìm kiếm là gì?,Là cây nhị phân mà giá trị nút trái nhỏ hơn nút gốc và giá trị nút phải lớn hơn nút gốc.
+Lý thuyết đồ thị,quay cây là gì?,Là thao tác thay đổi cấu trúc cây nhị phân mà không làm mất tính chất thứ tự của BST.
+Lý thuyết đồ thị,cây cân bằng là gì?,Là cây nhị phân tìm kiếm mà độ lệch chiều cao giữa hai cây con của mọi nút không quá 1.
+Lý thuyết đồ thị,đồ thị có trọng số là gì?,Đồ thị mà mỗi cạnh được gán một giá trị số (trọng số).
+Lý thuyết đồ thị,cung trong đồ thị có hướng là gì?,"Cung trong đồ thị có hướng Là một cặp đỉnh có thứ tự (u, v) đại diện cho hướng đi từ u đến v."
+Lý thuyết đồ thị,liên thông mạnh là gì?,Đồ thị có hướng mà giữa hai đỉnh bất kỳ luôn có đường đi có hướng qua lại.
+Lý thuyết đồ thị,liên thông yếu là gì?,Đồ thị có hướng mà nếu thay các cung bằng cạnh vô hướng thì ta được đồ thị vô hướng liên thông.
+Lý thuyết đồ thị,thành phần liên thông mạnh là gì?,Thành phần liên thông mạnh Là đồ thị con liên thông mạnh tối đại.
+Lý thuyết đồ thị,Thuật toán Tarjan dùng để làm gì?,Tìm các thành phần liên thông mạnh trong đồ thị có hướng.
+Lý thuyết đồ thị,bao đóng chuyển tiếp là gì?,"Đồ thị mới có cạnh (u, v) nếu trong đồ thị gốc có đường đi từ u đến v."
+Lý thuyết đồ thị,đa đồ thị là gì?,Đồ thị cho phép có nhiều cạnh nối giữa cùng một cặp đỉnh.
+Lý thuyết đồ thị,khuyên trong đồ thị là gì?,Là cạnh nối một đỉnh với chính nó.
+Lý thuyết đồ thị,đơn đồ thị là gì?,Đồ thị không có khuyên và không có đa cạnh.
+Lý thuyết đồ thị,bậc vào của một đỉnh là gì?,Số lượng cung đi vào đỉnh đó trong đồ thị có hướng.
+Lý thuyết đồ thị,bậc ra của một đỉnh là gì?,Số lượng cung đi ra khỏi đỉnh đó trong đồ thị có hướng.
+Lý thuyết đồ thị,Tổng bậc vào và tổng bậc ra trong đồ thị có hướng có mối liên hệ gì?,Chúng luôn bằng nhau và bằng số lượng cung của đồ thị.
+Lý thuyết đồ thị,đồ thị phân cấp là gì?,Đồ thị mà các đỉnh được chia thành các mức và cạnh chỉ nối giữa các mức khác nhau.
+Lý thuyết đồ thị,đồ thị lồng nhau là gì?,Đồ thị mà các đỉnh hoặc cạnh có thể chứa các đồ thị con bên trong.
+Lý thuyết đồ thị,thuật toán tìm kiếm theo chiều sâu là gì?,Phép duyệt ưu tiên đi sâu vào các nhánh trước khi quay lại.
+Lý thuyết đồ thị,thuật toán tìm kiếm theo chiều rộng là gì?,Phép duyệt ưu tiên thăm tất cả các đỉnh kề trước khi đi sâu hơn.
+Lý thuyết đồ thị,Ứng dụng của BFS trong việc tìm đường đi ngắn nhất?,BFS luôn tìm được đường đi có ít cạnh nhất trong đồ thị không trọng số.
+Lý thuyết đồ thị,cây bao trùm là gì?,Tập hợp các cây khung của các thành phần liên thông của đồ thị.
+Lý thuyết đồ thị,vết là gì?,Là đường đi mà không có cạnh nào bị lặp lại.
+Lý thuyết đồ thị,xích trong đồ thị có hướng là gì?,Xích trong đồ thị có hướng Là một dãy các đỉnh mà mỗi cặp liên tiếp có một cung nối chúng.
+Lý thuyết đồ thị,đồ thị tự đẳng cấu là gì?,Đồ thị mà có một phép hoán vị đỉnh bảo toàn quan hệ kề.
+Lý thuyết đồ thị,ma trận kề lũy thừa k là gì?,"Phần tử (i, j) của ma trận A^k cho biết số lượng đường đi độ dài k từ đỉnh i đến đỉnh j."
+Lý thuyết đồ thị,đồ thị rỗng n đỉnh là gì?,Đồ thị có n đỉnh và 0 cạnh.
+Lý thuyết đồ thị,đồ thị tam giác là gì?,Đồ thị tam giác Là đồ thị mà mọi chu trình đều có ít nhất một dây cung.
+Lý thuyết đồ thị,đồ thị hoàn hảo là gì?,Đồ thị mà sắc số bằng số bao vây cho mọi đồ thị con cảm sinh.
+Lý thuyết đồ thị,đồ thị khoảng là gì?,Đồ thị biểu diễn quan hệ giao nhau của các khoảng trên một đường thẳng.
+Lý thuyết đồ thị,đồ thị hoán vị là gì?,Đồ thị biểu diễn quan hệ nghịch thế trong một hoán vị.
+Lý thuyết đồ thị,đồ thị đối ngẫu phẳng là gì?,Đồ thị được tạo ra bằng cách đặt mỗi đỉnh vào một mặt của đồ thị phẳng và nối chúng nếu các mặt kề nhau.
+Lý thuyết đồ thị,đồ thị k-liên thông là gì?,Đồ thị mà cần xóa ít nhất k đỉnh để làm nó mất tính liên thông.
+Lý thuyết đồ thị,bậc trung bình của đồ thị là gì?,Bằng hai lần số cạnh chia cho số đỉnh.
+Lý thuyết đồ thị,đồ thị chính quy là gì?,Đồ thị mà mọi đỉnh có cùng một bậc.
+Lý thuyết đồ thị,đồ thị Petersen là gì?,"Một đồ thị đặc biệt có 10 đỉnh và 15 cạnh, là ví dụ cho nhiều tính chất đồ thị."
+Lý thuyết đồ thị,"đồ thị đầy đủ hai phía K_m,n là gì?","Đồ thị mà tập đỉnh chia thành hai tập m và n đỉnh, mọi đỉnh tập này nối với mọi đỉnh tập kia."
+Lý thuyết đồ thị,đồ thị bánh xe W_n là gì?,Đồ thị tạo bằng cách nối một đỉnh trung tâm với tất cả các đỉnh của chu trình C_n-1.
+Lý thuyết đồ thị,đồ thị n-khối là gì?,Đồ thị biểu diễn các đỉnh và cạnh của một khối n chiều.
+Lý thuyết đồ thị,đồ thị hình sao là gì?,"Đồ thị hai phía đầy đủ K_1,n."
+Lý thuyết đồ thị,đồ thị đường dẫn P_n là gì?,Đồ thị gồm n đỉnh nối tiếp nhau thành một đường thẳng.
+Lý thuyết đồ thị,đồ thị chu trình C_n là gì?,Đồ thị gồm n đỉnh nối tiếp nhau thành một vòng khép kín.
+Lý thuyết đồ thị,đồ thị bậc phân cấp là gì?,Đồ thị mà bậc của các đỉnh tuân theo một phân phối lũy thừa (Scale-free graph).
+Lý thuyết đồ thị,đồ thị thế giới nhỏ là gì?,Đồ thị có đường kính nhỏ và hệ số phân cụm cao.
+Lý thuyết đồ thị,đồ thị ngẫu nhiên là gì?,Đồ thị được tạo ra bằng cách nối các cặp đỉnh với một xác suất p cho trước.
+Lý thuyết đồ thị,đồ thị mật độ cao là gì?,Đồ thị có số lượng cạnh gần đạt mức tối đa.
+Lý thuyết đồ thị,đồ thị thưa là gì?,Đồ thị có số lượng cạnh tỷ lệ thuận với số lượng đỉnh.
+Lý thuyết đồ thị,luồng thặng dư là gì?,Sự khác biệt giữa khả năng thông qua và luồng hiện tại trên một cạnh.
+Lý thuyết đồ thị,lát cắt nhỏ nhất trong mạng là gì?,Lát cắt có tổng khả năng thông qua của các cạnh đi qua là nhỏ nhất.
+Lý thuyết đồ thị,số bao phủ đỉnh cực tiểu là gì?,Tập hợp các đỉnh có kích thước nhỏ nhất phủ tất cả các cạnh.
+Lý thuyết đồ thị,tập độc lập cực đại là gì?,Tập độc lập mà không thể thêm bất kỳ đỉnh nào khác vào mà vẫn giữ tính độc lập.
+Lý thuyết đồ thị,sắc số của đồ thị phẳng là gì?,Luôn nhỏ hơn hoặc bằng 4 theo định lý 4 màu.
+Lý thuyết đồ thị,đồ thị k-sắc cạnh là gì?,Đồ thị có thể tô cạnh bằng k màu.
+Lý thuyết đồ thị,chu trình Hamilton trong đồ thị có hướng là gì?,Chu trình đi qua mọi đỉnh đúng một lần theo hướng các cung.
+Lý thuyết đồ thị,đồ thị giải mã là gì?,Đồ thị mà cấu trúc cho phép khôi phục thông tin một cách duy nhất.
+Lý thuyết đồ thị,đồ thị mở rộng là gì?,Đồ thị có tính kết nối cao và khó bị chia cắt.
+Lý thuyết đồ thị,phổ của đồ thị là gì?,Tập hợp các giá trị riêng của ma trận kề của đồ thị đó.
+Lý thuyết đồ thị,đa thức đặc trưng của đồ thị là gì?,Đa thức đặc trưng của ma trận kề của đồ thị.
+Lý thuyết đồ thị,đồ thị đẳng phổ là gì?,Hai đồ thị không đẳng cấu nhưng có cùng phổ.
+Lý thuyết đồ thị,chỉ số Wiener là gì?,Tổng khoảng cách giữa tất cả các cặp đỉnh trong đồ thị.
+Lý thuyết đồ thị,đồ thị trung tâm là gì?,Đồ thị con cảm sinh bởi các đỉnh thuộc tâm của đồ thị gốc.
+Lý thuyết đồ thị,độ lệch của đỉnh là gì?,Khoảng cách lớn nhất từ đỉnh đó đến các đỉnh khác.
+Lý thuyết đồ thị,đồ thị con khung là gì?,Đồ thị con có cùng tập đỉnh với đồ thị gốc.
+Lý thuyết đồ thị,đồ thị phân tách là gì?,Đồ thị mà tập đỉnh có thể chia thành một clique và một tập độc lập.
+Lý thuyết đồ thị,đồ thị đơn vị là gì?,Đồ thị có cạnh giữa hai điểm nếu khoảng cách giữa chúng bằng 1.
+Lý thuyết đồ thị,đồ thị lồng nhau là gì?,Đồ thị mà các tập lân cận của đỉnh tuân theo một quan hệ bao hàm.
+Lý thuyết đồ thị,đồ thị k-cây là gì?,Đồ thị được xây dựng bằng cách bắt đầu từ một clique K_k+1 và liên tiếp thêm đỉnh kề với một clique K_k.
+Lý thuyết đồ thị,độ rộng cây là gì?,Đại lượng đo lường mức độ giống cây của một đồ thị.
+Lý thuyết đồ thị,đồ thị dải là gì?,Đồ thị có cấu trúc hẹp và kéo dài.
+Lý thuyết đồ thị,đồ thị thặng dư trong mạng là gì?,Đồ thị dùng để tìm các đường tăng luồng.
+Lý thuyết đồ thị,đồ thị có hướng mạnh là gì?,Đồ thị mà mọi đỉnh đều có thể đến được mọi đỉnh khác.
+Lý thuyết đồ thị,thuật toán Kosaraju là gì?,Thuật toán tìm các thành phần liên thông mạnh dựa trên hai lần DFS.
+Lý thuyết đồ thị,đồ thị không có chu trình có hướng là gì?,Đồ thị không có chu trình có hướng Là đồ thị có hướng không chứa chu trình.
+Lý thuyết đồ thị,thứ tự topo là gì?,Sắp xếp các đỉnh sao cho các cạnh luôn hướng từ trái sang phải.
+Lý thuyết đồ thị,đồ thị chuyển đổi là gì?,Đồ thị biểu diễn các trạng thái và sự chuyển đổi giữa chúng.
+Lý thuyết đồ thị,đồ thị trạng thái là gì?,Đồ thị dùng trong kiểm tra mô hình để biểu diễn hành vi của hệ thống.
+Lý thuyết đồ thị,đồ thị kề cạnh là gì?,Hai cạnh được gọi là kề nhau nếu chúng có chung một đỉnh.
+Lý thuyết đồ thị,bậc của cạnh là gì?,Số lượng cạnh kề với cạnh đó.
+Lý thuyết đồ thị,đồ thị đối ngẫu hình học là gì?,Đồ thị phẳng đối ngẫu.
+Lý thuyết đồ thị,số mặt của đồ thị phẳng là gì?,Các vùng bị giới hạn bởi các cạnh của đồ thị.
+Lý thuyết đồ thị,mặt ngoài của đồ thị phẳng là gì?,Vùng không bị giới hạn bao quanh toàn bộ đồ thị.
+Lý thuyết đồ thị,đồ thị k-phần là gì?,Đồ thị k-partite.
+Lý thuyết đồ thị,đồ thị hoàn hảo là gì?,Đồ thị mà mọi đồ thị con cảm sinh có sắc số bằng số bao vây.
+Lý thuyết đồ thị,đồ thị Chordal là gì?,Đồ thị tam giác.
+Lý thuyết đồ thị,đồ thị Interval là gì?,Đồ thị khoảng.
+Lý thuyết đồ thị,đồ thị Split là gì?,Đồ thị phân tách.
+Lý thuyết đồ thị,đồ thị Cograph là gì?,Đồ thị có thể được xây dựng từ các đỉnh đơn lẻ thông qua các phép hợp rời và phép bù.
+Lý thuyết đồ thị,đồ thị Line là gì?,Đồ thị đường.
+Lý thuyết đồ thị,đồ thị Distance-regular là gì?,Đồ thị chính quy có tính chất đối xứng về khoảng cách.
+Lý thuyết đồ thị,đồ thị Cayley là gì?,Đồ thị biểu diễn cấu trúc của một nhóm thông qua một tập sinh.
+Lý thuyết đồ thị,đồ thị Johnson là gì?,Đồ thị mà đỉnh là các tập con k phần tử của một tập n phần tử.
+Lý thuyết đồ thị,đồ thị Hamming là gì?,Đồ thị mà đỉnh là các xâu ký tự và cạnh nối nếu chúng khác nhau đúng một vị trí.
+Lý thuyết đồ thị,đồ thị Kneser là gì?,Đồ thị mà đỉnh là tập con và cạnh nối nếu các tập con rời nhau.
+Lý thuyết đồ thị,đồ thị Turan là gì?,Đồ thị đa chân đầy đủ tối ưu.
+Lý thuyết đồ thị,đồ thị Ramsay là gì?,Đồ thị liên quan đến định lý Ramsay.
+Lý thuyết đồ thị,số Ramsay là gì?,Số lượng đỉnh tối thiểu để đảm bảo tồn tại một cấu hình tổ hợp nhất định.
+Lý thuyết đồ thị,đồ thị mở rộng là gì?,Expander graph.
+Lý thuyết đồ thị,bậc của đồ thị là gì?,Số đỉnh.
+Lý thuyết đồ thị,kích thước của đồ thị là gì?,Số cạnh.
+Lý thuyết đồ thị,đồ thị rỗng là gì?,Null graph.
+Lý thuyết đồ thị,đồ thị đầy đủ là gì?,Complete graph.
+Lý thuyết đồ thị,đồ thị hai phía là gì?,Bipartite graph.
+Lý thuyết đồ thị,đồ thị con là gì?,Subgraph.
+Lý thuyết đồ thị,đồ thị con cảm sinh là gì?,Induced subgraph.
+Lý thuyết đồ thị,cây là gì?,Tree.
+Lý thuyết đồ thị,rừng là gì?,Forest.
+Lý thuyết đồ thị,đồ thị phẳng là gì?,Đồ thị phẳng Là đồ thị có thể vẽ trên mặt phẳng mà không có hai cạnh nào cắt nhau.
+Lý thuyết đồ thị,sắc số là gì?,Chromatic number.
+Lý thuyết đồ thị,chu trình Euler là gì?,Euler circuit.
+Lý thuyết đồ thị,cây khung là gì?,Spanning tree.
+Lý thuyết đồ thị,bộ ghép là gì?,Matching.
+Lý thuyết đồ thị,luồng trong mạng là gì?,Network flow.
+Lý thuyết đồ thị,ma trận kề là gì?,Adjacency matrix.
+Lý thuyết đồ thị,ma trận liên thuộc là gì?,Incidence matrix.
+Lý thuyết đồ thị,bậc của đỉnh là gì?,Degree of vertex.
+Lý thuyết đồ thị,đỉnh kề là gì?,Adjacent vertices.
+Lý thuyết đồ thị,cạnh kề là gì?,Adjacent edges.
+Lý thuyết đồ thị,đường đi là gì?,Path.
+Lý thuyết đồ thị,chu trình là gì?,Cycle.
+Lý thuyết đồ thị,liên thông là gì?,Connected.
+Lý thuyết đồ thị,thành phần liên thông là gì?,Connected component.
+Lý thuyết đồ thị,đồ thị có hướng là gì?,Directed graph.
+Lý thuyết đồ thị,cung là gì?,Arc.
+Lý thuyết đồ thị,đa đồ thị là gì?,Multigraph.
+Lý thuyết đồ thị,khuyên là gì?,Loop.
+Lý thuyết đồ thị,đơn đồ thị là gì?,Simple graph.
+Lý thuyết đồ thị,đồ thị chính quy là gì?,Đồ thị chính quy Là đồ thị mà mọi đỉnh đều có cùng bậc.
+Lý thuyết đồ thị,đồ thị đầy đủ hai phía là gì?,Đồ thị đầy đủ hai phía Là đồ thị hai phía mà mỗi đỉnh của tập này đều nối với tất cả các đỉnh của tập kia.
+Lý thuyết đồ thị,cây nhị phân là gì?,Là cây mà mỗi nút có tối đa hai con.
+Lý thuyết đồ thị,cây có gốc là gì?,Là cây có một nút đặc biệt được chọn làm gốc.
+Lý thuyết đồ thị,mức của nút là gì?,Mức của nút Là số cạnh trên đường đi từ gốc đến nút đó.
+Lý thuyết đồ thị,chiều cao của cây là gì?,Là mức lớn nhất của các nút trong cây.
+Lý thuyết đồ thị,lá của cây là gì?,Là các nút không có con (nút bậc 1 trừ gốc).
+Lý thuyết đồ thị,nút trong của cây là gì?,Là các nút có ít nhất một con.
+Lý thuyết đồ thị,cây khung nhỏ nhất là gì?,Là cây khung có tổng trọng số các cạnh là nhỏ nhất.
+Lý thuyết đồ thị,đường đi ngắn nhất là gì?,Là đường đi giữa hai đỉnh có tổng trọng số các cạnh là nhỏ nhất.
+Lý thuyết đồ thị,luồng cực đại là gì?,Là giá trị luồng lớn nhất có thể truyền từ nguồn đến đích trong mạng.
+Lý thuyết đồ thị,lát cắt là gì?,Lát cắt Là tập các cạnh mà khi loại bỏ sẽ làm đồ thị mất tính liên thông.
+Lý thuyết đồ thị,tập độc lập là gì?,Tập độc lập Là tập các đỉnh mà không có hai đỉnh nào trong tập đó kề nhau.
+Lý thuyết đồ thị,clique là gì?,Clique Là tập các đỉnh mà mọi cặp đỉnh trong tập đó đều kề nhau.
+Lý thuyết đồ thị,số bao phủ đỉnh là gì?,Số bao phủ đỉnh Là số lượng đỉnh nhỏ nhất cần thiết để phủ tất cả các cạnh của đồ thị.
+Lý thuyết đồ thị,sắc số cạnh là gì?,Sắc số cạnh Là số màu ít nhất cần dùng để tô các cạnh sao cho hai cạnh kề nhau có màu khác nhau.
+Lý thuyết đồ thị,đồ thị con khung là gì?,Đồ thị con khung Là đồ thị con chứa tất cả các đỉnh của đồ thị ban đầu.
+Lý thuyết đồ thị,đồ thị bù là gì?,Đồ thị bù Là đồ thị có cùng tập đỉnh nhưng chỉ chứa các cạnh không có trong đồ thị ban đầu.
+Lý thuyết đồ thị,khoảng cách giữa hai đỉnh là gì?,Là độ dài của đường đi ngắn nhất giữa hai đỉnh đó.
+Lý thuyết đồ thị,đường kính của đồ thị là gì?,Là khoảng cách lớn nhất giữa hai đỉnh bất kỳ trong đồ thị.
+Lý thuyết đồ thị,bán kính của đồ thị là gì?,Là khoảng cách nhỏ nhất từ một đỉnh đến các đỉnh xa nhất của đồ thị.
+Lý thuyết đồ thị,tâm của đồ thị là gì?,Tâm của đồ thị Là tập hợp các đỉnh có độ lệch tâm bằng bán kính của đồ thị.
+Lý thuyết đồ thị,ma trận Laplacian là gì?,Là ma trận biểu diễn bằng hiệu của ma trận bậc và ma trận kề của đồ thị.
+Lý thuyết đồ thị,phổ của đồ thị là gì?,Phổ của đồ thị Là tập hợp các trị riêng của ma trận kề của đồ thị.
+Lý thuyết đồ thị,đa thức màu là gì?,Là đa thức dùng để đếm số cách tô màu các đỉnh của đồ thị.
+Lý thuyết đồ thị,đa thức đặc trưng là gì?,Là đa thức đặc trưng của ma trận kề của đồ thị.
+Lý thuyết đồ thị,đồ thị đẳng cấu là gì?,"Là hai đồ thị có cấu trúc giống hệt nhau, chỉ khác nhau về tên gọi các đỉnh."
+Lý thuyết đồ thị,đồ thị đối ngẫu là gì?,Đồ thị đối ngẫu Là đồ thị được xây dựng từ các mặt của một đồ thị phẳng.
+Lý thuyết đồ thị,đồ thị phẳng là gì?,Đồ thị phẳng Là đồ thị có thể vẽ trên mặt phẳng mà không có hai cạnh nào cắt nhau.
+Lý thuyết đồ thị,mặt của đồ thị phẳng là gì?,Là các miền của mặt phẳng được bao quanh bởi các cạnh của đồ thị phẳng.
+Lý thuyết đồ thị,công thức Euler là gì?,Công thức khẳng định V - E + F = 2 cho đồ thị phẳng liên thông.
+Lý thuyết đồ thị,đồ thị k-liên thông là gì?,Đồ thị k-liên thông Là đồ thị mà cần loại bỏ ít nhất k đỉnh để làm đồ thị mất tính liên thông.
+Lý thuyết đồ thị,thành phần liên thông mạnh là gì?,Thành phần liên thông mạnh Là tập con các đỉnh tối đại mà giữa hai đỉnh bất kỳ luôn có đường đi có hướng.
+Lý thuyết đồ thị,thứ tự topo là gì?,"Là thứ tự sắp xếp các đỉnh của đồ thị có hướng sao cho mọi cung (u, v) thì u đứng trước v."
+Lý thuyết đồ thị,đồ thị có hướng phi chu trình là gì?,Đồ thị có hướng phi chu trình Là đồ thị có hướng không chứa chu trình.
+Lý thuyết đồ thị,thuật toán Dijkstra là gì?,Thuật toán Dijkstra Là thuật toán tìm đường đi ngắn nhất từ một đỉnh đến tất cả các đỉnh khác trong đồ thị có trọng số không âm.
+Lý thuyết đồ thị,thuật toán Kruskal là gì?,Thuật toán Kruskal Là thuật toán tìm cây khung nhỏ nhất bằng cách chọn dần các cạnh có trọng số nhỏ nhất.
+Lý thuyết đồ thị,thuật toán Prim là gì?,Thuật toán Prim Là thuật toán tìm cây khung nhỏ nhất bằng cách phát triển cây từ một đỉnh ban đầu.
+Lý thuyết đồ thị,thuật toán Ford-Fulkerson là gì?,Thuật toán Ford-Fulkerson Là thuật toán tìm luồng cực đại trong mạng bằng cách tìm các đường tăng luồng.
+Lý thuyết đồ thị,thuật toán BFS là gì?,"Thuật toán BFS Là thuật toán duyệt đồ thị theo chiều rộng, sử dụng hàng đợi (Queue)."
+Lý thuyết đồ thị,thuật toán DFS là gì?,"Thuật toán DFS Là thuật toán duyệt đồ thị theo chiều sâu, sử dụng ngăn xếp (Stack) hoặc đệ quy."
+Lý thuyết đồ thị,mã Gray là gì?,Là hệ thống mã nhị phân mà hai giá trị liên tiếp chỉ khác nhau ở một bit.
+Lý thuyết đồ thị,mã Huffman là gì?,Mã Huffman Là thuật toán nén dữ liệu dùng cây nhị phân để tạo mã có độ dài thay đổi.
+Lý thuyết đồ thị,cây nhị phân tìm kiếm là gì?,Là cây nhị phân mà khóa của nút gốc lớn hơn các nút con trái và nhỏ hơn các nút con phải.
+Lý thuyết đồ thị,cây AVL là gì?,"Là cây nhị phân tìm kiếm tự cân bằng, độ lệch chiều cao hai cây con không quá 1."
+Lý thuyết đồ thị,cây B là gì?,"Là cây tìm kiếm tự cân bằng, cho phép mỗi nút có nhiều hơn hai con, thường dùng trong cơ sở dữ liệu."
+Lý thuyết đồ thị,cây đỏ đen là gì?,Cây đỏ đen Là một loại cây nhị phân tìm kiếm tự cân bằng có thêm thuộc tính màu cho mỗi nút.
+Lý thuyết đồ thị,đồ thị có trọng số là gì?,Đồ thị có trọng số Là đồ thị mà mỗi cạnh được gán một giá trị số gọi là trọng số.
+Lý thuyết đồ thị,trọng số của cạnh là gì?,Là giá trị số được gán cho một cạnh của đồ thị.
+Lý thuyết đồ thị,bài toán người du lịch là gì?,Bài toán người du lịch Là bài toán tìm chu trình ngắn nhất đi qua tất cả các đỉnh của đồ thị đúng một lần.
+Lý thuyết đồ thị,bài toán cái túi là gì?,Bài toán cái túi Là bài toán chọn các đồ vật có trọng lượng và giá trị cho trước để tối ưu hóa giá trị trong giới hạn sức chứa.
+Lý thuyết đồ thị,độ phức tạp thuật toán là gì?,"Là thước đo lượng tài nguyên (thời gian, bộ nhớ) mà thuật toán tiêu tốn khi thực hiện."
+Lý thuyết đồ thị,lớp P là gì?,Lớp P Là tập hợp các bài toán có thể giải được trong thời gian đa thức.
+Lý thuyết đồ thị,lớp NP là gì?,Lớp NP Là tập hợp các bài toán có thể kiểm tra lời giải trong thời gian đa thức.
+Lý thuyết đồ thị,bài toán NP-đầy đủ là gì?,"Là các bài toán khó nhất trong lớp NP, nếu giải được một bài trong thời gian đa thức thì giải được tất cả."
+Lý thuyết đồ thị,thuật toán tham lam là gì?,Thuật toán tham lam Là thuật toán luôn chọn lựa phương án tốt nhất tại mỗi bước với hy vọng tìm được tối ưu toàn cục.
+Lý thuyết đồ thị,thuật toán quy hoạch động là gì?,Thuật toán quy hoạch động Là thuật toán giải bài toán lớn bằng cách chia nhỏ thành các bài toán con và lưu trữ kết quả.
+Lý thuyết đồ thị,thuật toán chia để trị là gì?,"Thuật toán chia để trị Là thuật toán chia bài toán thành các bài toán con tương tự, giải chúng và kết hợp kết quả."
+Lý thuyết đồ thị,thuật toán quay lui là gì?,Thuật toán quay lui Là thuật toán tìm nghiệm bằng cách thử các khả năng và quay lại nếu không thỏa mãn.
+Lý thuyết đồ thị,thuật toán nhánh cận là gì?,Thuật toán nhánh cận Là thuật toán tìm kiếm tối ưu bằng cách chia nhánh và đánh giá cận để loại bỏ bớt các nhánh.
+Lý thuyết đồ thị,đồ thị thưa là gì?,Đồ thị thưa Là đồ thị có số lượng cạnh rất ít so với số cạnh tối đa có thể có.
+Lý thuyết đồ thị,đồ thị dày là gì?,Đồ thị dày Là đồ thị có số lượng cạnh gần với số cạnh tối đa có thể có.
+Lý thuyết đồ thị,đồ thị ngẫu nhiên là gì?,Đồ thị ngẫu nhiên Là đồ thị được tạo ra bằng các quá trình ngẫu nhiên.
+Lý thuyết đồ thị,đồ thị thế giới nhỏ là gì?,Đồ thị thế giới nhỏ Là đồ thị mà hầu hết các đỉnh có thể đến được nhau qua một số ít bước trung gian.
+Lý thuyết đồ thị,đồ thị mạng xã hội là gì?,Đồ thị mạng xã hội Là đồ thị biểu diễn các mối quan hệ giữa các cá nhân hoặc tổ chức.
+Lý thuyết đồ thị,đồ thị Web là gì?,Đồ thị Web Là đồ thị biểu diễn các trang web dưới dạng đỉnh và các liên kết dưới dạng cạnh.
+Lý thuyết đồ thị,PageRank là gì?,PageRank Là thuật toán xếp hạng trang web dựa trên cấu trúc liên kết của đồ thị Web.
+Lý thuyết đồ thị,đồ thị tri thức là gì?,Đồ thị tri thức Là đồ thị biểu diễn các thực thể và mối quan hệ giữa chúng trong cơ sở tri thức.
+Lý thuyết số,Công thức tính phi với p là số nguyên tố?,$\phi(p) = p - 1$.
+Lý thuyết số,Cơ sở toán học của thuật toán Euclid là gì?,"Dựa trên tính chất $GCD(a, b) = GCD(b, a \pmod b)$."
+Lý thuyết số,Ký hiệu Legendre dùng để làm gì?,Dùng để kiểm tra xem một số có phải là thặng dư bình phương modulo một số nguyên tố lẻ hay không.
+Lý thuyết số,Mối liên hệ giữa GCD và LCM của hai số a và b là gì?,"$GCD(a, b) \cdot LCM(a, b) = |a \cdot b|$."
+Lý thuyết số,Nguyên lý hoạt động của mã hóa công khai RSA?,Dựa trên độ khó của việc phân tích một số nguyên cực lớn thành tích của hai số nguyên tố.
+Lý thuyết số,Phát biểu định lý Euler trong lý thuyết số?,"Nếu $GCD(a, n) = 1$ thì $a^{\phi(n)} \equiv 1 \pmod n$."
+Lý thuyết số,Phát biểu định lý Fermat nhỏ ?,Nếu p là số nguyên tố và a không chia hết cho p thì $a^{p-1} \equiv 1 \pmod p$.
+Lý thuyết số,Sàng lọc Eratosthenes dùng để làm gì?,Dùng để tìm tất cả các số nguyên tố nhỏ hơn hoặc bằng một số N cho trước một cách nhanh chóng.
+Lý thuyết số,Thuật toán Euclid dùng để làm gì?,Dùng để tìm ước chung lớn nhất (GCD) của hai số nguyên một cách hiệu quả bằng phép chia dư liên tiếp.
+Lý thuyết số,Thuật toán Euclid mở rộng dùng để làm gì?,"Dùng để tìm các hệ số x, y sao cho $ax + by = GCD(a, b)$."
+Lý thuyết số,căn nguyên thủy modulo n là gì?,Căn nguyên thủy modulo n Là số g sao cho mọi số nguyên tố cùng nhau với n đều có thể biểu diễn dưới dạng lũy thừa của g modulo n.
+Lý thuyết số,hai số nguyên tố cùng nhau là gì?,Là hai số có ước chung lớn nhất bằng 1.
+Lý thuyết số,hợp số là gì?,Hợp số Là số nguyên lớn hơn 1 và có nhiều hơn hai ước dương.
+Lý thuyết số,số nguyên tố là gì?,Số nguyên tố Là số nguyên lớn hơn 1 và chỉ có duy nhất hai ước dương là 1 và chính nó.
+Lý thuyết số,nghịch đảo modulo của a modulo m là gì?,Nghịch đảo modulo của a modulo m Là số nguyên x sao cho $a \cdot x \equiv 1 \pmod m$.
+Lý thuyết số,số Mersenne là gì?,"Số Mersenne Là số có dạng $2^p - 1$, trong đó p là một số nguyên tố."
+Lý thuyết số,số giả nguyên tố là gì?,Là hợp số vượt qua được một số phép kiểm tra tính nguyên tố (như kiểm tra Fermat).
+Lý thuyết số,thặng dư bình phương modulo n là gì?,Thặng dư bình phương modulo n Là số a sao cho tồn tại x thỏa mãn $x^2 \equiv a \pmod n$.
+Lý thuyết số,"Trong mã hóa RSA, khóa bí mật dùng để làm gì?",Dùng để giải mã thông tin bằng cách sử dụng số mũ d là nghịch đảo của e modulo $\phi(n)$.
+Lý thuyết số,"Trong mã hóa RSA, khóa công khai gồm những thành phần nào?",Gồm số n (tích hai số nguyên tố) và số mũ mã hóa e.
+Lý thuyết số,Tính chất cộng của quan hệ đồng dư là gì?,Nếu $a \equiv b \pmod m$ và $c \equiv d \pmod m$ thì $a + c \equiv b + d \pmod m$.
+Lý thuyết số,Tính chất của GCD liên quan đến tổ hợp tuyến tính?,"$GCD(a, b)$ là số nguyên dương nhỏ nhất có thể biểu diễn dưới dạng $ax + by$."
+Lý thuyết số,Tính chất nhân của quan hệ đồng dư là gì?,Nếu $a \equiv b \pmod m$ và $c \equiv d \pmod m$ thì $a \cdot c \equiv b \cdot d \pmod m$.
+Lý thuyết số,Tại sao bài toán phân tích số nguyên lại quan trọng?,Vì tính bảo mật của nhiều hệ thống mã hóa hiện đại phụ thuộc vào việc bài toán này không có thuật toán giải nhanh.
+Lý thuyết số,Tại sao số 1 không được coi là số nguyên tố?,Để đảm bảo tính duy nhất của việc phân tích một số ra thừa số nguyên tố (theo định lý cơ bản của số học).
+Lý thuyết số,Tại sao thuật toán Euclid mở rộng lại quan trọng trong mật mã học?,"Vì nó được dùng để tìm nghịch đảo modulo, một bước then chốt trong mã hóa RSA."
+Lý thuyết số,Điều kiện để a có nghịch đảo modulo m là gì?,"a và m phải nguyên tố cùng nhau, tức là $GCD(a, m) = 1$."
+Lý thuyết số,Điều kiện để a đồng dư với b modulo m qua hiệu số là gì?,Hiệu $a - b$ phải chia hết cho m.
+Lý thuyết số,Định lý cơ bản của số học là gì?,Mọi số nguyên lớn hơn 1 đều có thể biểu diễn duy nhất dưới dạng tích các số nguyên tố.
+Lý thuyết số,Định lý số dư Trung Hoa dùng để làm gì?,Dùng để giải hệ phương trình đồng dư bậc nhất với các modulo nguyên tố cùng nhau từng đôi một.
+Lý thuyết số,bội chung nhỏ nhất là gì?,Bội chung nhỏ nhất Là số nguyên dương nhỏ nhất là bội của cả hai số nguyên a và b.
+Lý thuyết số,hàm số Euler phi là gì?,Hàm số Euler phi Là số lượng các số nguyên dương nhỏ hơn hoặc bằng n và nguyên tố cùng nhau với n.
+Lý thuyết số,hàm số Mobius mu là gì?,"Hàm số Mobius mu Là hàm số nhận giá trị 1, -1 hoặc 0 tùy thuộc vào cấu trúc thừa số nguyên tố của n, dùng trong công thức đảo ngược Mobius."
+Lý thuyết số,logarit rời rạc là gì?,"Logarit rời rạc Là bài toán tìm x sao cho $a^x \equiv b \pmod n$, đây là bài toán khó và là cơ sở cho nhiều hệ mật mã."
+Lý thuyết số,quan hệ chia hết giữa hai số nguyên là gì?,Số nguyên a chia hết cho số nguyên b (b khác 0) nếu tồn tại số nguyên c sao cho a = b*c.
+Lý thuyết số,quan hệ đồng dư modulo m là gì?,"Hai số a và b đồng dư modulo m nếu chúng có cùng số dư khi chia cho m, ký hiệu $a \equiv b \pmod m$."
+Lý thuyết số,số hoàn hảo là gì?,Số hoàn hảo Là số nguyên dương bằng tổng các ước dương của nó (ngoại trừ chính nó).
+Lý thuyết số,thương và số dư trong phép chia Euclid là gì?,"Với hai số nguyên a và b (b > 0), tồn tại duy nhất q và r sao cho a = bq + r và 0 <= r < b."
+Lý thuyết số,ước chung lớn nhất là gì?,Ước chung lớn nhất Là số nguyên dương lớn nhất chia hết cho cả hai số nguyên a và b.
+Lý thuyết số,số nguyên tố cùng nhau từng đôi một là gì?,Số nguyên tố cùng nhau từng đôi một Là một tập các số mà bất kỳ hai số nào trong đó cũng có GCD bằng 1.
+Lý thuyết số,số dư trong phép chia là gì?,Là giá trị r thỏa mãn $0 \le r < |b|$ trong phép chia $a = bq + r$.
+Lý thuyết số,Phát biểu định lý số dư Trung Hoa cho hệ hai phương trình?,"Hệ $x \equiv a \pmod m, x \equiv b \pmod n$ có nghiệm duy nhất modulo $m \cdot n$ nếu $GCD(m, n) = 1$."
+Lý thuyết số,bậc của a modulo n là gì?,Bậc của a modulo n Là số nguyên dương k nhỏ nhất sao cho $a^k \equiv 1 \pmod n$.
+Lý thuyết số,Mối liên hệ giữa bậc của a và hàm phi Euler?,Bậc của a modulo n luôn là một ước của $\phi(n)$.
+Lý thuyết số,thặng dư bình phương là gì?,Thặng dư bình phương Là số a sao cho phương trình $x^2 \equiv a \pmod n$ có nghiệm.
+Lý thuyết số,Tiêu chuẩn Euler về thặng dư bình phương là gì?,$a^{(p-1)/2} \equiv 1 \pmod p$ nếu a là thặng dư bình phương modulo p.
+Lý thuyết số,Ký hiệu Legendre $$ nhận giá trị bằng mấy nếu a không là thặng dư bình phương?,Nhận giá trị bằng -1.
+Lý thuyết số,Định lý tương hỗ bình phương là gì?,Mô tả mối quan hệ giữa tính thặng dư bình phương của hai số nguyên tố lẻ khác nhau.
+Lý thuyết số,số hoàn hảo chẵn là gì?,Mọi số hoàn hảo chẵn đều có dạng $2^{p-1}(2^p - 1)$ với $2^p - 1$ là số nguyên tố Mersenne.
+Lý thuyết số,hàm số ước số $\sigma$ là gì?,Là tổng tất cả các ước dương của số nguyên n.
+Lý thuyết số,hàm số đếm ước số $\tau$ là gì?,Hàm số đếm ước số $\tau$ Là số lượng các ước dương của số nguyên n.
+Lý thuyết số,số siêu nguyên tố là gì?,"Số siêu nguyên tố Là số nguyên tố mà khi xóa dần các chữ số từ bên phải, các số còn lại vẫn là số nguyên tố."
+Lý thuyết số,phương trình Diophantine là gì?,Là phương trình đại số yêu cầu tìm nghiệm trong tập số nguyên.
+Lý thuyết số,Phương trình $ax + by = c$ có nghiệm nguyên khi nào?,"Khi và chỉ khi c chia hết cho $GCD(a, b)$."
+Lý thuyết số,bộ số Pythagore là gì?,"Là bộ ba số nguyên dương $(a, b, c)$ thỏa mãn $a^2 + b^2 = c^2$."
+Lý thuyết số,Phát biểu định lý cuối cùng của Fermat ?,Phương trình $x^n + y^n = z^n$ không có nghiệm nguyên dương với mọi $n > 2$.
+Lý thuyết số,Tại sao bài toán phân tích số ra thừa số nguyên tố lại được coi là bài toán một chiều?,Vì việc nhân hai số nguyên tố rất nhanh nhưng việc tìm lại hai thừa số đó từ tích của chúng lại rất chậm.
+Lý thuyết số,hàm số Mobius $\mu$ là gì?,"Bằng 1 nếu n=1, bằng $(-1)^k$ nếu n là tích của k số nguyên tố phân biệt, và bằng 0 nếu n chứa ước là bình phương."
+Lý thuyết số,Công thức đảo ngược Mobius dùng để làm gì?,Dùng để biểu diễn một hàm số thông qua tổng của một hàm số khác trên các ước của n.
+Lý thuyết số,số giả nguyên tố Carmichael là gì?,Là hợp số n thỏa mãn $a^{n-1} \equiv 1 \pmod n$ với mọi a nguyên tố cùng nhau với n.
+Lý thuyết số,hệ mật mã khóa công khai là gì?,Là hệ thống sử dụng hai khóa khác nhau: một khóa để mã hóa (công khai) và một khóa để giải mã (bí mật).
+Lý thuyết số,Tại sao số nguyên tố lớn lại cần thiết cho RSA?,Để đảm bảo rằng việc phân tích tích của chúng là bất khả thi với các máy tính hiện nay.
+Lý thuyết số,chứng thực số là gì?,Là ứng dụng của mật mã học để xác nhận nguồn gốc và tính toàn vẹn của một thông điệp.
+Lý thuyết số,phân số liên tục là gì?,Phân số liên tục Là cách biểu diễn một số dưới dạng một số nguyên cộng với nghịch đảo của một phân số liên tục khác.
+Lý thuyết số,Tại sao phân số liên tục lại quan trọng?,Vì chúng cung cấp những xấp xỉ hữu tỷ tốt nhất cho các số vô tỷ.
+Lý thuyết số,số đại số là gì?,Số đại số Là số thực là nghiệm của một đa thức với các hệ số hữu tỷ.
+Lý thuyết số,số siêu việt là gì?,Số siêu việt Là số thực không phải là nghiệm của bất kỳ đa thức nào với các hệ số hữu tỷ (ví dụ $\pi$ hoặc $e$).
+Lý thuyết số,Định lý Dirichlet về số nguyên tố trong cấp số cộng là gì?,"Nếu $GCD(a, d) = 1$ thì có vô số số nguyên tố có dạng $a + kd$."
+Lý thuyết số,số nguyên tố sinh đôi là gì?,"Là cặp hai số nguyên tố hơn kém nhau 2 đơn vị (ví dụ 3 và 5, 11 và 13)."
+Quan hệ,quan hệ hai ngôi là gì là gì?,"Quan hệ hai ngôi là gì Là một tập con của tích Descartes A x B, gồm các cặp thứ tự (a, b) thỏa mãn một điều kiện nào đó."
+Quan hệ,quan hệ trên tập hợp A là gì?,"Quan hệ trên tập hợp A Là một quan hệ mà tập nguồn và tập đích đều là tập A, tức là một tập con của A x A."
+Quan hệ,tính phản xạ của một quan hệ là gì?,"Mọi phần tử a trong A đều có quan hệ với chính nó, tức là (a, a) thuộc R."
+Quan hệ,tính đối xứng của một quan hệ là gì?,Nếu a có quan hệ với b thì b cũng phải có quan hệ với a.
+Quan hệ,tính bắc cầu của một quan hệ là gì?,Nếu a có quan hệ với b và b có quan hệ với c thì a phải có quan hệ với c.
+Quan hệ,tính phản đối xứng của một quan hệ là gì?,Nếu a có quan hệ với b và b có quan hệ với a thì a và b phải trùng nhau.
+Quan hệ,quan hệ tương đương là gì?,"Quan hệ tương đương Là quan hệ thỏa mãn đồng thời ba tính chất: phản xạ, đối xứng và bắc cầu."
+Quan hệ,lớp tương đương của một phần tử là gì?,Lớp tương đương của một phần tử Là tập hợp tất cả các phần tử có quan hệ tương đương với phần tử đó.
+Quan hệ,Tại sao các lớp tương đương lại tạo thành một phân hoạch của tập hợp?,Vì chúng rời nhau và hợp của tất cả các lớp tương đương chính là tập hợp ban đầu.
+Quan hệ,quan hệ thứ tự bán phần là gì?,"Quan hệ thứ tự bán phần Là quan hệ thỏa mãn đồng thời ba tính chất: phản xạ, phản đối xứng và bắc cầu."
+Quan hệ,tập sắp thứ tự bộ phận là gì?,Tập sắp thứ tự bộ phận Là một tập hợp đi kèm với một quan hệ thứ tự bán phần trên nó.
+Quan hệ,quan hệ thứ tự toàn phần là gì?,Quan hệ thứ tự toàn phần Là quan hệ thứ tự mà mọi cặp phần tử đều có thể so sánh được với nhau.
+Quan hệ,phần tử tối đại trong POSET là gì?,Là phần tử mà không có phần tử nào khác lớn hơn nó theo quan hệ thứ tự đang xét.
+Quan hệ,phần tử tối tiểu trong POSET là gì?,Là phần tử mà không có phần tử nào khác nhỏ hơn nó theo quan hệ thứ tự đang xét.
+Quan hệ,phần tử lớn nhất trong POSET là gì?,Là phần tử lớn hơn hoặc bằng mọi phần tử khác trong tập hợp.
+Quan hệ,phần tử nhỏ nhất trong POSET là gì?,Là phần tử nhỏ hơn hoặc bằng mọi phần tử khác trong tập hợp.
+Quan hệ,Sự khác biệt giữa phần tử tối đại và phần tử lớn nhất là gì?,"Phần tử lớn nhất là duy nhất và so sánh được với tất cả, còn phần tử tối đại có thể có nhiều và không nhất thiết so sánh được với mọi phần tử."
+Quan hệ,chặn trên của một tập con là gì?,Là phần tử lớn hơn hoặc bằng tất cả các phần tử trong tập con đó.
+Quan hệ,chặn dưới của một tập con là gì?,Là phần tử nhỏ hơn hoặc bằng tất cả các phần tử trong tập con đó.
+Quan hệ,chặn trên nhỏ nhất là gì?,Là phần tử nhỏ nhất trong số tất cả các chặn trên của một tập con.
+Quan hệ,chặn dưới lớn nhất là gì?,Là phần tử lớn nhất trong số tất cả các chặn dưới của một tập con.
+Quan hệ,lưới trong lý thuyết quan hệ là gì?,Lưới trong lý thuyết quan hệ Là một POSET mà mọi cặp phần tử đều có chặn trên nhỏ nhất và chặn dưới lớn nhất duy nhất.
+Quan hệ,Biểu đồ Hasse dùng để làm gì?,Dùng để biểu diễn trực quan một quan hệ thứ tự bán phần bằng cách lược bỏ các cạnh phản xạ và bắc cầu dư thừa.
+Quan hệ,Cách vẽ một biểu đồ Hasse từ một POSET?,Vẽ các đỉnh sao cho phần tử lớn hơn nằm phía trên và nối một cạnh đi lên nếu có quan hệ trực tiếp (không qua trung gian).
+Quan hệ,bao đóng phản xạ của một quan hệ là gì?,Bao đóng phản xạ của một quan hệ Là quan hệ nhỏ nhất chứa quan hệ ban đầu và có tính chất phản xạ.
+Quan hệ,bao đóng đối xứng của một quan hệ là gì?,Bao đóng đối xứng của một quan hệ Là quan hệ nhỏ nhất chứa quan hệ ban đầu và có tính chất đối xứng.
+Quan hệ,bao đóng bắc cầu của một quan hệ là gì?,Bao đóng bắc cầu của một quan hệ Là quan hệ nhỏ nhất chứa quan hệ ban đầu và có tính chất bắc cầu.
+Quan hệ,Thuật toán Warshall dùng để làm gì?,Dùng để tìm bao đóng bắc cầu của một quan hệ trên tập hữu hạn một cách hiệu quả bằng ma trận.
+Quan hệ,quan hệ ngược là gì?,Quan hệ ngược Là quan hệ thu được bằng cách hoán đổi vị trí các phần tử trong mỗi cặp của quan hệ ban đầu.
+Quan hệ,hợp thành của hai quan hệ là gì?,Hợp thành của hai quan hệ Là quan hệ nối từ tập A đến tập C thông qua một tập trung gian B.
+Quan hệ,Ma trận biểu diễn quan hệ là gì?,Là ma trận nhị phân mà giá trị tại hàng i cột j bằng 1 nếu phần tử i có quan hệ với phần tử j.
+Quan hệ,Làm thế nào để kiểm tra tính phản xạ qua ma trận quan hệ?,Kiểm tra xem tất cả các phần tử trên đường chéo chính có bằng 1 hay không.
+Quan hệ,Làm thế nào để kiểm tra tính đối xứng qua ma trận quan hệ?,Kiểm tra xem ma trận đó có đối xứng qua đường chéo chính hay không ($M = M^T$).
+Quan hệ,Làm thế nào để kiểm tra tính phản đối xứng qua ma trận quan hệ?,Kiểm tra nếu $M_{ij}=1$ và $M_{ji}=1$ (với $i$ khác $j$) thì điều này không được xảy ra.
+Quan hệ,quan hệ tương đương n modulo là gì?,Quan hệ tương đương n modulo Là quan hệ trên tập số nguyên mà hai số có cùng số dư khi chia cho n.
+Quan hệ,chuỗi trong một POSET là gì?,Chuỗi trong một POSET Là một tập con mà mọi cặp phần tử đều có thể so sánh được với nhau.
+Quan hệ,phản chuỗi trong một POSET là gì?,Phản chuỗi trong một POSET Là một tập con mà không có bất kỳ hai phần tử phân biệt nào có thể so sánh được với nhau.
+Quan hệ,Định lý Dilworth trong lý thuyết quan hệ là gì?,Kích thước của phản chuỗi lớn nhất bằng số lượng chuỗi tối thiểu cần thiết để phủ hết tập hợp.
+Quan hệ,Tại sao quan hệ rỗng trên tập hợp khác rỗng lại có tính đối xứng?,"Vì điều kiện 'Nếu (a, b) thuộc R thì (b, a) thuộc R' luôn đúng do giả thiết luôn sai (Vacuously true)."
+Quan hệ,Quan hệ đồng nhất trên tập A có những tính chất gì?,"Nó vừa là quan hệ tương đương, vừa là quan hệ thứ tự bán phần."
+Quan hệ,phần tử kề trực tiếp trong POSET là gì?,Phần tử y kề trực tiếp x nếu x < y và không tồn tại z sao cho x < z < y.
+Quan hệ,Lưới phân phối là gì?,Là lưới mà các phép toán nối (Join) và gặp (Meet) tuân theo luật phân phối lẫn nhau.
+Quan hệ,Lưới bù là gì?,Là lưới mà mọi phần tử đều có phần tử bù sao cho phép nối của chúng ra phần tử lớn nhất và phép gặp ra phần tử nhỏ nhất.
+Quan hệ,đại số Boole qua lý thuyết lưới là gì?,"Đại số Boole qua lý thuyết lưới Là một lưới vừa có tính phân phối, vừa có tính bù."
+Quan hệ,quan hệ n-ngôi là gì?,"Quan hệ n-ngôi Là tập con của tích Descartes của n tập hợp, dùng để biểu diễn các quan hệ phức tạp trong cơ sở dữ liệu."
+Quan hệ,khóa trong quan hệ cơ sở dữ liệu là gì?,Khóa trong quan hệ cơ sở dữ liệu Là một tập hợp các thuộc tính định danh duy nhất cho mỗi bản ghi trong quan hệ.
+Quan hệ,chọn trong đại số quan hệ là gì?,Chọn trong đại số quan hệ Là việc trích xuất các hàng thỏa mãn một điều kiện nhất định từ một quan hệ.
+Quan hệ,chiếu trong đại số quan hệ là gì?,Chiếu trong đại số quan hệ Là việc trích xuất các cột cụ thể từ một quan hệ.
+Quan hệ,kết nối trong đại số quan hệ là gì?,Kết nối trong đại số quan hệ Là việc kết hợp hai quan hệ dựa trên các thuộc tính chung.
+Quan hệ,Tại sao lý thuyết quan hệ là nền tảng của các hệ quản trị cơ sở dữ liệu?,Vì dữ liệu được tổ chức dưới dạng các bảng (quan hệ) và các truy vấn dựa trên các phép toán đại số quan hệ.
+Xác suất rời rạc,Công thức cộng xác suất cho hai biến cố xung khắc?,$P(A \cup B) = P(A) + P(B)$.
+Xác suất rời rạc,Công thức cộng xác suất tổng quát cho hai biến cố bất kỳ?,$P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+Xác suất rời rạc,Công thức của luật Phân phối là gì?,$x \wedge (y \vee z) = (x \wedge y) \vee (x \wedge z)$
+Xác suất rời rạc,Công thức toán học của định lý Bayes?,$P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)}$.
+Xác suất rời rạc,Công thức tính kỳ vọng của biến ngẫu nhiên X?,$E(X) = \sum x_i \cdot P(X=x_i)$.
+Xác suất rời rạc,Công thức tính phương sai của tổng hai biến ngẫu nhiên độc lập?,$Var(X+Y) = Var(X) + Var(Y)$.
+Xác suất rời rạc,Công thức tính phương sai qua kỳ vọng?,$Var(X) = E(X^2) - [E(X)]^2$.
+Xác suất rời rạc,Công thức tính xác suất có điều kiện?,"$P(A|B) = \frac{P(A \cap B)}{P(B)}$, với điều kiện $P(B) > 0$."
+Xác suất rời rạc,Công thức tính xác suất của biến cố đối?,$P(\bar{A}) = 1 - P(A)$.
+Xác suất rời rạc,Công thức tính xác suất k lần thành công trong n phép thử Bernoulli?,$P_n(k) = C_n^k p^k (1-p)^{n-k}$.
+Xác suất rời rạc,Công thức xác suất Bernoulli ?,Dùng để tính xác suất có đúng k lần thành công trong n phép thử độc lập.
+Xác suất rời rạc,Kỳ vọng của biến ngẫu nhiên chỉ thị bằng bao nhiêu?,Bằng chính xác suất xảy ra của biến cố đó.
+Xác suất rời rạc,Kỳ vọng của biến ngẫu nhiên tuân theo phân phối nhị thức là bao nhiêu?,$E(X) = n \cdot p$.
+Xác suất rời rạc,Kỳ vọng và phương sai của phân phối Poisson có đặc điểm gì?,Chúng bằng nhau và đều bằng tham số $\lambda$ của phân phối.
+Xác suất rời rạc,Phát biểu bất đẳng thức Chebyshev?,Dùng để ước lượng xác suất biến ngẫu nhiên lệch khỏi kỳ vọng quá một khoảng k lần độ lệch chuẩn.
+Xác suất rời rạc,Phát biểu bất đẳng thức Markov?,Cho phép ước lượng giới hạn trên của xác suất biến ngẫu nhiên không âm vượt quá một giá trị cho trước dựa vào kỳ vọng.
+Xác suất rời rạc,Phát biểu công thức xác suất đầy đủ ?,Xác suất của biến cố $B$ được tính bằng tổng các tích $P(A_i) \cdot P(B|A_i)$ với $A_i$ là một hệ đầy đủ các biến cố.
+Xác suất rời rạc,Phát biểu nội dung luật Phân phối?,Luật Phân phối có công thức: $x \wedge (y \vee z) = (x \wedge y) \vee (x \wedge z)$.
+Xác suất rời rạc,Phát biểu định lý Bayes ?,Là công thức tính xác suất hậu nghiệm $P(A|B)$ dựa trên xác suất tiên nghiệm và xác suất có điều kiện ngược lại.
+Xác suất rời rạc,Phát biểu định lý Nhị thức Newton?,$(a+b)^n = \sum_{k=0}^n C_n^k a^{n-k} b^k$.
+Xác suất rời rạc,Phương sai của biến ngẫu nhiên tuân theo phân phối nhị thức là bao nhiêu?,$Var(X) = n \cdot p \cdot (1-p)$.
+Xác suất rời rạc,Phương sai của một hằng số bằng bao nhiêu?,"Bằng 0, vì hằng số không bao giờ dao động xung quanh giá trị trung bình."
+Xác suất rời rạc,biến cố kéo theo là gì?,Biến cố A kéo theo B nếu mọi kết quả thuận lợi cho A cũng là kết quả thuận lợi cho B.
+Xác suất rời rạc,biến cố đối là gì?,"Biến cố đối Là biến cố xảy ra khi và chỉ khi biến cố ban đầu không xảy ra, ký hiệu là $\bar{A}$."
+Xác suất rời rạc,biến ngẫu nhiên rời rạc là gì?,Biến ngẫu nhiên rời rạc Là biến lượng nhận các giá trị rời rạc (đếm được) với các xác suất xác định tương ứng.
+Xác suất rời rạc,bài toán chia đồ vật giống nhau vào các hộp khác nhau là gì?,Bài toán chia đồ vật giống nhau vào các hộp khác nhau Là bài toán tìm số cách phân phối k vật đồng nhất vào n ngăn phân biệt (tổ hợp lặp).
+Xác suất rời rạc,giá trị Mod của biến ngẫu nhiên rời rạc là gì?,Là giá trị mà tại đó xác suất đạt giá trị lớn nhất.
+Xác suất rời rạc,hai biến cố xung khắc là gì?,"Là hai biến cố không thể đồng thời xảy ra trong cùng một phép thử, tức là $A \cap B = \emptyset$."
+Xác suất rời rạc,hai biến cố đối lập là gì?,Là hai biến cố mà nếu cái này không xảy ra thì cái kia bắt buộc phải xảy ra.
+Xác suất rời rạc,hai biến cố độc lập là gì?,Là hai biến cố mà việc xảy ra của biến cố này không làm ảnh hưởng đến xác suất xảy ra của biến cố kia.
+Xác suất rời rạc,hàm khả biến trong định lý Bayes là gì?,Là xác suất quan sát thấy bằng chứng B nếu giả thuyết A là đúng.
+Xác suất rời rạc,hệ số tương quan là gì?,"Là đại lượng chuẩn hóa của hiệp phương sai, nằm trong khoảng từ -1 đến 1."
+Xác suất rời rạc,không gian mẫu là gì?,"Không gian mẫu Là tập hợp tất cả các kết quả có thể xảy ra của một phép thử ngẫu nhiên, ký hiệu là $S$ hoặc $\Omega$."
+Xác suất rời rạc,lát lưới trong ngữ cảnh đại số Boole là gì?,Lát lưới trong ngữ cảnh đại số Boole Là một cấu trúc toán học mà đại số Boole là một trường hợp đặc biệt có tính phân phối và có phần tử bù.
+Xác suất rời rạc,phép thử ngẫu nhiên là gì?,Phép thử ngẫu nhiên Là một hành động hoặc quy trình mà kết quả không thể dự đoán chính xác trước khi thực hiện.
+Xác suất rời rạc,phân phối Poisson là gì?,Là phân phối mô tả số lần xảy ra của một sự kiện trong một khoảng thời gian hoặc không gian cố định.
+Xác suất rời rạc,phân phối hình học là gì?,Mô tả số phép thử Bernoulli cần thiết để có được lần thành công đầu tiên.
+Xác suất rời rạc,phân phối nhị thức là gì?,Là phân phối xác suất của số lần thành công trong một chuỗi n phép thử Bernoulli độc lập.
+Xác suất rời rạc,tỷ lệ dương tính giả trong bài toán Bayes là gì?,Là xác suất kết quả xét nghiệm là dương tính trong khi đối tượng thực tế không mắc bệnh.
+Xác suất rời rạc,tỷ lệ âm tính giả trong bài toán Bayes là gì?,Là xác suất kết quả xét nghiệm là âm tính trong khi đối tượng thực tế đang mắc bệnh.
+Xác suất rời rạc,xác suất hậu nghiệm là gì?,Là xác suất của một biến cố được cập nhật sau khi đã quan sát thấy một bằng chứng hoặc dữ liệu cụ thể.
+Xác suất rời rạc,xác suất tiên nghiệm là gì?,Là xác suất của một biến cố được xác định trước khi có thêm thông tin hoặc dữ liệu mới.
+Xác suất rời rạc,Tính chất tuyến tính của kỳ vọng là gì?,"$E(aX + bY) = aE(X) + bE(Y)$ với mọi hằng số a, b."
+Xác suất rời rạc,Tại sao các bất đẳng thức xác suất lại quan trọng khi không biết phân phối cụ thể?,Vì chúng giúp đưa ra các đánh giá an toàn về độ rủi ro chỉ dựa trên kỳ vọng và phương sai.
+Xác suất rời rạc,Tại sao kỳ vọng của hằng số c lại bằng chính nó?,"Vì hằng số không có tính ngẫu nhiên, giá trị trung bình luôn là chính nó."
+Xác suất rời rạc,Tại sao luật Phân phối quan trọng trong việc rút gọn hàm?,Vì nó giúp thay thế biểu thức phức tạp bằng (x \wedge y) \vee (x \wedge z)$.
+Xác suất rời rạc,Tại sao modulo thường được chọn là số nguyên tố trong các thuật toán băm?,Để giảm thiểu xung đột (collisions) và đảm bảo phân phối đều các giá trị băm.
+Xác suất rời rạc,Tại sao tổng các hệ số nhị thức trong dòng n của tam giác Pascal bằng 2 mũ n?,"Vì nó tương ứng với việc thay a$=$1, b$=$1 vào định lý nhị thức Newton."
+Xác suất rời rạc,Tại sao xác suất hậu nghiệm lại quan trọng trong các bài toán phân loại?,Vì nó giúp xác định khả năng một đối tượng thuộc về một lớp cụ thể dựa trên các thuộc tính đã quan sát được.
+Xác suất rời rạc,Tại sao định lý Bayes lại là nền tảng của trí tuệ nhân tạo?,Vì nó cho phép máy tính học hỏi từ dữ liệu và đưa ra các quyết định dựa trên xác suất một cách hệ thống.
+Xác suất rời rạc,Tại sao định lý Bayes lại được gọi là quy tắc cập nhật xác suất?,Vì nó cho phép kết hợp kiến thức cũ (tiên nghiệm) với bằng chứng mới để có tri thức mới (hậu nghiệm).
+Xác suất rời rạc,Tổng xác suất của tất cả các giá trị có thể có của biến ngẫu nhiên là bao nhiêu?,Luôn luôn bằng 1.
+Xác suất rời rạc,Xác suất của hợp hai biến cố không xung khắc tính như thế nào?,Bằng tổng xác suất từng biến cố trừ đi xác suất của giao hai biến cố đó.
+Xác suất rời rạc,Xác suất của một biến cố bất kỳ nằm trong khoảng nào?,Luôn nằm trong đoạn từ 0 đến 1.
+Xác suất rời rạc,Ý nghĩa của phương sai là gì?,Dùng để đo lường mức độ phân tán hoặc độ rủi ro của các giá trị so với giá trị trung bình.
+Xác suất rời rạc,Ý nghĩa của định lý Bayes trong việc cập nhật tri thức?,Nó cung cấp một khung toán học để thay đổi niềm tin về một giả thuyết khi có thêm các bằng chứng mới.
+Xác suất rời rạc,Ý nghĩa vật lý của kỳ vọng là gì?,Có thể coi là trọng tâm hoặc giá trị trung bình dài hạn của biến ngẫu nhiên.
+Xác suất rời rạc,Điều kiện toán học để hai biến cố A và B độc lập là gì?,$P(A \cap B) = P(A) \cdot P(B)$.
+Xác suất rời rạc,Định lý Bayes mở rộng áp dụng khi nào?,Khi có một hệ đầy đủ các giả thuyết và ta muốn tính xác suất của một giả thuyết sau khi biết kết quả thử nghiệm.
+Xác suất rời rạc,biến cố chắc chắn là gì?,"Biến cố chắc chắn Là biến cố luôn luôn xảy ra trong mọi lần thực hiện phép thử, có xác suất bằng 1."
+Xác suất rời rạc,biến cố không thể là gì?,"Biến cố không thể Là biến cố không bao giờ xảy ra trong bất kỳ lần thực hiện phép thử nào, có xác suất bằng 0."
+Xác suất rời rạc,biến ngẫu nhiên chỉ thị là gì?,Biến ngẫu nhiên chỉ thị Là biến ngẫu nhiên nhận giá trị 1 nếu biến cố xảy ra và 0 nếu không xảy ra.
+Xác suất rời rạc,biến ngẫu nhiên đồng nhất rời rạc là gì?,Biến ngẫu nhiên đồng nhất rời rạc Là biến ngẫu nhiên mà mọi giá trị có thể nhận đều có xác suất bằng nhau.
+Xác suất rời rạc,giá trị kỳ vọng của biến ngẫu nhiên rời rạc là gì?,Là tổng các tích của mỗi giá trị có thể nhận và xác suất tương ứng của giá trị đó.
+Xác suất rời rạc,hiệp phương sai giữa hai biến ngẫu nhiên là gì?,Là đại lượng đo lường mối quan hệ tuyến tính giữa hai biến ngẫu nhiên X và Y.
+Xác suất rời rạc,hàm phân phối tích lũy là gì?,Hàm phân phối tích lũy Là hàm số $F(x)$ tính xác suất để biến ngẫu nhiên X nhận giá trị nhỏ hơn hoặc bằng x.
+Xác suất rời rạc,hàm xác suất của biến ngẫu nhiên rời rạc là gì?,Hàm xác suất của biến ngẫu nhiên rời rạc Là hàm số gán cho mỗi giá trị x của biến ngẫu nhiên một xác suất $P(X=x)$.
+Xác suất rời rạc,hệ số nhị thức là gì?,"Là các hệ số trong khai triển lũy thừa của một nhị thức, ký hiệu là $C(n, k)$."
+Xác suất rời rạc,hệ đầy đủ các biến cố là gì?,Hệ đầy đủ các biến cố Là một nhóm các biến cố rời nhau mà hợp của chúng chính là không gian mẫu.
+Xác suất rời rạc,biến cố là gì?,"Biến cố Là một tập con của không gian mẫu, đại diện cho một tập các kết quả thỏa mãn điều kiện nào đó."
+Xác suất rời rạc,phân phối siêu bội là gì?,Mô tả xác suất chọn được k vật thể có tính chất đặc biệt từ một tập hữu hạn mà không thay thế.
+Xác suất rời rạc,giao của hai biến cố A và B là gì?,Giao của hai biến cố A và B Là biến cố xảy ra khi cả hai biến cố A và B đồng thời xảy ra.
+Xác suất rời rạc,hợp của hai biến cố A và B là gì?,Hợp của hai biến cố A và B Là biến cố xảy ra khi có ít nhất một trong hai biến cố A hoặc B xảy ra.
+Xác suất rời rạc,thử Bernoulli là gì?,Thử Bernoulli Là phép thử ngẫu nhiên chỉ có đúng hai kết quả có thể xảy ra: Thành công hoặc Thất bại.
+Xác suất rời rạc,phương sai của biến ngẫu nhiên là gì?,Là kỳ vọng của bình phương độ lệch giữa biến ngẫu nhiên và giá trị trung bình của nó.
+Xác suất rời rạc,xác suất có điều kiện là gì?,"Là xác suất xảy ra biến cố $A$ với điều kiện biến cố $B$ đã xảy ra, ký hiệu $P(A|B)$."
+Xác suất rời rạc,xác suất cổ điển của một biến cố là gì?,Là tỷ số giữa số kết quả thuận lợi cho biến cố đó và tổng số kết quả có thể xảy ra trong không gian mẫu.
+Xác suất rời rạc,xác suất theo quan điểm thống kê là gì?,Là giá trị mà tần suất xuất hiện của biến cố tiến dần tới khi số lần phép thử tiến ra vô hạn.
+Xác suất rời rạc,độ lệch chuẩn là gì?,"Là căn bậc hai số học của phương sai, cùng đơn vị với biến ngẫu nhiên."
+Xác suất rời rạc,Ứng dụng của định lý Bayes trong kiểm tra y tế?,Dùng để tính xác suất một người thực sự mắc bệnh khi kết quả xét nghiệm là dương tính.
+Xác suất rời rạc,kỳ vọng điều kiện $E$ là gì?,Là kỳ vọng của biến ngẫu nhiên X khi biết thông tin về giá trị của biến ngẫu nhiên Y.
+Xác suất rời rạc,hàm sinh xác suất là gì?,Hàm sinh xác suất Là hàm số $G(s) = \sum P(X=k) s^k$ dùng để tìm các đặc trưng của biến ngẫu nhiên.
+Xác suất rời rạc,Kỳ vọng của tổng các biến ngẫu nhiên có phụ thuộc tính độc lập không?,"Không, kỳ vọng của tổng luôn bằng tổng các kỳ vọng."
+Xác suất rời rạc,Phương sai của tổng các biến ngẫu nhiên có phụ thuộc tính độc lập không?,"Có, nếu độc lập thì phương sai tổng bằng tổng phương sai, nếu không thì phải cộng thêm hiệp phương sai."
+Xác suất rời rạc,biến ngẫu nhiên Bernoulli là gì?,Biến ngẫu nhiên Bernoulli Là biến ngẫu nhiên chỉ nhận giá trị 1 (thành công) với xác suất p và 0 (thất bại) với xác suất 1-p.
+Xác suất rời rạc,Mối liên hệ giữa phân phối nhị thức và phân phối Poisson là gì?,"Khi n lớn và p nhỏ, phân phối nhị thức xấp xỉ phân phối Poisson với $\lambda = n \cdot p$."
+Xác suất rời rạc,xác suất biên là gì?,Là xác suất của một biến ngẫu nhiên mà không quan tâm đến giá trị của các biến ngẫu nhiên khác trong một phân phối đồng thời.
+Xác suất rời rạc,phân phối đồng thời của hai biến ngẫu nhiên là gì?,"Là bảng hoặc hàm số cho biết xác suất để cặp $(X, Y)$ nhận các giá trị $(x, y)$ cụ thể."
+Xác suất rời rạc,Khi nào hai biến ngẫu nhiên rời rạc được gọi là độc lập?,Khi xác suất đồng thời bằng tích các xác suất biên với mọi giá trị của chúng.
+Xác suất rời rạc,xác suất có điều kiện của biến ngẫu nhiên là gì?,Là xác suất $P(X=x | Y=y)$ được tính bằng xác suất đồng thời chia cho xác suất biên của Y.
+Xác suất rời rạc,hàm hồi quy trong xác suất là gì?,Hàm hồi quy trong xác suất Là hàm số biểu diễn kỳ vọng điều kiện $E(X|Y=y)$ theo giá trị y.
+Xác suất rời rạc,phân phối đa thức là gì?,Là sự mở rộng của phân phối nhị thức cho phép thử có nhiều hơn hai kết quả.
+Xác suất rời rạc,trung vị của biến ngẫu nhiên rời rạc là gì?,Là giá trị m sao cho xác suất để X nhỏ hơn m và xác suất để X lớn hơn m đều không quá 0.5.
+Xác suất rời rạc,Mối liên hệ giữa phương sai và độ lệch chuẩn là gì?,Phương sai là bình phương của độ lệch chuẩn.
+Xác suất rời rạc,Tại sao phương sai luôn không âm?,Vì nó là kỳ vọng của một đại lượng bình phương (bình phương độ lệch).
+Xác suất rời rạc,sự kiện hầu chắc chắn là gì?,"Là sự kiện xảy ra với xác suất bằng 1, dù không gian mẫu có thể chứa kết quả không thỏa mãn."
+Xác suất rời rạc,Định lý giới hạn trung tâm phát biểu điều gì?,Tổng của một số lượng lớn các biến ngẫu nhiên độc lập sẽ có phân phối xấp xỉ phân phối chuẩn.
+Xác suất rời rạc,chuỗi Markov là gì?,Chuỗi Markov Là một quá trình ngẫu nhiên mà xác suất của trạng thái tương lai chỉ phụ thuộc vào trạng thái hiện tại.
+Xác suất rời rạc,ma trận chuyển trong chuỗi Markov là gì?,Là ma trận chứa xác suất chuyển dịch giữa các trạng thái trong một bước.
+Xác suất rời rạc,trạng thái hấp thụ trong chuỗi Markov là gì?,Là trạng thái mà một khi đã vào thì không thể rời đi.
+Xác suất rời rạc,Ý nghĩa của phân phối dừng là gì?,Là phân phối xác suất không thay đổi sau khi thực hiện các bước chuyển dịch của chuỗi Markov.
+Xác suất rời rạc,Tại sao xác suất lại quan trọng trong thuật toán ngẫu nhiên ?,Vì nó cho phép giải quyết các bài toán khó một cách nhanh chóng với xác suất sai sót cực nhỏ.
+Xác suất rời rạc,thuật toán Monte Carlo là gì?,Thuật toán Monte Carlo Là thuật toán ngẫu nhiên có thời gian chạy cố định nhưng kết quả có xác suất sai số nhất định.
+Xác suất rời rạc,thuật toán Las Vegas là gì?,Thuật toán Las Vegas Là thuật toán ngẫu nhiên luôn cho kết quả đúng nhưng thời gian chạy là một biến ngẫu nhiên.
+Xác suất rời rạc,độ hỗn loạn trong lý thuyết thông tin là gì?,Là đại lượng đo lường mức độ không chắc chắn hoặc lượng thông tin trung bình của một biến ngẫu nhiên.
+Xác suất rời rạc,Công thức Shannon cho entropy là gì?,$H(X) = - \sum p_i \log p_i$.
+Xác suất rời rạc,Tại sao entropy của biến ngẫu nhiên đồng nhất là lớn nhất?,"Vì khi mọi kết quả đều có khả năng như nhau, độ không chắc chắn là cao nhất."
+Xác suất rời rạc,sự hội tụ theo xác suất là gì?,"Nghĩa là khi n tăng lên, xác suất để biến ngẫu nhiên lệch khỏi giá trị đích một khoảng nhỏ sẽ tiến về 0."
+Xác suất rời rạc,Luật số lớn phát biểu điều gì?,Trung bình cộng của nhiều phép thử độc lập sẽ tiến gần tới kỳ vọng của biến ngẫu nhiên khi số phép thử tăng lên.
+Xác suất rời rạc,Sự khác biệt giữa luật số lớn yếu và luật số lớn mạnh?,"Luật yếu nói về sự hội tụ theo xác suất, luật mạnh nói về sự hội tụ hầu chắc chắn."
+Xác suất rời rạc,xác suất là gì?,Xác suất là một số trong khoảng từ 0 đến 1 đo lường khả năng xảy ra của một sự kiện.
+Xác suất rời rạc,biến cố xung khắc là gì?,"Hai biến cố được gọi là xung khắc khi chúng không thể cùng xảy ra, tức là phần giao của chúng là tập hợp rỗng."
+Xác suất rời rạc,biến cố độc lập là gì?,Hai biến cố A và B được gọi là độc lập khi xác suất xảy ra đồng thời của chúng bằng tích xác suất của từng biến cố.
+Xác suất rời rạc,công thức xác suất toàn phần là gì?,Công thức xác suất toàn phần phát biểu rằng xác suất của biến cố A bằng tổng các tích P(B_i) nhân P(A|B_i) với B_i là phân hoạch của không gian mẫu.
+Xác suất rời rạc,công thức Bayes là gì?,"Công thức Bayes cho phép tính xác suất P(B_i|A) từ các xác suất P(B_i) và P(A|B_i) đã biết, bằng cách đảo ngược điều kiện của xác suất có điều kiện."
+Xác suất rời rạc,kỳ vọng của biến ngẫu nhiên rời rạc là gì?,"Kỳ vọng E(X) là giá trị trung bình có trọng số của biến ngẫu nhiên X, tính bằng tổng x_i nhân P(X = x_i) với mọi giá trị x_i."
+Xác suất rời rạc,Tại sao các biến cố xung khắc không thể là biến cố độc lập?,"Nếu hai biến cố xung khắc và đều có xác suất dương, thì P(A giao B) = 0 khác với P(A)P(B) > 0, nên chúng không thể độc lập."
+Xác suất rời rạc,nghịch lý sinh nhật là gì?,"Nghịch lý sinh nhật phát biểu rằng trong một nhóm chỉ 23 người, xác suất để có ít nhất hai người cùng ngày sinh đã vượt quá 50%."
+Xác suất rời rạc,quy tắc cộng xác suất là gì?,"Quy tắc cộng xác suất phát biểu rằng P(A hợp B) bằng P(A) cộng P(B) trừ đi P(A giao B), áp dụng nguyên lý bù trừ cho xác suất."
+Xác suất rời rạc,Tại sao xác suất của phần bù biến cố A bằng 1 trừ P(A)?,Vì biến cố A và phần bù của nó là xung khắc và hợp lại thành toàn bộ không gian mẫu có xác suất bằng 1.
+Xác suất rời rạc,hàm khối xác suất là gì?,Hàm khối xác suất p(x) của biến ngẫu nhiên rời rạc X là hàm số gán xác suất P(X = x) cho mỗi giá trị x mà X có thể nhận.
+Xác suất rời rạc,tính chất của kỳ vọng là gì?,"Kỳ vọng có tính tuyến tính, nghĩa là E(aX + bY) bằng aE(X) cộng bE(Y) với mọi hằng số a và b, bất kể X và Y có độc lập hay không."
+Xác suất rời rạc,phép thử Bernoulli là gì?,Phép thử Bernoulli là thí nghiệm ngẫu nhiên chỉ có hai kết quả có thể xảy ra là thành công (xác suất p) hoặc thất bại (xác suất 1-p).
+Xác suất rời rạc,"Kỳ vọng của phân phối nhị thức B(n,p) bằng bao nhiêu?","Kỳ vọng của phân phối nhị thức B(n,p) bằng n nhân p."
+Xác suất rời rạc,"Phương sai của phân phối nhị thức B(n,p) bằng bao nhiêu?","Phương sai của phân phối nhị thức B(n,p) bằng n nhân p nhân (1-p)."
+Lý thuyết số,số hợp số là gì?,Hợp số là số tự nhiên lớn hơn 1 có ít nhất một ước số khác 1 và chính nó.
+Lý thuyết số,thuật toán Euclid là gì?,"Thuật toán Euclid là phương pháp hiệu quả tính ước chung lớn nhất, dựa trên tính chất gcd(a,b) bằng gcd(b, a mod b)."
+Lý thuyết số,số nguyên tố cùng nhau là gì?,Hai số được gọi là nguyên tố cùng nhau khi ước chung lớn nhất của chúng bằng 1.
+Lý thuyết số,phép đồng dư là gì?,Hai số a và b được gọi là đồng dư theo modulo n (ký hiệu a ≡ b (mod n)) khi hiệu a - b chia hết cho n.
+Lý thuyết số,định lý nhỏ Fermat là gì?,Định lý nhỏ Fermat phát biểu rằng nếu p là số nguyên tố và p không chia hết a thì a^(p-1) ≡ 1 (mod p).
+Lý thuyết số,hàm Euler phi là gì?,Hàm Euler phi(n) đếm số lượng các số nguyên từ 1 đến n nguyên tố cùng nhau với n.
+Lý thuyết số,định lý Euler là gì?,"Định lý Euler phát biểu rằng nếu gcd(a, n) bằng 1 thì a^phi(n) ≡ 1 (mod n), trong đó phi(n) là hàm Euler."
+Lý thuyết số,Sàng Eratosthenes là gì?,Sàng Eratosthenes là thuật toán tìm tất cả các số nguyên tố nhỏ hơn n bằng cách loại bỏ dần các bội số của các số nguyên tố đã tìm được.
+Lý thuyết số,phương trình Diophantus là gì?,"Phương trình Diophantus là phương trình đại số mà chúng ta tìm nghiệm nguyên, ví dụ phương trình ax + by = c."
+Lý thuyết số,Phương trình ax + by = c có nghiệm nguyên khi nào?,Phương trình ax + by = c có nghiệm nguyên khi và chỉ khi ước chung lớn nhất của a và b chia hết c.
+Lý thuyết số,Tại sao số nguyên tố có vô hạn?,"Bằng chứng của Euclid: giả sử có hữu hạn số nguyên tố, lấy tích của tất cả cộng 1, ta được số mới không chia hết cho số nguyên tố nào, mâu thuẫn."
+Lý thuyết số,mật mã RSA dựa trên lý thuyết số nào?,Mật mã RSA dựa trên định lý Euler và sự khó khăn của bài toán phân tích số lớn thành thừa số nguyên tố.
+Lý thuyết số,hệ thặng dư đầy đủ modulo n là gì?,Hệ thặng dư đầy đủ modulo n là tập hợp n số nguyên đôi một không đồng dư với nhau theo modulo n.
+Lý thuyết số,Tại sao phép đồng dư quan trọng trong tin học?,"Phép đồng dư được ứng dụng rộng rãi trong mật mã học, kiểm tra lỗi, và các thuật toán băm trong máy tính."
+Quan hệ,quan hệ hai ngôi là gì?,"Quan hệ hai ngôi trên tập hợp A là một tập con của tích Descartes A nhân A, xác định các cặp phần tử có liên hệ với nhau."
+Quan hệ,quan hệ phản xạ là gì?,"Quan hệ R trên tập A được gọi là phản xạ nếu mọi phần tử a trong A đều có quan hệ với chính nó, tức là (a, a) thuộc R với mọi a."
+Quan hệ,quan hệ đối xứng là gì?,"Quan hệ R được gọi là đối xứng nếu khi (a, b) thuộc R thì (b, a) cũng thuộc R."
+Quan hệ,quan hệ phản đối xứng là gì?,"Quan hệ R được gọi là phản đối xứng nếu khi (a, b) và (b, a) đều thuộc R thì a phải bằng b."
+Quan hệ,quan hệ bắc cầu là gì?,"Quan hệ R được gọi là bắc cầu nếu khi (a, b) và (b, c) đều thuộc R thì (a, c) cũng thuộc R."
+Quan hệ,lớp tương đương là gì?,"Lớp tương đương của phần tử a là tập hợp tất cả các phần tử b có quan hệ tương đương với a, ký hiệu [a]."
+Quan hệ,tập thương là gì?,Tập thương A/R là tập hợp tất cả các lớp tương đương của quan hệ R trên tập A.
+Quan hệ,quan hệ thứ tự bộ phận là gì?,"Quan hệ thứ tự bộ phận là quan hệ vừa phản xạ, vừa phản đối xứng, vừa bắc cầu, thường ký hiệu là ≤."
+Quan hệ,tập có thứ tự bộ phận là gì?,"Tập có thứ tự bộ phận (poset) là một cặp (A, ≤) trong đó A là tập hợp và ≤ là quan hệ thứ tự bộ phận trên A."
+Quan hệ,phần tử cực đại trong tập có thứ tự là gì?,Phần tử cực đại là phần tử mà không có phần tử nào trong tập hợp lớn hơn nó.
+Quan hệ,phần tử lớn nhất trong tập có thứ tự là gì?,Phần tử lớn nhất (phần tử tối đại) là phần tử lớn hơn hoặc bằng mọi phần tử khác trong tập hợp.
+Quan hệ,biểu đồ Hasse là gì?,"Biểu đồ Hasse là cách biểu diễn trực quan một tập có thứ tự bộ phận, trong đó chỉ vẽ các quan hệ bao phủ và phần tử lớn hơn được đặt cao hơn."
+Quan hệ,quan hệ bao phủ là gì?,Quan hệ bao phủ là quan hệ y bao phủ x khi x < y và không tồn tại z nào thỏa x < z < y.
+Quan hệ,ma trận quan hệ là gì?,Ma trận quan hệ là ma trận nhị phân M trong đó M[i][j] bằng 1 nếu phần tử a_i có quan hệ với a_j và bằng 0 nếu ngược lại.
+Quan hệ,hợp của hai quan hệ là gì?,"Hợp của quan hệ R và S là quan hệ chứa (a, c) khi tồn tại b sao cho (a, b) thuộc R và (b, c) thuộc S."
+Quan hệ,Tại sao quan hệ tương đương tạo ra phân hoạch?,"Vì các lớp tương đương đôi một rời nhau và hợp lại cho ta toàn bộ tập hợp ban đầu, đúng với định nghĩa phân hoạch."
+Quan hệ,quan hệ thứ tự nghiêm ngặt là gì?,"Quan hệ thứ tự nghiêm ngặt là quan hệ phi phản xạ, phản đối xứng và bắc cầu, ký hiệu là <."

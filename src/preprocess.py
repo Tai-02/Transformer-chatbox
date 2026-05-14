@@ -26,7 +26,10 @@ def build_vocab(sentences, min_freq=1):
     vocab = special_tokens + words
     return {word: i for i, word in enumerate(vocab)}, {i: word for i, word in enumerate(vocab)}
 
-def process_df(df, word2idx):
+def main():
+    if not os.path.exists(CSV_PATH): return
+    df = pd.read_csv(CSV_PATH, sep=';', header=None, names=['topic', 'question', 'answer'], encoding='utf-8-sig').dropna(subset=['question', 'answer'])
+    
     tokenized_q = [tokenize(q) for q in df['question']]
     tokenized_a = [tokenize(a) for a in df['answer']]
     
