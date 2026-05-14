@@ -40,11 +40,16 @@ pip install -r requirements.txt
 ```
 
 ### 2. Chuẩn bị dữ liệu
-1. **Tăng cường dữ liệu**:
+1. **Tải dữ liệu thô**: 
+   Tải file dữ liệu mẫu tại đây: [Google Drive - Dữ liệu mẫu](https://drive.google.com/drive/folders/17U5mYwNusa2OKSnUFA4fyNiI6aPK1_vd?usp=sharing)
+   Sau đó, copy file vào đường dẫn: `data/raw/output.csv`.
+   *(Lưu ý: Định dạng CSV sử dụng dấu chấm phẩy `;` làm dấu phân cách)*
+
+2. **Tăng cường dữ liệu**:
    ```powershell
    python src/augment_data.py
    ```
-2. **Tiền xử lý và Tokenize**:
+3. **Tiền xử lý và Tokenize**:
    ```powershell
    python src/preprocess.py
    ```
