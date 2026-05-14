@@ -27,7 +27,7 @@ def build_vocab(sentences, min_freq=1):
 
 def main():
     if not os.path.exists(CSV_PATH): return
-    df = pd.read_csv(CSV_PATH, sep=';', header=None, names=['topic', 'question', 'answer']).dropna(subset=['question', 'answer'])
+    df = pd.read_csv(CSV_PATH, header=0, names=['topic', 'question', 'answer']).dropna(subset=['question', 'answer'])
     
     tokenized_q = [tokenize(q) for q in df['question']]
     tokenized_a = [tokenize(a) for a in df['answer']]

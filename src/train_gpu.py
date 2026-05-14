@@ -15,12 +15,12 @@ VOCAB_PATH = 'data/processed/vocab.pkl'
 SAVE_PATH = 'models/model.pt'
 
 BATCH_SIZE = 64
-D_MODEL = 256
-N_LAYER = 4
+D_MODEL = 192
+N_LAYER = 3
 N_HEAD = 8
-DROPOUT = 0.2
+DROPOUT = 0.35
 EPOCHS = 200
-LR = 5e-4
+LR = 8e-4
 
 class EarlyStopping:
     def __init__(self, patience=30, delta=0.0):
@@ -68,17 +68,15 @@ def train_gpu():
         print("Data not found.")
         return
 
+    print("Loading data...")
     with open(VOCAB_PATH, 'rb') as f: vocab = pickle.load(f)
     with open(DATA_PATH, 'rb') as f: data = pickle.load(f)
 
-    word2idx = vocab['word2idx']
-    pad_idx = word2idx['<pad>']
-    vocab_size = len(word2idx)
+    word2idx, pad_idx, vocab_size = vocab['word2idx'], vocab['word2idx']['<pad>'], len(vocab['word2idx'])
 
-    train_seq, val_seq, train_topics, _ = train_test_split(
-        data['sequences'], data['topics'], test_size=0.2, stratify=data['topics'], random_state=42
-    )
-
+    print("Splitting data...")
+    train_seq, val_seq, _, _ = train_test_split(data['sequences'], data['topics'], test_size=0.2, stratify=data['topics'], random_state=42)
+    
     print(f"Train: {len(train_seq)} | Val: {len(val_seq)} | Vocab: {vocab_size}")
 
     train_dl = DataLoader(SeqDataset(train_seq), batch_size=BATCH_SIZE, shuffle=True,
@@ -86,10 +84,12 @@ def train_gpu():
     val_dl = DataLoader(SeqDataset(val_seq), batch_size=BATCH_SIZE, shuffle=False,
                         collate_fn=lambda b: collate_fn(b, pad_idx), pin_memory=True)
 
+    print("Initializing model...")
     model = make_model(vocab_size, n_layer=N_LAYER, d_model=D_MODEL, n_head=N_HEAD, dropout=DROPOUT)
     model.to(device)
 
-    optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=0.05)
+    print("Setting up optimizer...")
+    optimizer = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=0.1)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS, eta_min=1e-5)
     scaler = torch.amp.GradScaler('cuda') if torch.cuda.is_available() else None
     early_stopping = EarlyStopping(patience=10, delta=0.01)
@@ -149,7 +149,8 @@ def train_gpu():
 
         avg_val_loss, avg_val_acc = total_val_loss / len(val_dl), total_val_acc / len(val_dl) * 100
         
-        warn = " ⚠️ OVERFIT" if avg_val_loss > avg_train_loss + 0.5 else ""
+        is_overfitting = avg_val_loss > avg_train_loss + 0.5
+        warn = " ⚠️ OVERFIT" if is_overfitting else ""
         msg = f"Epoch {epoch+1:3d} | Train: {avg_train_loss:.4f} ({avg_train_acc:.1f}%) | Val: {avg_val_loss:.4f} ({avg_val_acc:.1f}%) | {time.time()-start_time:.1f}s{warn}"
         print(msg)
         with open('logs/progress.txt', 'a', encoding='utf-8') as f:
@@ -161,16 +162,25 @@ def train_gpu():
             best_epoch = epoch + 1
             torch.save({'model_state_dict': model.state_dict(), 'v_size': vocab_size, 'd_m': D_MODEL, 'n_l': N_LAYER, 'n_h': N_HEAD, 'dr': DROPOUT}, SAVE_PATH)
 
-        early_stopping(avg_val_loss)
-        if early_stopping.early_stop:
-            print(f"Early stopping at epoch {epoch+1}.")
+        if is_overfitting:
+            stop_msg = f"Stopping training due to Overfitting (Gap > 0.5) at epoch {epoch+1}."
+            print(stop_msg)
+            with open('logs/progress.txt', 'a', encoding='utf-8') as f:
+                f.write(stop_msg + "\n")
             break
 
-    print(f"\n--- Training Complete ---")
-    print(f"Best Epoch: {best_epoch}")
-    print(f"Best Val Loss: {best_val_loss:.4f}")
-    print(f"Best Val Acc: {best_val_acc:.1f}%")
-    print(f"Model saved to: {SAVE_PATH}")
+        early_stopping(avg_val_loss)
+        if early_stopping.early_stop:
+            stop_msg = f"Early stopping at epoch {epoch+1}."
+            print(stop_msg)
+            with open('logs/progress.txt', 'a', encoding='utf-8') as f:
+                f.write(stop_msg + "\n")
+            break
+
+    final_msg = f"\n--- Training Complete ---\nBest Epoch: {best_epoch}\nBest Val Loss: {best_val_loss:.4f}\nBest Val Acc: {best_val_acc:.1f}%\nModel saved to: {SAVE_PATH}"
+    print(final_msg)
+    with open('logs/progress.txt', 'a', encoding='utf-8') as f:
+        f.write(final_msg + "\n")
 
 if __name__ == "__main__":
     train_gpu()

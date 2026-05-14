@@ -42,7 +42,7 @@ def chat():
             x = torch.tensor([prompt_indices]).to(device)
             
             with torch.no_grad():                
-                out_ids = model.generate(x, max_new_tokens=100, temperature=0.5, top_k=3)
+                out_ids = model.generate(x, max_new_tokens=100, temperature=0.5, top_k=50)
             
             response_ids = out_ids[0][len(prompt_indices):]
             response_tokens = []
